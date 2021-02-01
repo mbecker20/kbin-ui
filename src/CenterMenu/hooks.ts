@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { mmAddMenu, mmCloseMenu } from "../../../main";
-import { OpenMenu } from "../../../menuManager/types";
+import { AddMenu, CloseMenu, OpenMenu } from "../menuManager/types";
 
-export function useCenterMenu(name: string, onOpen?: OpenMenu, save = true, onClose?: () => void) {
+export function useCenterMenu(name: string, mmAddMenu: AddMenu, mmCloseMenu: CloseMenu, onOpen?: OpenMenu, save = true, onClose?: () => void) {
   const [exists, setExists] = useState(false)
   mmAddMenu(name, (...args: any) => {
     if (onOpen) onOpen(...args)

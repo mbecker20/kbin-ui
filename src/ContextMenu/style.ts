@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { colors, sizes, zIndex } from '../../../theme'
+import { colors, sizes, zIndex } from '../theme'
 
 const useJSS = createUseStyles({
   ContextMenuBounder: {

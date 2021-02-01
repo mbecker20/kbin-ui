@@ -1,8 +1,11 @@
 import { MouseEvent, RefObject } from "react"
-import { inRange } from "../../../helpers"
 
 type DivRef = RefObject<HTMLDivElement>
 type MouseDivEvent = MouseEvent<HTMLDivElement>
+
+export function inRange(val: number, range: [number, number]) {
+  return val >= range[0] && val <= range[1]
+}
 
 export function getEMLocation(buttonRef: DivRef, menuRef: DivRef) {
   if (!buttonRef.current || !menuRef.current) {

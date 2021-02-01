@@ -1,0 +1,29 @@
+{
+  "name": "thrax-ui",
+  "version": "1.0.0",
+  "description": "collection of react ui components",
+  "main": "build/index.js",
+  "scripts": {
+    "publish-package": "tsc && npm publish",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbecker20/thraxUI.git"
+  },
+  "author": "mbecker20",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbecker20/thraxUI/issues"
+  },
+  "homepage": "https://github.com/mbecker20/thraxUI#readme",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "react": "^17.0.1",
+    "react-jss": "^10.5.1",
+    "react-spring": "^8.0.27"
+  }
+}

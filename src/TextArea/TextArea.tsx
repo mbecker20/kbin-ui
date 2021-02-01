@@ -5,7 +5,7 @@ import { AnimatedFlexRow } from '../Flex/FlexRow'
 import { AnimatedText } from '../Text/Text'
 import TextAreaOnly from './TextAreaOnly'
 import { useSpring } from 'react-spring'
-import { colors, springConfig } from '../../../theme'
+import { colors, springConfig } from '../theme'
 import { AnimatedFlexCol } from '../Flex/FlexCol'
 
 interface Props {

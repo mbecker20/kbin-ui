@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useJSS from './style'
 import { useSpring, animated } from 'react-spring'
-import { sizes, colors, springConfig } from '../../../theme'
+import { sizes, colors, springConfig } from '../theme'
 
 interface Props {
   text: string,

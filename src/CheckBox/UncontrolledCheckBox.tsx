@@ -2,7 +2,7 @@ import React, { MouseEvent, useState } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 import SVGIcon from '../SVGIcon/SVGIcon'
-import { colors } from '../../../theme'
+import { colors } from '../theme'
 
 interface Props {
   checked: boolean

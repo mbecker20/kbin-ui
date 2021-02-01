@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { sizes } from '../../../theme'
+import { sizes } from '../theme'
 
 function getYLocation(yLoc: string) {
   switch(yLoc) {

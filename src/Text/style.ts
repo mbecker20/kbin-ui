@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { colors, sizes } from '../../../theme'
+import { colors, sizes } from '../theme'
 
 const useJSS = createUseStyles({
   Text: {

@@ -3,7 +3,7 @@ import useJSS from './style'
 import CSS from 'csstype'
 import Conditional from '../Conditional'
 import Text from '../Text/Text'
-import { sizes } from '../../../theme'
+import { sizes } from '../theme'
 import SVGIcon from '../SVGIcon/SVGIcon'
 
 export type CenterMenuControlData = boolean

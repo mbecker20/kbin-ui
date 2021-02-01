@@ -4,7 +4,7 @@ import FlexRow from '../Flex/FlexRow'
 import useJSS from './style'
 import { useSpring } from 'react-spring'
 import CSS from 'csstype'
-import { colors, springConfig } from '../../../theme'
+import { colors, springConfig } from '../theme'
 
 interface Props {
   isRight: boolean

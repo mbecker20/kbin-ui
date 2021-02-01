@@ -3,7 +3,7 @@ import useJSS from './style'
 import { useSpring, animated } from 'react-spring'
 import Conditional from '../Conditional'
 import Text from '../Text/Text'
-import { zIndex } from '../../../theme'
+import { zIndex } from '../theme'
 
 declare global {
   interface Window {

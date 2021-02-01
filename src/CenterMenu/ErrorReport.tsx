@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
-import { springConfig } from '../../../theme'
+import { springConfig } from '../theme'
 import Conditional from '../Conditional'
 import Text from '../Text/Text'
 import useJSS from './style'

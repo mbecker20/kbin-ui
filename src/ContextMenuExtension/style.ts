@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { colors } from '../../../theme'
+import { colors } from '../theme'
 
 const maxWidth = '8em'
 const maxHeight = '12em'

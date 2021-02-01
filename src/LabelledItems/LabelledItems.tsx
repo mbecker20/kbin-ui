@@ -3,7 +3,7 @@ import FlexCol from '../Flex/FlexCol'
 import Text from '../Text/Text'
 import useJSS from './style'
 import CSS from 'csstype'
-import { sizes } from '../../../theme'
+import { sizes } from '../theme'
 import IfElse from '../IfElse'
 
 interface Props {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { sizes } from '../../../theme'
+import { sizes } from '../theme'
 import FlexCol from '../Flex/FlexCol'
 import Text from '../Text/Text'
 import useJSS from './style'

@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { colors, zIndex } from '../../../theme'
+import { colors, zIndex } from '../theme'
 
 const useJSS = createUseStyles({
   CenterMenuBounder: {
