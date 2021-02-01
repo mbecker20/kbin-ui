@@ -1,6 +1,6 @@
 {
   "name": "thrax-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "collection of react ui components",
   "main": "build/index.js",
   "scripts": {
