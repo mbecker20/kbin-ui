@@ -1,3 +1,5 @@
+import { useContextMenu } from './ContextMenu/hooks'
+
 export { default as AutoPlacingGrid } from './AutoPlacingGrid/AutoPlacingGrid'
 export { default as Button } from './Button/Button'
 export { default as CenterMenu } from './CenterMenu/CenterMenu'
@@ -27,5 +29,7 @@ export { default as HorizontalButtonScroller } from './HorizontalButtonScroller'
 export { default as IfElse } from './IfElse'
 export { default as Map } from './Map'
 export * from './theme'
+export { useContextMenu } from './ContextMenu/hooks'
+export { useCenterMenu } from './CenterMenu/hooks'
 
 
