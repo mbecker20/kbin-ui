@@ -10,6 +10,7 @@ export { default as UncontrolledDualButtons } from './DualButtons/UncontrolledDu
 export { default as FlexRow } from './Flex/FlexRow'
 export { default as FlexCol } from './Flex/FlexCol'
 export { default as HorizontalScroller } from './HorizontalScroller/HorizontalScroller'
+export { default as LabelledItems } from './LabelledItems/LabelledItems'
 export { default as LabelledText } from './LabelledText/LabelledText'
 export { default as LabelledMultiText } from './LabelledText/LabelledMultiText'
 export { default as createMenuManager } from './menuManager/menuManager'
