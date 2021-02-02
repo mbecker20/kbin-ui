@@ -6,7 +6,7 @@
       "ESNext",
       "DOM"
     ],
-    "module": "ESNext",
+    "module": "commonJS",
     "target": "ESNext",
     "declaration": true,
     "strict": true,
@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "rootDir": "src",
     "outDir": "build",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   }
 }
