@@ -53,14 +53,44 @@ export const sizes = {
     margin: '.2em',
     padding: '.3em',
   },
-  switchDiameter: 3, // in vmin
-  checkBox: 1.2, // in em
-  checkBoxCheckDif: 0,
-  checkBoxHighlightDif: 1.5,
+  switch: {
+    diameter: 3, // in vmin
+  },
+  checkBox: {
+    size: 1.2, // in em
+    checkDif: 0,
+    highlightDif: 1.5,
+  }
 }
 
-export function setCustomSizes(customSizes: Partial<typeof sizes>) {
-  Object.assign(sizes, customSizes)
+type CustomSizes = {
+  text?: Partial<typeof sizes.text>
+  contextMenu?: Partial<typeof sizes.contextMenu>
+  file?: Partial<typeof sizes.file>
+  button?: Partial<typeof sizes.button>
+  switch?: Partial<typeof sizes.switch>
+  checkBox?: Partial<typeof sizes.checkBox>
+}
+
+export function setCustomSizes(customSizes: CustomSizes) {
+  if (customSizes.text) {
+    Object.assign(sizes.text, customSizes.text)
+  }
+  if (customSizes.contextMenu) {
+    Object.assign(sizes.contextMenu, customSizes.contextMenu)
+  }
+  if (customSizes.file) {
+    Object.assign(sizes.file, customSizes.file)
+  }
+  if (customSizes.button) {
+    Object.assign(sizes.button, customSizes.button)
+  }
+  if (customSizes.switch) {
+    Object.assign(sizes.switch, customSizes.switch)
+  }
+  if (customSizes.checkBox) {
+    Object.assign(sizes.checkBox, customSizes.checkBox)
+  }
 }
 
 export const zIndex = {
@@ -92,6 +122,20 @@ export const springConfig = {
   }
 }
 
-export function setCustomSpringConfig(customSpringConfig: Partial<typeof springConfig>) {
-  Object.assign(springConfig, customSpringConfig)
+type CustomSpringConfig = {
+  fast?: Partial<typeof springConfig.fast>
+  medium?: Partial<typeof springConfig.medium>
+  xslow?: Partial<typeof springConfig.xslow>
+}
+
+export function setCustomSpringConfig(customSpringConfig: CustomSpringConfig) {
+  if (customSpringConfig.fast) {
+    Object.assign(springConfig.fast, customSpringConfig.fast)
+  }
+  if (customSpringConfig.medium) {
+    Object.assign(springConfig.medium, customSpringConfig.medium)
+  }
+  if (customSpringConfig.xslow) {
+    Object.assign(springConfig.xslow, customSpringConfig.xslow)
+  }
 }

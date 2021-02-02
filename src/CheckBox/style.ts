@@ -12,8 +12,8 @@ const useJSS = createUseStyles({
   CheckBox: {
     gridRow: 1,
     gridColumn: 1,
-    width: `${sizes.checkBox}em`,
-    height: `${sizes.checkBox}em`,
+    width: `${sizes.checkBox.size}em`,
+    height: `${sizes.checkBox.size}em`,
     borderStyle: 'solid',
     borderColor: colors.checkBoxBorder,
     borderWidth: '.1em',
@@ -26,8 +26,8 @@ const useJSS = createUseStyles({
   Check: {
     gridRow: 1,
     gridColumn: 1,
-    width: `${sizes.checkBox + sizes.checkBoxCheckDif}em`,
-    height: `${sizes.checkBox + sizes.checkBoxCheckDif}em`,
+    width: `${sizes.checkBox.size + sizes.checkBox.checkDif}em`,
+    height: `${sizes.checkBox.size + sizes.checkBox.checkDif}em`,
     '&:hover': {
       cursor: 'pointer'
     },
@@ -36,8 +36,8 @@ const useJSS = createUseStyles({
   Highlight: {
     gridRow: 1,
     gridColumn: 1,
-    width: `${sizes.checkBox + sizes.checkBoxHighlightDif}em`,
-    height: `${sizes.checkBox + sizes.checkBoxHighlightDif}em`,
+    width: `${sizes.checkBox.size + sizes.checkBox.highlightDif}em`,
+    height: `${sizes.checkBox.size + sizes.checkBox.highlightDif}em`,
     zIndex: -1
   }
 })
