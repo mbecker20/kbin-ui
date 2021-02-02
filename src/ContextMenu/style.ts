@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { colors, sizes, zIndex } from '../theme'
+import { colors, sizes, zIndex, scrollbarJSS } from '../theme'
 
 const useJSS = createUseStyles({
   ContextMenuBounder: {
@@ -26,14 +26,8 @@ const useJSS = createUseStyles({
     position: 'fixed',
     top: -1000,
     left: -1000,
-    overflowY: 'scroll',
-    '&::-webkit-scrollbar': {
-      width: '0em',
-    },
-    '&::-webkit-scrollbar-thumb': {
-      backgroundColor: 'white',
-    },
     userSelect: 'none',
+    ...scrollbarJSS.thin
   },
 
   MenuItem: {

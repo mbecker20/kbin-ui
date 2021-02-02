@@ -1,3 +1,5 @@
+import { createUseStyles } from "react-jss"
+
 export const colors = {
   contextMenuBackground: '#030917',
   contextMenuItemBorder: 'rgba(.3, .3, .3, .8)',
@@ -139,3 +141,83 @@ export function setCustomSpringConfig(customSpringConfig: CustomSpringConfig) {
     Object.assign(springConfig.xslow, customSpringConfig.xslow)
   }
 }
+
+export const scrollbarJSS = {
+  regular: {
+    '&::-webkit-scrollbar': {
+      width: '.8em',
+    },
+    '&::-webkit-scrollbar-track': {
+      background: '#2323246f',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: '#0a2154',
+      borderRadius: '1.5em'
+    },
+    scrollbarWidth: 'auto',
+    scrollbarColor: '#0a2154',
+  },
+  thin: {
+    '&::-webkit-scrollbar': {
+      width: '.5em',
+    },
+    '&::-webkit-scrollbar-track': {
+      background: '#2323246f',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: '#0a2154',
+      borderRadius: '1.5em'
+    },
+    scrollbarWidth: 'thin',
+    scrollbarColor: '#0a2154',
+  },
+  none: {
+    '&::-webkit-scrollbar': {
+      width: '0px',
+    },
+    '&::-webkit-scrollbar-track': {
+      background: '#2323246f',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: '#0a2154',
+      borderRadius: '1.5em'
+    },
+    scrollbarWidth: 'none',
+    scrollbarColor: '#0a2154',
+  }
+}
+
+type CustomScrollbarJSS = {
+  regular?: Partial<typeof scrollbarJSS.regular>
+  thin?: Partial<typeof scrollbarJSS.thin>
+  none?: Partial<typeof scrollbarJSS.none>
+}
+
+export function setCustomScrollbarJSS(customJSS: CustomScrollbarJSS) {
+  if (customJSS.regular) {
+    Object.assign(scrollbarJSS.regular, customJSS.regular)
+  }
+  if (customJSS.thin) {
+    Object.assign(scrollbarJSS.thin, customJSS.thin)
+  }
+  if (customJSS.none) {
+    Object.assign(scrollbarJSS.none, customJSS.none)
+  }
+}
+
+export const useScrollbarJSS = createUseStyles({
+  Scroller: {
+    '&::-webkit-scrollbar': {
+      width: type => scrollbarJSS[type]['&::-webkit-scrollbar'].width,
+    },
+    '&::-webkit-scrollbar-track': {
+      background: type => scrollbarJSS[type]['&::-webkit-scrollbar-track'].background,
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: type => scrollbarJSS[type]['&::-webkit-scrollbar-thumb'].background,
+      borderRadius: type => scrollbarJSS[type]['&::-webkit-scrollbar-thumb'].borderRadius,
+    },
+    scrollbarWidth: type => scrollbarJSS[type].scrollbarWidth,
+    scrollbarColor: type => scrollbarJSS[type].scrollbarColor,
+  }
+})
