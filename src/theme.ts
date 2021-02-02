@@ -23,8 +23,6 @@ export const colors = {
 
   notificationSuccess: '#046727c7',
   notificationFailure: '#9e0505c7',
-
-  dashboardBG: '',
   
   checkBoxBorder: '#b7c0c8',
   checkBoxHighlightCenter: '#0a2154ef',
