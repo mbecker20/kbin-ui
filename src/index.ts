@@ -1,5 +1,3 @@
-import { useContextMenu } from './ContextMenu/hooks'
-
 export { default as AutoPlacingGrid } from './AutoPlacingGrid/AutoPlacingGrid'
 export { default as Button } from './Button/Button'
 export { default as CenterMenu } from './CenterMenu/CenterMenu'
