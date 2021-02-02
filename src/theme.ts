@@ -2,8 +2,6 @@ export const colors = {
   contextMenuBackground: '#030917',
   contextMenuItemBorder: 'rgba(.3, .3, .3, .8)',
 
-  topbar: '#071944',
-
   defaultButton: '#0a2154',
   redButton: '#7b0303d9',
   buttonBorder: 'rgba(.3, .3, .3, .8)',
@@ -29,6 +27,10 @@ export const colors = {
   checkBoxBorder: '#b7c0c8',
   checkBoxHighlightCenter: '#0a2154ef',
   checkBoxHighlightEdge: '#0a21549b',
+}
+
+export function setCustomColors(customColors: Partial<typeof colors>) {
+  Object.assign(colors, customColors)
 }
 
 export const sizes = {
@@ -57,11 +59,19 @@ export const sizes = {
   checkBoxHighlightDif: 1.5,
 }
 
+export function setCustomSizes(customSizes: Partial<typeof sizes>) {
+  Object.assign(sizes, customSizes)
+}
+
 export const zIndex = {
   contextMenu: 60,
   topbar: 10,
   centerMenu: 50,
   notification: 100
+}
+
+export function setCustomZIndices(customZIndices: Partial<typeof zIndex>) {
+  Object.assign(zIndex, customZIndices)
 }
 
 export const springConfig = {
@@ -80,4 +90,8 @@ export const springConfig = {
     mass: 50,
     clamp: true
   }
+}
+
+export function setCustomSpringConfig(customSpringConfig: Partial<typeof springConfig>) {
+  Object.assign(springConfig, customSpringConfig)
 }
