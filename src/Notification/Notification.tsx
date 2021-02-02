@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import useJSS from './style'
 import { useSpring, animated } from 'react-spring'
-import Conditional from '../Conditional'
 import Text from '../Text/Text'
-import { zIndex } from '../theme'
+import { colors, zIndex } from '../theme'
 
 declare global {
   interface Window {
-    flashNotification: (color: string, text: string) => void
+    flashNotification: (success: boolean, text: string) => void
   }
 }
 
@@ -26,9 +25,9 @@ function Notification({ yLocation, xLocation }: Props) {
     exists: false, visible: false, color: '', text: '',
   })
   const classes = useJSS({ color, yLocation, xLocation })
-  window.flashNotification = (color, text) => {
+  window.flashNotification = (success, text) => {
     setData({
-      exists: true, visible: true, color, text,
+      exists: true, visible: true, color: success ? colors.notificationSuccess : colors.notificationFailure, text,
     })
     window.clearTimeout(timeoutID)
     timeoutID = window.setTimeout(() => {
