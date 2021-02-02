@@ -26,7 +26,7 @@ export { default as Conditional } from './Conditional'
 export { default as HorizontalButtonScroller } from './HorizontalButtonScroller'
 export { default as IfElse } from './IfElse'
 export { default as Map } from './Map'
-export * from './theme'
+export { colors, setCustomColors, sizes, setCustomSizes, zIndex, setCustomZIndices, springConfig, setCustomSpringConfig } from './theme'
 export { useContextMenu } from './ContextMenu/hooks'
 export { useCenterMenu } from './CenterMenu/hooks'
 
