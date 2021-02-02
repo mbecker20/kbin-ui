@@ -1,4 +1,5 @@
-import { MenuManager, OpenMenu } from "./types";
+import { makeUseCenterMenu } from "../CenterMenu/hooks"
+import { MenuManager, OpenMenu } from "./types"
 
 function createMenuManager() {
   const menuManager: MenuManager = {
@@ -39,7 +40,8 @@ function createMenuManager() {
     mmAddMenu,
     mmOpenMenu,
     mmQueueMenu,
-    mmCloseMenu
+    mmCloseMenu,
+    useCenterMenu: makeUseCenterMenu(mmAddMenu, mmCloseMenu)
   }
 }
 

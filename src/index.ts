@@ -28,6 +28,5 @@ export { default as IfElse } from './IfElse'
 export { default as Map } from './Map'
 export { colors, setCustomColors, sizes, setCustomSizes, zIndex, setCustomZIndices, springConfig, setCustomSpringConfig } from './theme'
 export { useContextMenu } from './ContextMenu/hooks'
-export { useCenterMenu } from './CenterMenu/hooks'
 
 
