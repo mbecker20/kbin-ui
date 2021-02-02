@@ -95,7 +95,6 @@ export function setCustomSizes(customSizes: CustomSizes) {
 
 export const zIndex = {
   contextMenu: 60,
-  topbar: 10,
   centerMenu: 50,
   notification: 100
 }
