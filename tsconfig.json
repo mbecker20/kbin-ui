@@ -7,7 +7,7 @@
       "DOM"
     ],
     "module": "commonjs",
-    "target": "ESNext",
+    "target": "ES5",
     "declaration": true,
     "strict": true,
     "allowJs": true,
