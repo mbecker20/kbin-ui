@@ -12,7 +12,7 @@ function TextInput({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, password
+  labelFontSize, value, password, angry, happy
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -34,16 +34,28 @@ function TextInput({
   defaultValue?: string
   value?: string
   password?: boolean
+  angry?: boolean
+  happy?: boolean
 }) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
+  const borderColor = 
+    happy ? colors.happyInputBorder : 
+    angry ? colors.angryInputBorder : 
+    focussed ? colors.focussedInputBorder : 
+    colors.unfocussedInput
+  const backgroundColor = 
+    happy ? colors.happyInput :
+    angry ? colors.angryInput : 
+    focussed ? colors.focussedInput : 
+    colors.unfocussedInput
   const springStyle = useSpring({
-    borderColor: focussed ? colors.focussedInputBorder : colors.unfocussedInput,
-    backgroundColor: focussed ? colors.focussedInput : colors.unfocussedInput,
+    borderColor,
+    backgroundColor,
     config: springConfig.medium
   })
   const labelSpring = useSpring({
-    backgroundColor: focussed ? colors.focussedInput : colors.unfocussedInput,
+    backgroundColor,
     config: springConfig.medium
   })
   const Flex = layout === 'row' ? AnimatedFlexRow : AnimatedFlexCol

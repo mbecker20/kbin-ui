@@ -21,6 +21,10 @@ export const colors = {
   focussedInputBorder: '#1343b1',
   unfocussedInput: '#252626',
   unfocussedInputLabel: '#bac4ce',
+  angryInput: '',
+  angryInputBorder: '',
+  happyInput: '',
+  happyInputBorder: '',
 
   notificationSuccess: '#046727c7',
   notificationFailure: '#9e0505c7',

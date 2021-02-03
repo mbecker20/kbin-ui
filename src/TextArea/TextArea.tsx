@@ -12,7 +12,7 @@ function TextArea({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   textAreaRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value
+  labelFontSize, value, angry, happy
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -33,16 +33,28 @@ function TextArea({
   onEscape?: () => void
   defaultValue?: string
   value?: string
+  angry?: boolean
+  happy?: boolean
 }) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
+  const borderColor =
+    happy ? colors.happyInputBorder :
+    angry ? colors.angryInputBorder :
+    focussed ? colors.focussedInputBorder :
+    colors.unfocussedInput
+  const backgroundColor =
+    happy ? colors.happyInput :
+    angry ? colors.angryInput :
+    focussed ? colors.focussedInput :
+    colors.unfocussedInput
   const springStyle = useSpring({
-    borderColor: focussed ? colors.focussedInputBorder : colors.unfocussedInput,
-    backgroundColor: focussed ? colors.focussedInput : colors.unfocussedInput,
+    borderColor,
+    backgroundColor,
     config: springConfig.medium
   })
   const labelSpring = useSpring({
-    backgroundColor: focussed ? colors.focussedInput : colors.unfocussedInput,
+    backgroundColor,
     config: springConfig.medium
   })
   const Flex = layout === 'row' ? AnimatedFlexRow : AnimatedFlexCol
