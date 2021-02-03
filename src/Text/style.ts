@@ -13,7 +13,8 @@ const useJSS = createUseStyles({
     padding: ({ padding }) => padding,
     margin: ({ margin }) => margin,
     overflowWrap: ({ wrap }) => wrap ? 'anywhere' : null,
-    textAlign: ({ textAlign }) => textAlign
+    textAlign: ({ textAlign }) => textAlign,
+    borderBottomStyle: ({ underline }) => underline ? 'solid' : 'none',
   },
 })
 

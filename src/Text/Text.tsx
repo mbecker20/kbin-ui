@@ -5,7 +5,7 @@ import { animated } from 'react-spring'
 
 function _Text({ 
   className, style, text, fontSize, color, onClick, pointer, padding, margin, textCursor,
-  wrap, textAlign
+  wrap, textAlign, underline
 }: {
   text: string
   className?: string
@@ -20,10 +20,12 @@ function _Text({
   wrap?: boolean
   textAlign?: string
   ref?: RefObject<HTMLDivElement>
+  underline?: boolean
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     fontSize, color, pointer, padding, 
-    margin, textCursor, wrap, textAlign
+    margin, textCursor, wrap, textAlign,
+    underline
   })
   return (
     <div className={className ? `${classes.Text} ${className}` : classes.Text}
