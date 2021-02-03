@@ -46,7 +46,7 @@ function CenterMenu({
           onPointerDown={(e) => {e.stopPropagation()}}
           style={style}
         >
-          <SVGIcon src='./svg/close-x.svg' alt='x'
+          <SVGIcon src='/svg/close-x.svg' alt='x'
             className={classes.CloseIcon} onClick={onClose}
             pointer
           />
