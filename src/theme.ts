@@ -49,10 +49,6 @@ export const sizes = {
     maxHeight: '90vh',
     maxWidth: '90vw'
   },
-  file: {
-    width: 10, // in em
-    height: 12, // in em
-  },
   button: {
     margin: '.2em',
     padding: '.3em',
@@ -70,7 +66,6 @@ export const sizes = {
 type CustomSizes = {
   text?: Partial<typeof sizes.text>
   contextMenu?: Partial<typeof sizes.contextMenu>
-  file?: Partial<typeof sizes.file>
   button?: Partial<typeof sizes.button>
   switch?: Partial<typeof sizes.switch>
   checkBox?: Partial<typeof sizes.checkBox>
@@ -82,9 +77,6 @@ export function setCustomSizes(customSizes: CustomSizes) {
   }
   if (customSizes.contextMenu) {
     Object.assign(sizes.contextMenu, customSizes.contextMenu)
-  }
-  if (customSizes.file) {
-    Object.assign(sizes.file, customSizes.file)
   }
   if (customSizes.button) {
     Object.assign(sizes.button, customSizes.button)
