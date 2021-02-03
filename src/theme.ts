@@ -30,7 +30,9 @@ export const colors = {
   checkBoxHighlightEdge: '#0a21549b',
 
   scrollbarBackground: '#2323246f',
-  scrollbarThumb: '#0a2154'
+  scrollbarThumb: '#0a2154',
+
+  navbarBackground: '#030917'
 }
 
 export function setCustomColors(customColors: Partial<typeof colors>) {
