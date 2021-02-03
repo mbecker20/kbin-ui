@@ -230,7 +230,7 @@ ___
 
 ### AnimatedText
 
-▸ `Const`**AnimatedText**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
+▸ `Const`**AnimatedText**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `underline?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
 
 #### Parameters:
 
@@ -250,6 +250,7 @@ Name | Type |
 `text` | *string* |
 `textAlign?` | *string* |
 `textCursor?` | *boolean* |
+`underline?` | *boolean* |
 `wrap?` | *boolean* |
 
 • **ref**: *ForwardedRef*<HTMLDivElement\>
@@ -767,7 +768,7 @@ ___
 
 ### Text
 
-▸ `Const`**Text**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
+▸ `Const`**Text**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `underline?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
 
 #### Parameters:
 
@@ -787,6 +788,7 @@ Name | Type |
 `text` | *string* |
 `textAlign?` | *string* |
 `textCursor?` | *boolean* |
+`underline?` | *boolean* |
 `wrap?` | *boolean* |
 
 • **ref**: *ForwardedRef*<HTMLDivElement\>
