@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { colors, zIndex } from '../theme'
+import { colors, scrollbarJSS, zIndex } from '../theme'
 
 const useJSS = createUseStyles({
   CenterMenuBounder: {
@@ -28,7 +28,8 @@ const useJSS = createUseStyles({
     userSelect: 'none',
     maxWidth: '90vw',
     maxHeight: '90vh',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    ...scrollbarJSS.thin
   },
 
   Header: {
