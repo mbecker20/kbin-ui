@@ -86,6 +86,27 @@ export function useLocalStorage<T>(defaultStore: T, key: string): [T, (arg: T) =
   ]
 }
 
+function genUpdateID(updates: number) {
+  return `${updates}${Math.floor(Math.random() * 0xFFF).toString(16)}`
+}
+
+export function useReRender() {
+  const [, toReRender] = useState('')
+  let count = 0
+  const reRender = () => {
+    toReRender(genUpdateID(count))
+    count++
+  }
+  return reRender
+}
+
+export function useReRenderOnResize() {
+  const reRender = useReRender()
+  useListener('resize', () => {
+    window.requestAnimationFrame(reRender)
+  })
+}
+
 export function useErrorReport() {
   const [visible, setVisible] = useState(false)
   const [exists, setExists] = useState(false)
