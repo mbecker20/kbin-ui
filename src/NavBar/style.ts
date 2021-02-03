@@ -1,9 +1,11 @@
 import { createUseStyles } from 'react-jss'
+import { scrollbarJSS } from '../theme'
 
 const useJSS = createUseStyles({
   NavBarBounder: {
     height: '100vh',
-    overflowY: 'auto'
+    overflowY: 'auto',
+    ...scrollbarJSS.thin
   },
 
   NavBar: {
