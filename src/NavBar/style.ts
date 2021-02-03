@@ -5,6 +5,7 @@ const useJSS = createUseStyles({
   NavBarBounder: {
     height: '100vh',
     overflowY: 'auto',
+    paddingRight: '2em',
     ...scrollbarJSS.thin
   },
 
