@@ -28,6 +28,9 @@ export const colors = {
   checkBoxBorder: '#b7c0c8',
   checkBoxHighlightCenter: '#0a2154ef',
   checkBoxHighlightEdge: '#0a21549b',
+
+  scrollbarBackground: '#2323246f',
+  scrollbarThumb: '#0a2154'
 }
 
 export function setCustomColors(customColors: Partial<typeof colors>) {
@@ -146,42 +149,42 @@ export const scrollbarJSS = {
       width: '.8em',
     },
     '&::-webkit-scrollbar-track': {
-      background: '#2323246f',
+      background: colors.scrollbarBackground,
     },
     '&::-webkit-scrollbar-thumb': {
-      background: '#0a2154',
+      background: colors.scrollbarThumb,
       borderRadius: '1.5em'
     },
     scrollbarWidth: 'auto',
-    scrollbarColor: '#000000 #0a2154',
+    scrollbarColor: `${colors.scrollbarThumb} ${colors.scrollbarBackground}`,
   },
   thin: {
     '&::-webkit-scrollbar': {
       width: '.5em',
     },
     '&::-webkit-scrollbar-track': {
-      background: '#2323246f',
+      background: colors.scrollbarBackground,
     },
     '&::-webkit-scrollbar-thumb': {
-      background: '#0a2154',
+      background: colors.scrollbarThumb,
       borderRadius: '1.5em'
     },
     scrollbarWidth: 'thin',
-    scrollbarColor: '#000000 #0a2154',
+    scrollbarColor: `${colors.scrollbarThumb} ${colors.scrollbarBackground}`,
   },
   none: {
     '&::-webkit-scrollbar': {
       width: '0px',
     },
     '&::-webkit-scrollbar-track': {
-      background: '#2323246f',
+      background: colors.scrollbarBackground,
     },
     '&::-webkit-scrollbar-thumb': {
-      background: '#0a2154',
+      background: colors.scrollbarThumb,
       borderRadius: '1.5em'
     },
     scrollbarWidth: 'none',
-    scrollbarColor: '#000000 #0a2154',
+    scrollbarColor: `${colors.scrollbarThumb} ${colors.scrollbarBackground}`,
   }
 }
 

@@ -81,6 +81,8 @@ Name | Type |
 `text` | *string* |
 `unfocussedInput` | *string* |
 `unfocussedInputLabel` | *string* |
+`scrollbarBackground` | *string* |
+`scrollbarThumb` | *string* |
 
 Defined in: [theme.ts:3](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L3)
 
