@@ -21,7 +21,7 @@ function UncontrolledCheckBox({ checked, onClick, style, className }: {
         onClick={onClick}
       />
       <SVGIcon className={classes.Check}
-        src='./svg/check.svg' alt='check'
+        src='/svg/check.svg' alt='check'
         style={{ opacity: checked ? 1 : 0 }}
       />
       <svg className={classes.Highlight} xmlns="http://www.w3.org/2000/svg"
