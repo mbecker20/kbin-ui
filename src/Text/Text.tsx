@@ -1,4 +1,4 @@
-import React, { ForwardedRef, forwardRef, MouseEvent } from 'react'
+import React, { ForwardedRef, forwardRef, MouseEvent, RefObject } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 import { animated } from 'react-spring'
@@ -19,6 +19,7 @@ function _Text({
   textCursor?: boolean
   wrap?: boolean
   textAlign?: string
+  ref?: RefObject<HTMLDivElement>
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     fontSize, color, pointer, padding, 
@@ -34,8 +35,8 @@ function _Text({
   )
 }
 
-const Text = forwardRef(_Text)
+const Text = forwardRef(_Text) as typeof _Text
 
-export const AnimatedText = animated(Text)
+export const AnimatedText = animated(Text) as typeof _Text
 
 export default Text

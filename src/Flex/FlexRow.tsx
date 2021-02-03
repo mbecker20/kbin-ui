@@ -1,4 +1,4 @@
-import React, { ForwardedRef, forwardRef, MouseEvent, PointerEvent, WheelEvent } from 'react'
+import React, { ForwardedRef, forwardRef, MouseEvent, PointerEvent, RefObject, WheelEvent } from 'react'
 import CSS from 'csstype'
 import useJSS from './style'
 import { animated } from 'react-spring'
@@ -27,6 +27,7 @@ function _FlexRow({
   margin?: string
   padding?: string
   backgroundColor?: string
+  ref?: RefObject<HTMLDivElement>
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     justifyContent, alignItems, flexWrap, 
@@ -48,8 +49,8 @@ function _FlexRow({
   )
 }
 
-const FlexRow = forwardRef(_FlexRow)
+const FlexRow = forwardRef(_FlexRow) as typeof _FlexRow
 
-export const AnimatedFlexRow = animated(FlexRow)
+export const AnimatedFlexRow = animated(FlexRow) as typeof _FlexRow
 
 export default FlexRow

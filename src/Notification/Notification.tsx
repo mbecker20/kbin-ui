@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useJSS from './style'
-import { useSpring, animated } from 'react-spring'
-import Text from '../Text/Text'
+import { useSpring } from 'react-spring'
+import { AnimatedText } from '../Text/Text'
 import { colors, zIndex } from '../theme'
 
 declare global {
@@ -12,8 +12,6 @@ declare global {
 
 const notificationTime = 2500 //milliseconds
 let timeoutID = 0
-
-const AnimatedText = animated(Text)
 
 function Notification({ yLocation, xLocation }: {
   yLocation?: 'top' | 'center' | 'bottom',

@@ -1,4 +1,4 @@
-import React, { DragEvent, ForwardedRef, forwardRef, MouseEvent, PointerEvent, WheelEvent } from 'react'
+import React, { DragEvent, ForwardedRef, forwardRef, MouseEvent, PointerEvent, RefObject, WheelEvent } from 'react'
 import CSS from 'csstype'
 import useJSS from './style'
 import { animated } from 'react-spring'
@@ -28,6 +28,7 @@ function _FlexCol({
   margin?: string
   padding?: string
   backgroundColor?: string
+  ref?: RefObject<HTMLDivElement>
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     justifyContent, alignItems, pointer,
@@ -52,8 +53,8 @@ function _FlexCol({
   )
 }
 
-const FlexCol = forwardRef(_FlexCol)
+const FlexCol = forwardRef(_FlexCol) as typeof _FlexCol
 
-export const AnimatedFlexCol = animated(FlexCol)
+export const AnimatedFlexCol = animated(FlexCol) as typeof _FlexCol
 
 export default FlexCol

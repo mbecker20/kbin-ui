@@ -2,7 +2,7 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { springConfig } from '../theme'
 import Conditional from '../Conditional'
-import Text from '../Text/Text'
+import { AnimatedText } from '../Text/Text'
 import useJSS from './style'
 
 type ErrorReportControlData = {
@@ -11,8 +11,6 @@ type ErrorReportControlData = {
   setExistFalse: () => void
   errorString: string
 }
-
-const AnimatedText = animated(Text)
 
 function ErrorReport({ erControlData }: {
   erControlData: ErrorReportControlData
