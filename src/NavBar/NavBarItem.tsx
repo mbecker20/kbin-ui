@@ -46,6 +46,7 @@ function NavBarItem({
           size={iconSize}
           width={iconWidth}
           height={iconHeight}
+          onClick={onClick}
           style={{ gridColumn: 'icon / span 1' }}
           pointer
         />
