@@ -6,8 +6,8 @@
   "scripts": {
     "publish-package": "tsc && npm publish",
     "build": "tsc",
-    "gen-docs": "rm -r docs && typedoc src/index.ts --plugin typedoc-plugin-markdown --namedAnchors"
-  },
+    "gen-docs": "typedoc src/index.ts --readme none --name readme.md --plugin typedoc-plugin-markdown --namedAnchors"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mbecker20/kbinUI.git"

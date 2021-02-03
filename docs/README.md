@@ -1,57 +1,63 @@
-kbin-ui / [Exports](modules.md)
+readme.md
 
-# kbin-ui
+# readme.md
 
 ## Table of contents
 
 ### Variables
 
-- [colors](modules.md#colors)
-- [scrollbarJSS](modules.md#scrollbarjss)
-- [sizes](modules.md#sizes)
-- [springConfig](modules.md#springconfig)
-- [zIndex](modules.md#zindex)
+- [colors](README.md#colors)
+- [scrollbarJSS](README.md#scrollbarjss)
+- [sizes](README.md#sizes)
+- [springConfig](README.md#springconfig)
+- [zIndex](README.md#zindex)
 
 ### Functions
 
-- [AnimatedFlexCol](modules.md#animatedflexcol)
-- [AnimatedFlexRow](modules.md#animatedflexrow)
-- [AnimatedText](modules.md#animatedtext)
-- [AutoPlacingGrid](modules.md#autoplacinggrid)
-- [Button](modules.md#button)
-- [CenterMenu](modules.md#centermenu)
-- [CheckBox](modules.md#checkbox)
-- [Conditional](modules.md#conditional)
-- [ContextMenu](modules.md#contextmenu)
-- [ContextMenuExtension](modules.md#contextmenuextension)
-- [DualButtons](modules.md#dualbuttons)
-- [FlexCol](modules.md#flexcol)
-- [FlexRow](modules.md#flexrow)
-- [HorizontalButtonScroller](modules.md#horizontalbuttonscroller)
-- [HorizontalScroller](modules.md#horizontalscroller)
-- [IfElse](modules.md#ifelse)
-- [LabelledItems](modules.md#labelleditems)
-- [LabelledMultiText](modules.md#labelledmultitext)
-- [LabelledText](modules.md#labelledtext)
-- [Map](modules.md#map)
-- [Notification](modules.md#notification)
-- [SVGIcon](modules.md#svgicon)
-- [Switch](modules.md#switch)
-- [Text](modules.md#text)
-- [TextArea](modules.md#textarea)
-- [TextAreaOnly](modules.md#textareaonly)
-- [TextInput](modules.md#textinput)
-- [TextInputOnly](modules.md#textinputonly)
-- [UncontrolledCheckBox](modules.md#uncontrolledcheckbox)
-- [UncontrolledDualButtons](modules.md#uncontrolleddualbuttons)
-- [createMenuManager](modules.md#createmenumanager)
-- [setCustomColors](modules.md#setcustomcolors)
-- [setCustomScrollbarJSS](modules.md#setcustomscrollbarjss)
-- [setCustomSizes](modules.md#setcustomsizes)
-- [setCustomSpringConfig](modules.md#setcustomspringconfig)
-- [setCustomZIndices](modules.md#setcustomzindices)
-- [useContextMenu](modules.md#usecontextmenu)
-- [useScrollbarJSS](modules.md#usescrollbarjss)
+- [AnimatedFlexCol](README.md#animatedflexcol)
+- [AnimatedFlexRow](README.md#animatedflexrow)
+- [AnimatedText](README.md#animatedtext)
+- [AutoPlacingGrid](README.md#autoplacinggrid)
+- [Button](README.md#button)
+- [CenterMenu](README.md#centermenu)
+- [CheckBox](README.md#checkbox)
+- [Conditional](README.md#conditional)
+- [ContextMenu](README.md#contextmenu)
+- [ContextMenuExtension](README.md#contextmenuextension)
+- [DualButtons](README.md#dualbuttons)
+- [FlexCol](README.md#flexcol)
+- [FlexRow](README.md#flexrow)
+- [HorizontalButtonScroller](README.md#horizontalbuttonscroller)
+- [HorizontalScroller](README.md#horizontalscroller)
+- [IfElse](README.md#ifelse)
+- [LabelledItems](README.md#labelleditems)
+- [LabelledMultiText](README.md#labelledmultitext)
+- [LabelledText](README.md#labelledtext)
+- [Map](README.md#map)
+- [NavBar](README.md#navbar)
+- [NavBarItem](README.md#navbaritem)
+- [Notification](README.md#notification)
+- [SVGIcon](README.md#svgicon)
+- [Switch](README.md#switch)
+- [Text](README.md#text)
+- [TextArea](README.md#textarea)
+- [TextAreaOnly](README.md#textareaonly)
+- [TextInput](README.md#textinput)
+- [TextInputOnly](README.md#textinputonly)
+- [UncontrolledCheckBox](README.md#uncontrolledcheckbox)
+- [UncontrolledDualButtons](README.md#uncontrolleddualbuttons)
+- [createMenuManager](README.md#createmenumanager)
+- [setCustomColors](README.md#setcustomcolors)
+- [setCustomScrollbarJSS](README.md#setcustomscrollbarjss)
+- [setCustomSizes](README.md#setcustomsizes)
+- [setCustomSpringConfig](README.md#setcustomspringconfig)
+- [setCustomZIndices](README.md#setcustomzindices)
+- [useContextMenu](README.md#usecontextmenu)
+- [useDisableBodyScroll](README.md#usedisablebodyscroll)
+- [useEscapeToClose](README.md#useescapetoclose)
+- [useListener](README.md#uselistener)
+- [useLocalStorage](README.md#uselocalstorage)
+- [useScrollbarJSS](README.md#usescrollbarjss)
 
 ## Variables
 
@@ -80,11 +86,14 @@ Name | Type |
 `notificationFailure` | *string* |
 `notificationSuccess` | *string* |
 `redButton` | *string* |
+`scrollbarBackground` | *string* |
+`scrollbarThumb` | *string* |
+`selectedText` | *string* |
 `text` | *string* |
 `unfocussedInput` | *string* |
 `unfocussedInputLabel` | *string* |
 
-Defined in: [theme.ts:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L3)
+Defined in: [theme.ts:3](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L3)
 
 ___
 
@@ -96,11 +105,11 @@ ___
 
 Name | Type |
 ------ | ------ |
-`none` | { `&::-webkit-scrollbar`: { `width`: *string* = '0px' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* = '#0a2154'; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string* = '#2323246f' } ; `scrollbarColor`: *string* = '#0a2154'; `scrollbarWidth`: *string* = 'none' } |
-`regular` | { `&::-webkit-scrollbar`: { `width`: *string* = '.8em' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* = '#0a2154'; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string* = '#2323246f' } ; `scrollbarColor`: *string* = '#0a2154'; `scrollbarWidth`: *string* = 'auto' } |
-`thin` | { `&::-webkit-scrollbar`: { `width`: *string* = '.5em' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* = '#0a2154'; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string* = '#2323246f' } ; `scrollbarColor`: *string* = '#0a2154'; `scrollbarWidth`: *string* = 'thin' } |
+`none` | { `&::-webkit-scrollbar`: { `width`: *string* = '0px' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* ; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string*  } ; `scrollbarColor`: *string* ; `scrollbarWidth`: *string* = 'none' } |
+`regular` | { `&::-webkit-scrollbar`: { `width`: *string* = '.8em' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* ; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string*  } ; `scrollbarColor`: *string* ; `scrollbarWidth`: *string* = 'auto' } |
+`thin` | { `&::-webkit-scrollbar`: { `width`: *string* = '.5em' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* ; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string*  } ; `scrollbarColor`: *string* ; `scrollbarWidth`: *string* = 'thin' } |
 
-Defined in: [theme.ts:142](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L142)
+Defined in: [theme.ts:146](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L146)
 
 ___
 
@@ -119,7 +128,7 @@ Name | Type |
 `switch` | { `diameter`: *number* = 3 } |
 `text` | { `large`: *string* = 'calc(25px + 2.8vmin)'; `medium`: *string* = 'calc(18px + 1.8vmin)'; `small`: *string* = 'calc(12px + 1.2vmin)'; `xsmall`: *string* = 'calc(8px + 1vmin)'; `xxsmall`: *string* = 'calc(7px + .8vmin)' } |
 
-Defined in: [theme.ts:36](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L36)
+Defined in: [theme.ts:40](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L40)
 
 ___
 
@@ -135,7 +144,7 @@ Name | Type |
 `medium` | { `friction`: *number* = 40; `tension`: *number* = 330; `velocity`: *number* = 5 } |
 `xslow` | { `clamp`: *boolean* = true; `friction`: *number* = 20; `mass`: *number* = 50; `tension`: *number* = 100 } |
 
-Defined in: [theme.ts:106](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L106)
+Defined in: [theme.ts:110](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L110)
 
 ___
 
@@ -151,7 +160,7 @@ Name | Type |
 `contextMenu` | *number* |
 `notification` | *number* |
 
-Defined in: [theme.ts:96](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L96)
+Defined in: [theme.ts:100](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L100)
 
 ## Functions
 
@@ -189,7 +198,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexCol.tsx:58](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexCol.tsx#L58)
+Defined in: [Flex/FlexCol.tsx:58](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Flex/FlexCol.tsx#L58)
 
 ___
 
@@ -226,13 +235,13 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexRow.tsx:54](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexRow.tsx#L54)
+Defined in: [Flex/FlexRow.tsx:54](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Flex/FlexRow.tsx#L54)
 
 ___
 
 ### AnimatedText
 
-▸ `Const`**AnimatedText**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
+▸ `Const`**AnimatedText**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `underline?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
 
 #### Parameters:
 
@@ -252,13 +261,14 @@ Name | Type |
 `text` | *string* |
 `textAlign?` | *string* |
 `textCursor?` | *boolean* |
+`underline?` | *boolean* |
 `wrap?` | *boolean* |
 
 • **ref**: *ForwardedRef*<HTMLDivElement\>
 
 **Returns:** *Element*
 
-Defined in: [Text/Text.tsx:40](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Text/Text.tsx#L40)
+Defined in: [Text/Text.tsx:42](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Text/Text.tsx#L42)
 
 ___
 
@@ -287,7 +297,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [AutoPlacingGrid/AutoPlacingGrid.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/AutoPlacingGrid/AutoPlacingGrid.tsx#L5)
+Defined in: [AutoPlacingGrid/AutoPlacingGrid.tsx:5](https://github.com/mbecker20/kbinUI/blob/8d45585/src/AutoPlacingGrid/AutoPlacingGrid.tsx#L5)
 
 ___
 
@@ -320,7 +330,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Button/Button.tsx:6](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Button/Button.tsx#L6)
+Defined in: [Button/Button.tsx:6](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Button/Button.tsx#L6)
 
 ___
 
@@ -346,7 +356,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [CenterMenu/CenterMenu.tsx:11](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/CenterMenu/CenterMenu.tsx#L11)
+Defined in: [CenterMenu/CenterMenu.tsx:11](https://github.com/mbecker20/kbinUI/blob/8d45585/src/CenterMenu/CenterMenu.tsx#L11)
 
 ___
 
@@ -366,7 +376,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [CheckBox/CheckBox.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/CheckBox/CheckBox.tsx#L5)
+Defined in: [CheckBox/CheckBox.tsx:5](https://github.com/mbecker20/kbinUI/blob/8d45585/src/CheckBox/CheckBox.tsx#L5)
 
 ___
 
@@ -385,7 +395,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Conditional.tsx:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Conditional.tsx#L3)
+Defined in: [Conditional.tsx:3](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Conditional.tsx#L3)
 
 ___
 
@@ -408,7 +418,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [ContextMenu/ContextMenu.tsx:7](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/ContextMenu/ContextMenu.tsx#L7)
+Defined in: [ContextMenu/ContextMenu.tsx:7](https://github.com/mbecker20/kbinUI/blob/8d45585/src/ContextMenu/ContextMenu.tsx#L7)
 
 ___
 
@@ -429,7 +439,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [ContextMenuExtension/ExtensionMenu.tsx:10](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/ContextMenuExtension/ExtensionMenu.tsx#L10)
+Defined in: [ContextMenuExtension/ExtensionMenu.tsx:10](https://github.com/mbecker20/kbinUI/blob/8d45585/src/ContextMenuExtension/ExtensionMenu.tsx#L10)
 
 ___
 
@@ -451,7 +461,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [DualButtons/DualButtons.tsx:4](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/DualButtons/DualButtons.tsx#L4)
+Defined in: [DualButtons/DualButtons.tsx:4](https://github.com/mbecker20/kbinUI/blob/8d45585/src/DualButtons/DualButtons.tsx#L4)
 
 ___
 
@@ -489,7 +499,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexCol.tsx:56](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexCol.tsx#L56)
+Defined in: [Flex/FlexCol.tsx:56](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Flex/FlexCol.tsx#L56)
 
 ___
 
@@ -526,7 +536,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexRow.tsx:52](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexRow.tsx#L52)
+Defined in: [Flex/FlexRow.tsx:52](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Flex/FlexRow.tsx#L52)
 
 ___
 
@@ -552,7 +562,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [HorizontalButtonScroller.tsx:10](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/HorizontalButtonScroller.tsx#L10)
+Defined in: [HorizontalButtonScroller.tsx:10](https://github.com/mbecker20/kbinUI/blob/8d45585/src/HorizontalButtonScroller.tsx#L10)
 
 ___
 
@@ -575,7 +585,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [HorizontalScroller/HorizontalScroller.tsx:13](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/HorizontalScroller/HorizontalScroller.tsx#L13)
+Defined in: [HorizontalScroller/HorizontalScroller.tsx:13](https://github.com/mbecker20/kbinUI/blob/8d45585/src/HorizontalScroller/HorizontalScroller.tsx#L13)
 
 ___
 
@@ -595,7 +605,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [IfElse.tsx:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/IfElse.tsx#L3)
+Defined in: [IfElse.tsx:3](https://github.com/mbecker20/kbinUI/blob/8d45585/src/IfElse.tsx#L3)
 
 ___
 
@@ -618,7 +628,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [LabelledItems/LabelledItems.tsx:9](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/LabelledItems/LabelledItems.tsx#L9)
+Defined in: [LabelledItems/LabelledItems.tsx:9](https://github.com/mbecker20/kbinUI/blob/8d45585/src/LabelledItems/LabelledItems.tsx#L9)
 
 ___
 
@@ -642,7 +652,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [LabelledText/LabelledMultiText.tsx:8](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/LabelledText/LabelledMultiText.tsx#L8)
+Defined in: [LabelledText/LabelledMultiText.tsx:8](https://github.com/mbecker20/kbinUI/blob/8d45585/src/LabelledText/LabelledMultiText.tsx#L8)
 
 ___
 
@@ -666,7 +676,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [LabelledText/LabelledText.tsx:8](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/LabelledText/LabelledText.tsx#L8)
+Defined in: [LabelledText/LabelledText.tsx:8](https://github.com/mbecker20/kbinUI/blob/8d45585/src/LabelledText/LabelledText.tsx#L8)
 
 ___
 
@@ -691,7 +701,64 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Map.tsx:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Map.tsx#L3)
+Defined in: [Map.tsx:3](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Map.tsx#L3)
+
+___
+
+### NavBar
+
+▸ **NavBar**(`__namedParameters`: { `initOpen?`: *boolean* ; `localStorage?`: *boolean* ; `menuIconSrc`: *string* ; `onRouteClick`: (`route`: *string*) => *void* ; `onTitleClick?`: () => *void* ; `routes`: { [route: string]: *string*;  } ; `storageKey?`: *string* ; `titleIconHeight?`: *string* ; `titleIconSrc`: *string* ; `titleIconStyle?`: CSS.Properties ; `titleIconWidth?`: *string*  }): *Element*
+
+routes is an object with keys set as the routes and entries as urls to the image src for the route icon
+also needs the app logo src url and menu icon src url
+
+#### Parameters:
+
+• **__namedParameters**: *object*
+
+Name | Type |
+------ | ------ |
+`initOpen?` | *boolean* |
+`localStorage?` | *boolean* |
+`menuIconSrc` | *string* |
+`onRouteClick` | (`route`: *string*) => *void* |
+`onTitleClick?` | () => *void* |
+`routes` | { [route: string]: *string*;  } |
+`storageKey?` | *string* |
+`titleIconHeight?` | *string* |
+`titleIconSrc` | *string* |
+`titleIconStyle?` | CSS.Properties |
+`titleIconWidth?` | *string* |
+
+**Returns:** *Element*
+
+Defined in: [NavBar/NavBar.tsx:16](https://github.com/mbecker20/kbinUI/blob/8d45585/src/NavBar/NavBar.tsx#L16)
+
+___
+
+### NavBarItem
+
+▸ **NavBarItem**(`__namedParameters`: { `iconHeight?`: *string* ; `iconSRC`: *string* ; `iconSize?`: *string* ; `iconWidth?`: *string* ; `onClick?`: () => *void* ; `open`: *boolean* ; `selected?`: *boolean* ; `text`: *string* ; `textSize?`: *string*  }): *Element*
+
+#### Parameters:
+
+• **__namedParameters**: *object*
+
+Name | Type |
+------ | ------ |
+`iconHeight?` | *string* |
+`iconSRC` | *string* |
+`iconSize?` | *string* |
+`iconWidth?` | *string* |
+`onClick?` | () => *void* |
+`open` | *boolean* |
+`selected?` | *boolean* |
+`text` | *string* |
+`textSize?` | *string* |
+
+**Returns:** *Element*
+
+Defined in: [NavBar/NavBarItem.tsx:6](https://github.com/mbecker20/kbinUI/blob/8d45585/src/NavBar/NavBarItem.tsx#L6)
 
 ___
 
@@ -710,7 +777,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Notification/Notification.tsx:16](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Notification/Notification.tsx#L16)
+Defined in: [Notification/Notification.tsx:16](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Notification/Notification.tsx#L16)
 
 ___
 
@@ -741,7 +808,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [SVGIcon/SVGIcon.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/SVGIcon/SVGIcon.tsx#L5)
+Defined in: [SVGIcon/SVGIcon.tsx:5](https://github.com/mbecker20/kbinUI/blob/8d45585/src/SVGIcon/SVGIcon.tsx#L5)
 
 ___
 
@@ -763,13 +830,13 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Switch/Switch.tsx:19](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Switch/Switch.tsx#L19)
+Defined in: [Switch/Switch.tsx:19](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Switch/Switch.tsx#L19)
 
 ___
 
 ### Text
 
-▸ `Const`**Text**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
+▸ `Const`**Text**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `underline?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
 
 #### Parameters:
 
@@ -789,13 +856,14 @@ Name | Type |
 `text` | *string* |
 `textAlign?` | *string* |
 `textCursor?` | *boolean* |
+`underline?` | *boolean* |
 `wrap?` | *boolean* |
 
 • **ref**: *ForwardedRef*<HTMLDivElement\>
 
 **Returns:** *Element*
 
-Defined in: [Text/Text.tsx:38](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Text/Text.tsx#L38)
+Defined in: [Text/Text.tsx:40](https://github.com/mbecker20/kbinUI/blob/8d45585/src/Text/Text.tsx#L40)
 
 ___
 
@@ -831,7 +899,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextArea/TextArea.tsx:11](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextArea/TextArea.tsx#L11)
+Defined in: [TextArea/TextArea.tsx:11](https://github.com/mbecker20/kbinUI/blob/8d45585/src/TextArea/TextArea.tsx#L11)
 
 ___
 
@@ -862,7 +930,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextArea/TextAreaOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextArea/TextAreaOnly.tsx#L5)
+Defined in: [TextArea/TextAreaOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/8d45585/src/TextArea/TextAreaOnly.tsx#L5)
 
 ___
 
@@ -899,7 +967,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextInput/TextInput.tsx:11](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextInput/TextInput.tsx#L11)
+Defined in: [TextInput/TextInput.tsx:11](https://github.com/mbecker20/kbinUI/blob/8d45585/src/TextInput/TextInput.tsx#L11)
 
 ___
 
@@ -931,7 +999,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextInput/TextInputOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextInput/TextInputOnly.tsx#L5)
+Defined in: [TextInput/TextInputOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/8d45585/src/TextInput/TextInputOnly.tsx#L5)
 
 ___
 
@@ -952,7 +1020,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [CheckBox/UncontrolledCheckBox.tsx:7](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/CheckBox/UncontrolledCheckBox.tsx#L7)
+Defined in: [CheckBox/UncontrolledCheckBox.tsx:7](https://github.com/mbecker20/kbinUI/blob/8d45585/src/CheckBox/UncontrolledCheckBox.tsx#L7)
 
 ___
 
@@ -975,7 +1043,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [DualButtons/UncontrolledDualButtons.tsx:9](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/DualButtons/UncontrolledDualButtons.tsx#L9)
+Defined in: [DualButtons/UncontrolledDualButtons.tsx:9](https://github.com/mbecker20/kbinUI/blob/8d45585/src/DualButtons/UncontrolledDualButtons.tsx#L9)
 
 ___
 
@@ -993,23 +1061,23 @@ Name | Type |
 `mmQueueMenu` | (`name`: *string*, ...`args`: *any*) => *void* |
 `useCenterMenu` | (`name`: *string*, `onOpen?`: OpenMenu, `save`: *boolean*, `onClose?`: () => *void*) => { `closeMenu`: () => *void* ; `cmControlData`: *boolean* ; `softClose`: () => *void*  } |
 
-Defined in: [menuManager/menuManager.ts:4](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/menuManager/menuManager.ts#L4)
+Defined in: [menuManager/menuManager.ts:4](https://github.com/mbecker20/kbinUI/blob/8d45585/src/menuManager/menuManager.ts#L4)
 
 ___
 
 ### setCustomColors
 
-▸ **setCustomColors**(`customColors`: *Partial*<*typeof* [*colors*](modules.md#colors)\>): *void*
+▸ **setCustomColors**(`customColors`: *Partial*<*typeof* [*colors*](README.md#colors)\>): *void*
 
 #### Parameters:
 
 Name | Type |
 ------ | ------ |
-`customColors` | *Partial*<*typeof* [*colors*](modules.md#colors)\> |
+`customColors` | *Partial*<*typeof* [*colors*](README.md#colors)\> |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:32](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L32)
+Defined in: [theme.ts:36](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L36)
 
 ___
 
@@ -1025,7 +1093,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:193](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L193)
+Defined in: [theme.ts:197](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L197)
 
 ___
 
@@ -1041,7 +1109,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:75](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L75)
+Defined in: [theme.ts:79](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L79)
 
 ___
 
@@ -1057,23 +1125,23 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:130](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L130)
+Defined in: [theme.ts:134](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L134)
 
 ___
 
 ### setCustomZIndices
 
-▸ **setCustomZIndices**(`customZIndices`: *Partial*<*typeof* [*zIndex*](modules.md#zindex)\>): *void*
+▸ **setCustomZIndices**(`customZIndices`: *Partial*<*typeof* [*zIndex*](README.md#zindex)\>): *void*
 
 #### Parameters:
 
 Name | Type |
 ------ | ------ |
-`customZIndices` | *Partial*<*typeof* [*zIndex*](modules.md#zindex)\> |
+`customZIndices` | *Partial*<*typeof* [*zIndex*](README.md#zindex)\> |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:102](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L102)
+Defined in: [theme.ts:106](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L106)
 
 ___
 
@@ -1095,7 +1163,81 @@ Name | Type |
 
 **Returns:** *Return*<Data\>
 
-Defined in: [ContextMenu/hooks.ts:14](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/ContextMenu/hooks.ts#L14)
+Defined in: [hooks.ts:41](https://github.com/mbecker20/kbinUI/blob/8d45585/src/hooks.ts#L41)
+
+___
+
+### useDisableBodyScroll
+
+▸ **useDisableBodyScroll**(): *void*
+
+**Returns:** *void*
+
+Defined in: [hooks.ts:21](https://github.com/mbecker20/kbinUI/blob/8d45585/src/hooks.ts#L21)
+
+___
+
+### useEscapeToClose
+
+▸ **useEscapeToClose**(`closeMenu`: () => *void*, `dependencies?`: *any*[]): *void*
+
+#### Parameters:
+
+Name | Type | Default value |
+------ | ------ | ------ |
+`closeMenu` | () => *void* | - |
+`dependencies` | *any*[] | ... |
+
+**Returns:** *void*
+
+Defined in: [hooks.ts:13](https://github.com/mbecker20/kbinUI/blob/8d45585/src/hooks.ts#L13)
+
+___
+
+### useListener
+
+▸ **useListener**<Event\>(`listenerID`: *string*, `listener`: (`e`: Event) => *void*, `dependencies?`: *any*[]): *void*
+
+#### Type parameters:
+
+Name |
+------ |
+`Event` |
+
+#### Parameters:
+
+Name | Type | Default value |
+------ | ------ | ------ |
+`listenerID` | *string* | - |
+`listener` | (`e`: Event) => *void* | - |
+`dependencies` | *any*[] | ... |
+
+**Returns:** *void*
+
+Defined in: [hooks.ts:4](https://github.com/mbecker20/kbinUI/blob/8d45585/src/hooks.ts#L4)
+
+___
+
+### useLocalStorage
+
+▸ **useLocalStorage**<T\>(`defaultStore`: T, `key`: *string*): [T, (`arg`: T) => *void*]
+
+#### Type parameters:
+
+Name |
+------ |
+`T` |
+
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`defaultStore` | T |
+`key` | *string* |
+
+**Returns:** [T, (`arg`: T) => *void*]
+
+Defined in: [hooks.ts:77](https://github.com/mbecker20/kbinUI/blob/8d45585/src/hooks.ts#L77)
 
 ___
 
@@ -1111,4 +1253,4 @@ Name | Type |
 
 **Returns:** *Record*<*Scroller*, *string*\>
 
-Defined in: [theme.ts:205](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L205)
+Defined in: [theme.ts:209](https://github.com/mbecker20/kbinUI/blob/8d45585/src/theme.ts#L209)
