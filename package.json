@@ -1,13 +1,13 @@
 {
   "name": "kbin-ui",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "collection of react ui components",
   "main": "build/index.js",
   "scripts": {
     "publish-package": "tsc && npm publish",
     "build": "tsc",
     "gen-docs": "typedoc src/index.ts --readme none --name readme.md --plugin typedoc-plugin-markdown --namedAnchors"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mbecker20/kbinUI.git"
