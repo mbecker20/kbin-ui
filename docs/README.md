@@ -1,55 +1,57 @@
+kbin-ui / [Exports](modules.md)
+
 # kbin-ui
 
 ## Table of contents
 
 ### Variables
 
-- [colors](#colors)
-- [scrollbarJSS](#scrollbarjss)
-- [sizes](#sizes)
-- [springConfig](#springconfig)
-- [zIndex](#zindex)
+- [colors](modules.md#colors)
+- [scrollbarJSS](modules.md#scrollbarjss)
+- [sizes](modules.md#sizes)
+- [springConfig](modules.md#springconfig)
+- [zIndex](modules.md#zindex)
 
 ### Functions
 
-- [AnimatedFlexCol](#animatedflexcol)
-- [AnimatedFlexRow](#animatedflexrow)
-- [AnimatedText](#animatedtext)
-- [AutoPlacingGrid](#autoplacinggrid)
-- [Button](#button)
-- [CenterMenu](#centermenu)
-- [CheckBox](#checkbox)
-- [Conditional](#conditional)
-- [ContextMenu](#contextmenu)
-- [ContextMenuExtension](#contextmenuextension)
-- [DualButtons](#dualbuttons)
-- [FlexCol](#flexcol)
-- [FlexRow](#flexrow)
-- [HorizontalButtonScroller](#horizontalbuttonscroller)
-- [HorizontalScroller](#horizontalscroller)
-- [IfElse](#ifelse)
-- [LabelledItems](#labelleditems)
-- [LabelledMultiText](#labelledmultitext)
-- [LabelledText](#labelledtext)
-- [Map](#map)
-- [Notification](#notification)
-- [SVGIcon](#svgicon)
-- [Switch](#switch)
-- [Text](#text)
-- [TextArea](#textarea)
-- [TextAreaOnly](#textareaonly)
-- [TextInput](#textinput)
-- [TextInputOnly](#textinputonly)
-- [UncontrolledCheckBox](#uncontrolledcheckbox)
-- [UncontrolledDualButtons](#uncontrolleddualbuttons)
-- [createMenuManager](#createmenumanager)
-- [setCustomColors](#setcustomcolors)
-- [setCustomScrollbarJSS](#setcustomscrollbarjss)
-- [setCustomSizes](#setcustomsizes)
-- [setCustomSpringConfig](#setcustomspringconfig)
-- [setCustomZIndices](#setcustomzindices)
-- [useContextMenu](#usecontextmenu)
-- [useScrollbarJSS](#usescrollbarjss)
+- [AnimatedFlexCol](modules.md#animatedflexcol)
+- [AnimatedFlexRow](modules.md#animatedflexrow)
+- [AnimatedText](modules.md#animatedtext)
+- [AutoPlacingGrid](modules.md#autoplacinggrid)
+- [Button](modules.md#button)
+- [CenterMenu](modules.md#centermenu)
+- [CheckBox](modules.md#checkbox)
+- [Conditional](modules.md#conditional)
+- [ContextMenu](modules.md#contextmenu)
+- [ContextMenuExtension](modules.md#contextmenuextension)
+- [DualButtons](modules.md#dualbuttons)
+- [FlexCol](modules.md#flexcol)
+- [FlexRow](modules.md#flexrow)
+- [HorizontalButtonScroller](modules.md#horizontalbuttonscroller)
+- [HorizontalScroller](modules.md#horizontalscroller)
+- [IfElse](modules.md#ifelse)
+- [LabelledItems](modules.md#labelleditems)
+- [LabelledMultiText](modules.md#labelledmultitext)
+- [LabelledText](modules.md#labelledtext)
+- [Map](modules.md#map)
+- [Notification](modules.md#notification)
+- [SVGIcon](modules.md#svgicon)
+- [Switch](modules.md#switch)
+- [Text](modules.md#text)
+- [TextArea](modules.md#textarea)
+- [TextAreaOnly](modules.md#textareaonly)
+- [TextInput](modules.md#textinput)
+- [TextInputOnly](modules.md#textinputonly)
+- [UncontrolledCheckBox](modules.md#uncontrolledcheckbox)
+- [UncontrolledDualButtons](modules.md#uncontrolleddualbuttons)
+- [createMenuManager](modules.md#createmenumanager)
+- [setCustomColors](modules.md#setcustomcolors)
+- [setCustomScrollbarJSS](modules.md#setcustomscrollbarjss)
+- [setCustomSizes](modules.md#setcustomsizes)
+- [setCustomSpringConfig](modules.md#setcustomspringconfig)
+- [setCustomZIndices](modules.md#setcustomzindices)
+- [useContextMenu](modules.md#usecontextmenu)
+- [useScrollbarJSS](modules.md#usescrollbarjss)
 
 ## Variables
 
@@ -82,7 +84,7 @@ Name | Type |
 `unfocussedInput` | *string* |
 `unfocussedInputLabel` | *string* |
 
-Defined in: [theme.ts:3](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L3)
+Defined in: [theme.ts:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L3)
 
 ___
 
@@ -98,7 +100,7 @@ Name | Type |
 `regular` | { `&::-webkit-scrollbar`: { `width`: *string* = '.8em' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* = '#0a2154'; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string* = '#2323246f' } ; `scrollbarColor`: *string* = '#0a2154'; `scrollbarWidth`: *string* = 'auto' } |
 `thin` | { `&::-webkit-scrollbar`: { `width`: *string* = '.5em' } ; `&::-webkit-scrollbar-thumb`: { `background`: *string* = '#0a2154'; `borderRadius`: *string* = '1.5em' } ; `&::-webkit-scrollbar-track`: { `background`: *string* = '#2323246f' } ; `scrollbarColor`: *string* = '#0a2154'; `scrollbarWidth`: *string* = 'thin' } |
 
-Defined in: [theme.ts:142](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L142)
+Defined in: [theme.ts:142](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L142)
 
 ___
 
@@ -117,7 +119,7 @@ Name | Type |
 `switch` | { `diameter`: *number* = 3 } |
 `text` | { `large`: *string* = 'calc(25px + 2.8vmin)'; `medium`: *string* = 'calc(18px + 1.8vmin)'; `small`: *string* = 'calc(12px + 1.2vmin)'; `xsmall`: *string* = 'calc(8px + 1vmin)'; `xxsmall`: *string* = 'calc(7px + .8vmin)' } |
 
-Defined in: [theme.ts:36](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L36)
+Defined in: [theme.ts:36](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L36)
 
 ___
 
@@ -133,7 +135,7 @@ Name | Type |
 `medium` | { `friction`: *number* = 40; `tension`: *number* = 330; `velocity`: *number* = 5 } |
 `xslow` | { `clamp`: *boolean* = true; `friction`: *number* = 20; `mass`: *number* = 50; `tension`: *number* = 100 } |
 
-Defined in: [theme.ts:106](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L106)
+Defined in: [theme.ts:106](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L106)
 
 ___
 
@@ -149,7 +151,7 @@ Name | Type |
 `contextMenu` | *number* |
 `notification` | *number* |
 
-Defined in: [theme.ts:96](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L96)
+Defined in: [theme.ts:96](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L96)
 
 ## Functions
 
@@ -187,7 +189,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexCol.tsx:58](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Flex/FlexCol.tsx#L58)
+Defined in: [Flex/FlexCol.tsx:58](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexCol.tsx#L58)
 
 ___
 
@@ -224,7 +226,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexRow.tsx:54](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Flex/FlexRow.tsx#L54)
+Defined in: [Flex/FlexRow.tsx:54](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexRow.tsx#L54)
 
 ___
 
@@ -256,7 +258,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Text/Text.tsx:40](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Text/Text.tsx#L40)
+Defined in: [Text/Text.tsx:40](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Text/Text.tsx#L40)
 
 ___
 
@@ -285,7 +287,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [AutoPlacingGrid/AutoPlacingGrid.tsx:5](https://github.com/mbecker20/kbinUI/blob/80cd214/src/AutoPlacingGrid/AutoPlacingGrid.tsx#L5)
+Defined in: [AutoPlacingGrid/AutoPlacingGrid.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/AutoPlacingGrid/AutoPlacingGrid.tsx#L5)
 
 ___
 
@@ -318,7 +320,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Button/Button.tsx:6](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Button/Button.tsx#L6)
+Defined in: [Button/Button.tsx:6](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Button/Button.tsx#L6)
 
 ___
 
@@ -344,7 +346,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [CenterMenu/CenterMenu.tsx:11](https://github.com/mbecker20/kbinUI/blob/80cd214/src/CenterMenu/CenterMenu.tsx#L11)
+Defined in: [CenterMenu/CenterMenu.tsx:11](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/CenterMenu/CenterMenu.tsx#L11)
 
 ___
 
@@ -364,7 +366,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [CheckBox/CheckBox.tsx:5](https://github.com/mbecker20/kbinUI/blob/80cd214/src/CheckBox/CheckBox.tsx#L5)
+Defined in: [CheckBox/CheckBox.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/CheckBox/CheckBox.tsx#L5)
 
 ___
 
@@ -383,7 +385,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Conditional.tsx:3](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Conditional.tsx#L3)
+Defined in: [Conditional.tsx:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Conditional.tsx#L3)
 
 ___
 
@@ -406,7 +408,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [ContextMenu/ContextMenu.tsx:7](https://github.com/mbecker20/kbinUI/blob/80cd214/src/ContextMenu/ContextMenu.tsx#L7)
+Defined in: [ContextMenu/ContextMenu.tsx:7](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/ContextMenu/ContextMenu.tsx#L7)
 
 ___
 
@@ -427,7 +429,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [ContextMenuExtension/ExtensionMenu.tsx:10](https://github.com/mbecker20/kbinUI/blob/80cd214/src/ContextMenuExtension/ExtensionMenu.tsx#L10)
+Defined in: [ContextMenuExtension/ExtensionMenu.tsx:10](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/ContextMenuExtension/ExtensionMenu.tsx#L10)
 
 ___
 
@@ -449,7 +451,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [DualButtons/DualButtons.tsx:4](https://github.com/mbecker20/kbinUI/blob/80cd214/src/DualButtons/DualButtons.tsx#L4)
+Defined in: [DualButtons/DualButtons.tsx:4](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/DualButtons/DualButtons.tsx#L4)
 
 ___
 
@@ -487,7 +489,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexCol.tsx:56](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Flex/FlexCol.tsx#L56)
+Defined in: [Flex/FlexCol.tsx:56](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexCol.tsx#L56)
 
 ___
 
@@ -524,7 +526,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Flex/FlexRow.tsx:52](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Flex/FlexRow.tsx#L52)
+Defined in: [Flex/FlexRow.tsx:52](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Flex/FlexRow.tsx#L52)
 
 ___
 
@@ -550,7 +552,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [HorizontalButtonScroller.tsx:10](https://github.com/mbecker20/kbinUI/blob/80cd214/src/HorizontalButtonScroller.tsx#L10)
+Defined in: [HorizontalButtonScroller.tsx:10](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/HorizontalButtonScroller.tsx#L10)
 
 ___
 
@@ -573,7 +575,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [HorizontalScroller/HorizontalScroller.tsx:13](https://github.com/mbecker20/kbinUI/blob/80cd214/src/HorizontalScroller/HorizontalScroller.tsx#L13)
+Defined in: [HorizontalScroller/HorizontalScroller.tsx:13](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/HorizontalScroller/HorizontalScroller.tsx#L13)
 
 ___
 
@@ -593,7 +595,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [IfElse.tsx:3](https://github.com/mbecker20/kbinUI/blob/80cd214/src/IfElse.tsx#L3)
+Defined in: [IfElse.tsx:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/IfElse.tsx#L3)
 
 ___
 
@@ -616,7 +618,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [LabelledItems/LabelledItems.tsx:9](https://github.com/mbecker20/kbinUI/blob/80cd214/src/LabelledItems/LabelledItems.tsx#L9)
+Defined in: [LabelledItems/LabelledItems.tsx:9](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/LabelledItems/LabelledItems.tsx#L9)
 
 ___
 
@@ -640,7 +642,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [LabelledText/LabelledMultiText.tsx:8](https://github.com/mbecker20/kbinUI/blob/80cd214/src/LabelledText/LabelledMultiText.tsx#L8)
+Defined in: [LabelledText/LabelledMultiText.tsx:8](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/LabelledText/LabelledMultiText.tsx#L8)
 
 ___
 
@@ -664,7 +666,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [LabelledText/LabelledText.tsx:8](https://github.com/mbecker20/kbinUI/blob/80cd214/src/LabelledText/LabelledText.tsx#L8)
+Defined in: [LabelledText/LabelledText.tsx:8](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/LabelledText/LabelledText.tsx#L8)
 
 ___
 
@@ -689,7 +691,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Map.tsx:3](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Map.tsx#L3)
+Defined in: [Map.tsx:3](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Map.tsx#L3)
 
 ___
 
@@ -708,7 +710,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Notification/Notification.tsx:16](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Notification/Notification.tsx#L16)
+Defined in: [Notification/Notification.tsx:16](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Notification/Notification.tsx#L16)
 
 ___
 
@@ -739,7 +741,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [SVGIcon/SVGIcon.tsx:5](https://github.com/mbecker20/kbinUI/blob/80cd214/src/SVGIcon/SVGIcon.tsx#L5)
+Defined in: [SVGIcon/SVGIcon.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/SVGIcon/SVGIcon.tsx#L5)
 
 ___
 
@@ -761,7 +763,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Switch/Switch.tsx:19](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Switch/Switch.tsx#L19)
+Defined in: [Switch/Switch.tsx:19](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Switch/Switch.tsx#L19)
 
 ___
 
@@ -793,7 +795,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [Text/Text.tsx:38](https://github.com/mbecker20/kbinUI/blob/80cd214/src/Text/Text.tsx#L38)
+Defined in: [Text/Text.tsx:38](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/Text/Text.tsx#L38)
 
 ___
 
@@ -829,7 +831,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextArea/TextArea.tsx:11](https://github.com/mbecker20/kbinUI/blob/80cd214/src/TextArea/TextArea.tsx#L11)
+Defined in: [TextArea/TextArea.tsx:11](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextArea/TextArea.tsx#L11)
 
 ___
 
@@ -860,7 +862,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextArea/TextAreaOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/80cd214/src/TextArea/TextAreaOnly.tsx#L5)
+Defined in: [TextArea/TextAreaOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextArea/TextAreaOnly.tsx#L5)
 
 ___
 
@@ -897,7 +899,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextInput/TextInput.tsx:11](https://github.com/mbecker20/kbinUI/blob/80cd214/src/TextInput/TextInput.tsx#L11)
+Defined in: [TextInput/TextInput.tsx:11](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextInput/TextInput.tsx#L11)
 
 ___
 
@@ -929,7 +931,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [TextInput/TextInputOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/80cd214/src/TextInput/TextInputOnly.tsx#L5)
+Defined in: [TextInput/TextInputOnly.tsx:5](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/TextInput/TextInputOnly.tsx#L5)
 
 ___
 
@@ -950,7 +952,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [CheckBox/UncontrolledCheckBox.tsx:7](https://github.com/mbecker20/kbinUI/blob/80cd214/src/CheckBox/UncontrolledCheckBox.tsx#L7)
+Defined in: [CheckBox/UncontrolledCheckBox.tsx:7](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/CheckBox/UncontrolledCheckBox.tsx#L7)
 
 ___
 
@@ -973,7 +975,7 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [DualButtons/UncontrolledDualButtons.tsx:9](https://github.com/mbecker20/kbinUI/blob/80cd214/src/DualButtons/UncontrolledDualButtons.tsx#L9)
+Defined in: [DualButtons/UncontrolledDualButtons.tsx:9](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/DualButtons/UncontrolledDualButtons.tsx#L9)
 
 ___
 
@@ -991,7 +993,7 @@ Name | Type |
 `mmQueueMenu` | (`name`: *string*, ...`args`: *any*) => *void* |
 `useCenterMenu` | (`name`: *string*, `onOpen?`: OpenMenu, `save`: *boolean*, `onClose?`: () => *void*) => { `closeMenu`: () => *void* ; `cmControlData`: *boolean* ; `softClose`: () => *void*  } |
 
-Defined in: [menuManager/menuManager.ts:4](https://github.com/mbecker20/kbinUI/blob/80cd214/src/menuManager/menuManager.ts#L4)
+Defined in: [menuManager/menuManager.ts:4](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/menuManager/menuManager.ts#L4)
 
 ___
 
@@ -1007,7 +1009,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:32](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L32)
+Defined in: [theme.ts:32](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L32)
 
 ___
 
@@ -1023,7 +1025,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:193](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L193)
+Defined in: [theme.ts:193](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L193)
 
 ___
 
@@ -1039,7 +1041,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:75](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L75)
+Defined in: [theme.ts:75](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L75)
 
 ___
 
@@ -1055,7 +1057,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:130](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L130)
+Defined in: [theme.ts:130](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L130)
 
 ___
 
@@ -1071,7 +1073,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [theme.ts:102](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L102)
+Defined in: [theme.ts:102](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L102)
 
 ___
 
@@ -1093,7 +1095,7 @@ Name | Type |
 
 **Returns:** *Return*<Data\>
 
-Defined in: [ContextMenu/hooks.ts:14](https://github.com/mbecker20/kbinUI/blob/80cd214/src/ContextMenu/hooks.ts#L14)
+Defined in: [ContextMenu/hooks.ts:14](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/ContextMenu/hooks.ts#L14)
 
 ___
 
@@ -1109,4 +1111,4 @@ Name | Type |
 
 **Returns:** *Record*<*Scroller*, *string*\>
 
-Defined in: [theme.ts:205](https://github.com/mbecker20/kbinUI/blob/80cd214/src/theme.ts#L205)
+Defined in: [theme.ts:205](https://github.com/mbecker20/kbinUI/blob/e63cd03/src/theme.ts#L205)
