@@ -90,6 +90,15 @@ ___
 
 • `Const` **scrollbarJSS**: *object*
 
+an object with JSS to set a custom scrollbar in a component
+
+#### Usage:
+
+    const useJSS = createUseStyles({
+      /* style */,
+      ...scrollbarJSS.thin
+    })
+
 #### Type declaration:
 
 Name | Type |
@@ -105,6 +114,12 @@ ___
 ### sizes
 
 • `Const` **sizes**: *object*
+
+a collection of size constants compatible with CSS used across the UI
+
+#### Usage:
+
+    <Button fontSize={sizes.text.small}></Button>
 
 #### Type declaration:
 
@@ -125,6 +140,15 @@ ___
 
 • `Const` **springConfig**: *object*
 
+a collection of default spring configs
+
+#### Usage:
+
+    const springStyle = useSpring({
+      /* animated style */,
+      config: springConfig.fast
+    })
+
 #### Type declaration:
 
 Name | Type |
@@ -141,6 +165,8 @@ ___
 
 • `Const` **zIndex**: *object*
 
+sets the z-index of necessary components
+
 #### Type declaration:
 
 Name | Type |
@@ -156,6 +182,8 @@ Defined in: [theme.ts:96](https://github.com/mbecker20/kbinUI/blob/80cd214/src/t
 ### AnimatedFlexCol
 
 ▸ `Const`**AnimatedFlexCol**(`__namedParameters`: { `alignItems?`: *string* ; `backgroundColor?`: *string* ; `children?`: React.ReactNode ; `className?`: *string* ; `height?`: *string* ; `justifyContent?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onContextMenu?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onDragOver?`: (`e`: *DragEvent*<HTMLDivElement\>) => *void* ; `onDrop?`: (`e`: *DragEvent*<HTMLDivElement\>) => *void* ; `onPointerEnter?`: (`e`: *PointerEvent*<HTMLDivElement\>) => *void* ; `onPointerLeave?`: (`e`: *PointerEvent*<HTMLDivElement\>) => *void* ; `onWheel?`: (`e`: *WheelEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `width?`: *string*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
+
+animated(FlexCol) compatible with springs. see [FlexCol](#flexcol).
 
 #### Parameters:
 
@@ -195,6 +223,8 @@ ___
 
 ▸ `Const`**AnimatedFlexRow**(`__namedParameters`: { `alignItems?`: *string* ; `backgroundColor?`: *string* ; `children?`: React.ReactNode ; `className?`: *string* ; `flexWrap?`: *wrap* \| *nowrap* \| *wrap-reverse* ; `height?`: *string* ; `justifyContent?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onContextMenu?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onPointerEnter?`: (`e`: *PointerEvent*<HTMLDivElement\>) => *void* ; `onPointerLeave?`: (`e`: *PointerEvent*<HTMLDivElement\>) => *void* ; `onWheel?`: (`e`: *WheelEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `width?`: *string*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
 
+animated(FlexRow) compatible with springs. see [FlexRow](#flexrow).
+
 #### Parameters:
 
 • **__namedParameters**: *object*
@@ -232,6 +262,8 @@ ___
 
 ▸ `Const`**AnimatedText**(`__namedParameters`: { `className?`: *string* ; `color?`: *string* ; `fontSize?`: *string* ; `margin?`: *string* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `pointer?`: *boolean* ; `ref?`: *RefObject*<HTMLDivElement\> ; `style?`: CSS.Properties ; `text`: *string* ; `textAlign?`: *string* ; `textCursor?`: *boolean* ; `underline?`: *boolean* ; `wrap?`: *boolean*  }, `ref`: *ForwardedRef*<HTMLDivElement\>): *Element*
 
+animated(Text) compatible with springs. see [Text](#text).
+
 #### Parameters:
 
 • **__namedParameters**: *object*
@@ -265,6 +297,8 @@ ___
 
 ▸ **AutoPlacingGrid**(`__namedParameters`: { `alignItems?`: *start* \| *end* \| *center* \| *stretch* ; `children?`: ReactNode ; `className?`: *string* ; `direction`: *row* \| *column* \| *row dense* \| *column dense* ; `gap?`: *string* ; `justifyContent?`: *start* \| *end* \| *center* \| *stretch* ; `minHeight`: *string* ; `minWidth`: *string* ; `numCols?`: *number* \| *string* ; `numRows?`: *number* \| *string* ; `placeItems?`: *start* \| *end* \| *center* \| *stretch* ; `style?`: CSS.Properties  }): *Element*
 
+a div with css grid and basic auto placing capabilities
+
 #### Parameters:
 
 • **__namedParameters**: *object*
@@ -293,6 +327,8 @@ ___
 ### Button
 
 ▸ **Button**(`__namedParameters`: { `buttonRef?`: *RefObject*<HTMLDivElement\> ; `children?`: React.ReactNode ; `className?`: *string* ; `fontSize?`: *string* ; `isRed?`: *boolean* ; `margin?`: *string* ; `notClickable?`: *boolean* ; `onClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onContextMenu?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onDoubleClick?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onKeyDown?`: (`e`: *KeyboardEvent*<HTMLDivElement\>) => *void* ; `onPointerDown?`: (`e`: *React.PointerEvent*<HTMLDivElement\>) => *void* ; `onPointerEnter?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `onPointerLeave?`: (`e`: *MouseEvent*<HTMLDivElement\>) => *void* ; `padding?`: *string* ; `style?`: CSS.Properties  }): *Element*
+
+a standard button element with onClick + more
 
 #### Parameters:
 
@@ -326,6 +362,36 @@ ___
 ### CenterMenu
 
 ▸ **CenterMenu**(`__namedParameters`: { `bounderStyle?`: CSS.Properties ; `children`: React.ReactNode ; `className?`: *string* ; `cmControlData`: CenterMenuControlData ; `header?`: *string* ; `headerClassName?`: *string* ; `headerStyle?`: CSS.Properties ; `onClose`: () => *void* ; `style?`: CSS.Properties  }): *Element*
+
+a component to create central menu popups. used along with the menuManager and useCenterMenu hook.
+
+### Usage:
+
+First the menu manager must be instantiated. See [createMenuManager](#createmenumanager).
+
+once the useCenterMenu hook is available (probably through export / import), create
+center menus following the two component pattern below
+
+    function ExampleCenterMenu() {
+      const { cmControlData, closeMenu, softClose } = useCenterMenu('exampleMenu')
+      return (
+        <CenterMenu
+          cmControlData={cmControlData}
+          onClose={closeMenu}
+        > 
+          <ExampleMenuItems closeMenu={closeMenu} softClose={softClose}>
+        </CenterMenu>
+      )
+    }
+
+    function ExampleMenuItems({ closeMenu, softClose }) {
+      useEscapeToClose(closeMenu)
+      return (
+        <Fragment>
+          /* menu content */
+        </Fragment>
+      )
+    }
 
 #### Parameters:
 

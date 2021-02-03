@@ -1,4 +1,4 @@
-import { makeUseCenterMenu } from "../CenterMenu/hooks"
+import { makeUseCenterMenu } from "../hooks"
 import { MenuManager, OpenMenu } from "./types"
 
 function createMenuManager() {
