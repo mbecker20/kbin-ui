@@ -9,6 +9,7 @@ export const colors = {
   buttonBorder: 'rgba(.3, .3, .3, .8)',
 
   text: '#bac4ce',
+  selectedText: '#2461e8',
 
   centerMenuBackground: 'rgba(0, 0, 0, .5)', // this covers 100vw 100vh
   centerMenu: '#030917',
@@ -152,7 +153,7 @@ export const scrollbarJSS = {
       borderRadius: '1.5em'
     },
     scrollbarWidth: 'auto',
-    scrollbarColor: '#0a2154',
+    scrollbarColor: '#000000 #0a2154',
   },
   thin: {
     '&::-webkit-scrollbar': {
@@ -166,7 +167,7 @@ export const scrollbarJSS = {
       borderRadius: '1.5em'
     },
     scrollbarWidth: 'thin',
-    scrollbarColor: '#0a2154',
+    scrollbarColor: '#000000 #0a2154',
   },
   none: {
     '&::-webkit-scrollbar': {
@@ -180,7 +181,7 @@ export const scrollbarJSS = {
       borderRadius: '1.5em'
     },
     scrollbarWidth: 'none',
-    scrollbarColor: '#0a2154',
+    scrollbarColor: '#000000 #0a2154',
   }
 }
 
