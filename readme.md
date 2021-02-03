@@ -1,5 +1,3 @@
-[kbin-ui](README.md) / Exports
-
 # kbin-ui
 
 ## Table of contents
