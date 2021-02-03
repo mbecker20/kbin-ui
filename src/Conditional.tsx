@@ -1,11 +1,9 @@
 import React, { Fragment, ReactNode } from 'react'
 
-interface Props {
+function Conditional({ children, showIf }: {
   children: ReactNode
   showIf: boolean
-}
-
-function Conditional({ children, showIf }: Props) {
+}) {
   return (
     <Fragment>
       {!showIf ? null : children}

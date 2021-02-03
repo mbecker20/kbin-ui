@@ -3,14 +3,6 @@ import useJSS from './style'
 import { useSpring, animated } from 'react-spring'
 import { sizes, colors, springConfig } from '../theme'
 
-interface Props {
-  text: string,
-  onSwitch: (newState: boolean) => void,
-  initState: boolean,
-  style?: object,
-  fontSize?: string
-}
-
 const heightDif = 1
 
 const fullWidth = 2 * sizes.switch.diameter
@@ -24,7 +16,13 @@ const rectY = heightDif
 const circleCY = (sizes.switch.diameter + heightDif) / 2
 
 
-function Switch({ text, onSwitch, initState, style, fontSize }: Props) {
+function Switch({ text, onSwitch, initState, style, fontSize }: {
+  text: string,
+  onSwitch: (newState: boolean) => void,
+  initState: boolean,
+  style?: object,
+  fontSize?: string
+}) {
   const [isSwitched, setSwitched] = useState(initState)
   const classes = useJSS({ fontSize })
   const spring = useSpring({

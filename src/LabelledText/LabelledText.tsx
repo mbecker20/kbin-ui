@@ -5,7 +5,7 @@ import Text from '../Text/Text'
 import useJSS from './style'
 import CSS from 'csstype'
 
-interface Props {
+function LabelledText({ label, text, labelSize, textSize, style, textStyle, labelStyle }: {
   label: string
   text: string
   labelSize?: string
@@ -13,9 +13,7 @@ interface Props {
   style?: CSS.Properties
   textStyle?: CSS.Properties
   labelStyle?: CSS.Properties
-}
-
-function LabelledText({ label, text, labelSize, textSize, style, textStyle, labelStyle }: Props) {
+}) {
   const classes = useJSS()
   return (
     <FlexCol className={classes.LabelledText} style={style}>

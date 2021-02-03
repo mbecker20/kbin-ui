@@ -5,16 +5,14 @@ import { getEMLocation } from './helpers'
 import useJSS from './style'
 import CSS from 'csstype'
 
-interface Props {
+const timeout = 1000
+
+function ExtensionMenu({ text, children, buttonStyle, fontSize }: {
   children: ReactNode
   text: string
   buttonStyle?: CSS.Properties
   fontSize?: string
-}
-
-const timeout = 1000
-
-function ExtensionMenu({ text, children, buttonStyle, fontSize }: Props) {
+}) {
   const [isOpen, setOpen] = useState(false)
   const [timeoutID, setTimeoutID] = useState(-1)
   const classes = useJSS()

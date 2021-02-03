@@ -3,15 +3,6 @@ import CSS from 'csstype'
 import FlexRow from '../Flex/FlexRow'
 import useJSS from './style'
 
-interface Props {
-  children: ReactNode
-  className?: string
-  style?: CSS.Properties
-  width?: string
-  height?: string
-  alignItems?: string
-}
-
 const baseStyle = {
   //overflowY: 'hidden',
   overflow: 'auto',
@@ -21,7 +12,14 @@ const baseStyle = {
 
 function HorizontalScroller({ 
   children, className, style, width, height, alignItems
-}: Props) {
+}: {
+  children: ReactNode
+  className?: string
+  style?: CSS.Properties
+  width?: string
+  height?: string
+  alignItems?: string
+}) {
   const { HorizontalScroller } = useJSS()
   const ref = useRef<HTMLDivElement>(null)
   return (

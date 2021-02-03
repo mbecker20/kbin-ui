@@ -8,7 +8,12 @@ import { useSpring } from 'react-spring'
 import { colors, springConfig } from '../theme'
 import { AnimatedFlexCol } from '../Flex/FlexCol'
 
-interface Props {
+function TextArea({
+  inputClassName, style, label, labelStyle, bounderClassName,
+  placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
+  textAreaRef, autoFocus, onEnter, onEscape, layout, defaultValue,
+  labelFontSize, value
+}: {
   layout?: 'row' | 'column'
   inputClassName?: string
   bounderClassName?: string
@@ -28,14 +33,7 @@ interface Props {
   onEscape?: () => void
   defaultValue?: string
   value?: string
-}
-
-function TextArea({
-  inputClassName, style, label, labelStyle, bounderClassName,
-  placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
-  textAreaRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value
-}: Props) {
+}) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const springStyle = useSpring({

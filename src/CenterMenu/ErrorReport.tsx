@@ -12,13 +12,11 @@ type ErrorReportControlData = {
   errorString: string
 }
 
-interface Props {
-  erControlData: ErrorReportControlData
-}
-
 const AnimatedText = animated(Text)
 
-function ErrorReport({ erControlData }: Props) {
+function ErrorReport({ erControlData }: {
+  erControlData: ErrorReportControlData
+}) {
   const classes = useJSS()
   const { exists, visible, setExistFalse, errorString } = erControlData
   const springStyle = useSpring({

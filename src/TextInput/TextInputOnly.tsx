@@ -2,7 +2,11 @@ import React, { ChangeEvent, FocusEvent, KeyboardEvent, RefObject } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 
-interface Props {
+function TextInputOnly({
+  className, style, placeholder, onChange, onFocus, 
+  onBlur, onKeyDown, fontSize, inputRef, autoFocus,
+  onEnter, onEscape, defaultValue, value, password
+}: {
   className?: string
   style?: CSS.Properties
   placeholder?: string
@@ -18,13 +22,7 @@ interface Props {
   defaultValue?: string
   value?: string
   password?: boolean
-}
-
-function TextInputOnly({
-  className, style, placeholder, onChange, onFocus, 
-  onBlur, onKeyDown, fontSize, inputRef, autoFocus,
-  onEnter, onEscape, defaultValue, value, password
-}: Props) {
+}) {
   const classes = useJSS({ fontSize })
   return (
     <input

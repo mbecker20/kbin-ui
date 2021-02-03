@@ -1,8 +1,13 @@
-import React, { ChangeEvent, FocusEvent, ForwardedRef, forwardRef, KeyboardEvent, RefObject } from 'react'
+import React, { ChangeEvent, FocusEvent, KeyboardEvent, RefObject } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 
-interface Props {
+function TextAreaOnly({
+  className, style, placeholder, onChange, 
+  onFocus, onBlur, onKeyDown, fontSize,
+  textAreaRef, autoFocus, onEnter,
+  onEscape, defaultValue, value
+}: {
   className?: string
   style?: CSS.Properties
   placeholder?: string
@@ -17,14 +22,7 @@ interface Props {
   onEscape?: () => void
   defaultValue?: string
   value?: string
-}
-
-function TextAreaOnly({
-  className, style, placeholder, onChange, 
-  onFocus, onBlur, onKeyDown, fontSize,
-  textAreaRef, autoFocus, onEnter,
-  onEscape, defaultValue, value
-}: Props) {
+}) {
   const classes = useJSS({ fontSize })
   return (
     <textarea

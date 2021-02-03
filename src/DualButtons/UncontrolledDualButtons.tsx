@@ -6,16 +6,14 @@ import { useSpring } from 'react-spring'
 import CSS from 'csstype'
 import { colors, springConfig } from '../theme'
 
-interface Props {
+function UncontrolledDualButtons({ isRight, leftText, rightText, onLeft, onRight, style }: {
   isRight: boolean
   leftText: string
   rightText: string
   onLeft: () => void
   onRight: () => void
   style?: CSS.Properties
-}
-
-function UncontrolledDualButtons({ isRight, leftText, rightText, onLeft, onRight, style }: Props) {
+}) {
   const classes = useJSS()
   const leftSpring = useSpring({
     backgroundColor: isRight ? colors.unfocussedInput : colors.defaultButton,

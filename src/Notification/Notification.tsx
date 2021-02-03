@@ -13,14 +13,12 @@ declare global {
 const notificationTime = 2500 //milliseconds
 let timeoutID = 0
 
-interface Props {
-  yLocation?: 'top' | 'center' | 'bottom',
-  xLocation?: 'left' | 'center' | 'right',
-}
-
 const AnimatedText = animated(Text)
 
-function Notification({ yLocation, xLocation }: Props) {
+function Notification({ yLocation, xLocation }: {
+  yLocation?: 'top' | 'center' | 'bottom',
+  xLocation?: 'left' | 'center' | 'right',
+}) {
   const [{ exists, visible, color, text }, setData] = useState({
     exists: false, visible: false, color: '', text: '',
   })

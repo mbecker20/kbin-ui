@@ -2,13 +2,11 @@ import React, { useState } from 'react'
 import UncontrolledCheckBox from './UncontrolledCheckBox'
 import CSS from 'csstype'
 
-interface Props {
+function CheckBox({ onChecked, onUnChecked, style }: {
   onChecked?: () => void
   onUnChecked?: () => void
   style?: CSS.Properties
-}
-
-function CheckBox({ onChecked, onUnChecked, style }: Props) {
+}) {
   const [checked, setChecked] = useState(false)
   return (
     <UncontrolledCheckBox 

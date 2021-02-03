@@ -3,7 +3,12 @@ import useJSS from './style'
 import CSS from 'csstype'
 import { animated } from 'react-spring';
 
-interface Props {
+function Button({ 
+  className, onClick, children, style, onPointerDown, 
+  buttonRef, onKeyDown, onContextMenu, fontSize, notClickable,
+  onPointerEnter, onPointerLeave, onDoubleClick,
+  isRed, margin, padding
+}: {
   className?: string
   children?: React.ReactNode
   onClick?: (e: MouseEvent<HTMLDivElement>) => void
@@ -16,18 +21,11 @@ interface Props {
   notClickable?: boolean
   onPointerEnter?: (e: MouseEvent<HTMLDivElement>) => void
   onPointerLeave?: (e: MouseEvent<HTMLDivElement>) => void
-  onDoubleClick?: (e:MouseEvent<HTMLDivElement>) => void
+  onDoubleClick?: (e: MouseEvent<HTMLDivElement>) => void
   isRed?: boolean
   margin?: string
   padding?: string
-}
-
-function Button({ 
-  className, onClick, children, style, onPointerDown, 
-  buttonRef, onKeyDown, onContextMenu, fontSize, notClickable,
-  onPointerEnter, onPointerLeave, onDoubleClick,
-  isRed, margin, padding
-}: Props) {
+}) {
   const classes = useJSS({ fontSize, notClickable, isRed, margin, padding })
   return (
     <div 

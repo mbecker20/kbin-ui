@@ -2,7 +2,12 @@ import React, { ReactNode } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 
-interface Props {
+function AutoPlacingGrid({ 
+  direction, minWidth, minHeight, children, 
+  className, style, numRows, numCols, 
+  gap, placeItems,
+  justifyContent, alignItems
+}: {
   direction: 'row' | 'column' | 'row dense' | 'column dense'
   minWidth: string
   minHeight: string
@@ -15,14 +20,7 @@ interface Props {
   placeItems?: 'start' | 'end' | 'center' | 'stretch'
   alignItems?: 'start' | 'end' | 'center' | 'stretch'
   justifyContent?: 'start' | 'end' | 'center' | 'stretch'
-}
-
-function AutoPlacingGrid({ 
-  direction, minWidth, minHeight, children, 
-  className, style, numRows, numCols, 
-  gap, placeItems,
-  justifyContent, alignItems
-}: Props) {
+}) {
   const classes = useJSS({ 
     numRows, numCols, direction, 
     gap, minWidth, minHeight,

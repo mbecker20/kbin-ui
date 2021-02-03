@@ -6,16 +6,14 @@ import CSS from 'csstype'
 import { sizes } from '../theme'
 import IfElse from '../IfElse'
 
-interface Props {
+function LabelledItems({ children, label, labelSize, style, labelStyle, itemsStyle }: {
   children: ReactNode
   label: ReactNode
   labelSize?: string
   style?: CSS.Properties
   labelStyle?: CSS.Properties
   itemsStyle?: CSS.Properties
-}
-
-function LabelledItems({ children, label, labelSize, style, labelStyle, itemsStyle }: Props) {
+}) {
   const classes = useJSS()
   return (
     <FlexCol className={classes.LabelledItems} style={style}>

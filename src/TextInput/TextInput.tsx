@@ -4,12 +4,17 @@ import CSS from 'csstype'
 import { AnimatedFlexRow } from '../Flex/FlexRow'
 import { AnimatedText } from '../Text/Text'
 import TextInputOnly from './TextInputOnly'
-import { animated, useSpring } from 'react-spring'
+import { useSpring } from 'react-spring'
 import { colors, springConfig } from '../theme'
 import { AnimatedFlexCol } from '../Flex/FlexCol'
 
-interface Props {
-  layout?: 'row' | 'column' 
+function TextInput({ 
+  inputClassName, style, label, labelStyle, bounderClassName,
+  placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
+  inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
+  labelFontSize, value, password
+}: {
+  layout?: 'row' | 'column'
   inputClassName?: string
   bounderClassName?: string
   style?: CSS.Properties
@@ -29,14 +34,7 @@ interface Props {
   defaultValue?: string
   value?: string
   password?: boolean
-}
-
-function TextInput({ 
-  inputClassName, style, label, labelStyle, bounderClassName,
-  placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
-  inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, password
-}: Props) {
+}) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const springStyle = useSpring({

@@ -4,14 +4,12 @@ import CSS from 'csstype'
 import SVGIcon from '../SVGIcon/SVGIcon'
 import { colors } from '../theme'
 
-interface Props {
+function UncontrolledCheckBox({ checked, onClick, style, className }: {
   checked: boolean
   onClick?: (e: MouseEvent<HTMLDivElement>) => void
   style?: CSS.Properties
   className?: string
-}
-
-function UncontrolledCheckBox({ checked, onClick, style, className }: Props) {
+}) {
   const classes = useJSS()
   const [mouseOver, setMouseOver] = useState(false)
   return (

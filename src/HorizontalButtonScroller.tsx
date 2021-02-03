@@ -3,7 +3,13 @@ import Button from './Button/Button'
 import FlexRow from './Flex/FlexRow'
 import CSS from 'csstype'
 
-interface Props {
+let timeout = false
+const timeoutTime = 700
+const minDelta = 1
+
+function HorizontalButtonScroller({ 
+  children, onLeft, onRight, className, style, buttonClassName, buttonStyle, useOnWheel
+}: {
   children: ReactNode
   onLeft: () => void
   onRight: () => void
@@ -13,15 +19,7 @@ interface Props {
   buttonStyle?: CSS.Properties
   onWheel?: (e: WheelEvent<HTMLDivElement>) => void
   useOnWheel?: boolean
-}
-
-let timeout = false
-const timeoutTime = 700
-const minDelta = 1
-
-function HorizontalButtonScroller({ 
-  children, onLeft, onRight, className, style, buttonClassName, buttonStyle, useOnWheel
-}: Props) {
+}) {
   return (
     <FlexRow
       className={className} 

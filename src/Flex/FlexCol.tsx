@@ -3,7 +3,13 @@ import CSS from 'csstype'
 import useJSS from './style'
 import { animated } from 'react-spring'
 
-interface Props {
+function _FlexCol({ 
+  className, children, style, onDrop, 
+  onDragOver, justifyContent, alignItems,
+  onContextMenu, onClick, pointer, onWheel,
+  width, height, onPointerEnter, onPointerLeave,
+  margin, padding, backgroundColor
+}: {
   className?: string
   style?: CSS.Properties
   children?: React.ReactNode
@@ -22,15 +28,7 @@ interface Props {
   margin?: string
   padding?: string
   backgroundColor?: string
-}
-
-function _FlexCol({ 
-  className, children, style, onDrop, 
-  onDragOver, justifyContent, alignItems,
-  onContextMenu, onClick, pointer, onWheel,
-  width, height, onPointerEnter, onPointerLeave,
-  margin, padding, backgroundColor
-}: Props, ref: ForwardedRef<HTMLDivElement>) {
+}, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     justifyContent, alignItems, pointer,
     width, height, margin, padding,

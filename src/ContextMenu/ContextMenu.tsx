@@ -4,16 +4,14 @@ import CSS from 'csstype'
 import { getCMLocation } from './helpers'
 import Conditional from '../Conditional'
 
-interface Props {
+function ContextMenu({ children, onClose, bounderStyle, style, event, isOpen }: {
   children: ReactNode
   onClose: () => void
   bounderStyle?: CSS.Properties
   style?: CSS.Properties
   event: React.MouseEvent<HTMLDivElement> | MouseEvent
   isOpen: boolean
-}
-
-function ContextMenu({ children, onClose, bounderStyle, style, event, isOpen }: Props) {
+}) {
   const classes = useJSS({ isOpen })
   const cmRef = useRef<HTMLDivElement>(null)
   useEffect(() => {

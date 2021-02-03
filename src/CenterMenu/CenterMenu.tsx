@@ -8,7 +8,11 @@ import SVGIcon from '../SVGIcon/SVGIcon'
 
 export type CenterMenuControlData = boolean
 
-interface Props {
+function CenterMenu({ 
+  cmControlData, className, style, headerClassName, 
+  headerStyle, children, header, onClose, 
+  bounderStyle 
+}: {
   cmControlData: CenterMenuControlData
   onClose: () => void
   className?: string
@@ -18,13 +22,7 @@ interface Props {
   children: React.ReactNode
   header?: string
   bounderStyle?: CSS.Properties
-}
-
-function CenterMenu({ 
-  cmControlData, className, style, headerClassName, 
-  headerStyle, children, header, onClose, 
-  bounderStyle 
-}: Props) {
+}) {
   const exists = cmControlData
   const classes = useJSS()
   /* const springStyle = useSpring({

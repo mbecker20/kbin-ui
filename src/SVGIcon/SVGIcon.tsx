@@ -2,7 +2,12 @@ import React, { MouseEvent, PointerEvent, RefObject } from 'react'
 import CSS from 'csstype'
 import useJSS from './style'
 
-interface Props {
+function SVGIcon({ 
+  className, style, size, src, 
+  alt, width, height, onClick,
+  onPointerDown, pointer, scale,
+  margin, imageRef, padding
+}: {
   src: string
   alt: string
   className?: string
@@ -17,14 +22,7 @@ interface Props {
   margin?: string
   padding?: string
   imageRef?: RefObject<HTMLImageElement>
-}
-
-function SVGIcon({ 
-  className, style, size, src, 
-  alt, width, height, onClick,
-  onPointerDown, pointer, scale,
-  margin, imageRef, padding
-}: Props) {
+}) {
   const classes = useJSS({ size, width, height, pointer, scale, margin, padding })
   return (
     <img 

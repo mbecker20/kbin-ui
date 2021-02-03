@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 import UncontrolledDualButtons from './UncontrolledDualButtons'
 
-interface Props {
+function DualButtons({ leftText, rightText, startRight, onLeft, onRight }: {
   leftText: string
   rightText: string
   startRight?: boolean // false | undefined: left, true: right
   onLeft?: () => void
   onRight?: () => void
-}
-
-function DualButtons({ leftText, rightText, startRight, onLeft, onRight }: Props) {
+}) {
   const [isRight, setRight] = useState(startRight ? true : false)
   return (
     <UncontrolledDualButtons
