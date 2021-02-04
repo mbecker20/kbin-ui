@@ -1,23 +1,23 @@
 import { createUseStyles } from 'react-jss'
-import { colors } from '../theme'
+import { colors, sizes } from '../theme'
 
 const useJSS = createUseStyles({
   LabelledItems: {
     backgroundColor: colors.unfocussedInput,
-    padding: '.2em',
-    margin: '.3em',
-    borderRadius: '.3em',
+    padding: sizes.labelledItems.padding,
+    margin: sizes.labelledItems.margin,
+    borderRadius: sizes.labelledItems.borderRadius,
   },
 
   Label: {
     backgroundColor: colors.unfocussedInput,
-    padding: '.2em',
+    padding: sizes.labelledItems.labelPadding,
     color: colors.unfocussedInputLabel,
   },
 
   Items: {
     backgroundColor: colors.inputBG,
-    padding: '.2em .4em',
+    padding: sizes.labelledItems.itemsPadding,
     width: 'inherit'
   }
 })

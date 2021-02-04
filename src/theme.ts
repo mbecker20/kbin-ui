@@ -69,6 +69,13 @@ export const sizes = {
     size: 1.2, // in em
     checkDif: 0,
     highlightDif: 1.5,
+  },
+  labelledItems: {
+    itemsPadding: '.2em .4em',
+    labelPadding: '.2em',
+    margin: '.3em',
+    padding: '.2em',
+    borderRadius: '.3em'
   }
 }
 
@@ -78,6 +85,7 @@ type CustomSizes = {
   button?: Partial<typeof sizes.button>
   switch?: Partial<typeof sizes.switch>
   checkBox?: Partial<typeof sizes.checkBox>
+  labelledItems?: Partial<typeof sizes.labelledItems>
 }
 
 export function setCustomSizes(customSizes: CustomSizes) {

@@ -1,4 +1,4 @@
-import React, { Fragment, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import FlexCol from '../Flex/FlexCol'
 import Text from '../Text/Text'
 import useJSS from './style'
