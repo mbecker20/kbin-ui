@@ -1,6 +1,10 @@
+import { ReactElement } from "react"
+
 export type MenuManager = {
-  menus: ManagedMenus,
+  menus: ManagedMenus
   history: MenuHistory[]
+  CenterMenus: ReactElement[]
+  ContextMenus: ReactElement[]
 }
 
 export type OpenMenu = (...args: any) => void

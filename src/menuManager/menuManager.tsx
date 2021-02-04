@@ -1,10 +1,15 @@
+import React from 'react'
+import { Fragment, ReactNode } from "react"
 import { makeUseCenterMenu } from "../hooks"
+import Map from "../Map"
 import { MenuManager, OpenMenu } from "./types"
 
 function createMenuManager() {
   const menuManager: MenuManager = {
     menus: {},
     history: [], // save names to preserve order menus opened
+    CenterMenus: [],
+    ContextMenus: []
   } 
 
   function mmAddMenu(name: string, openMenu: OpenMenu) {
@@ -36,12 +41,32 @@ function createMenuManager() {
     menuManager.history = menuManager.history.slice(0, menuManager.history.length - 1)
   }
 
+  function addCenterMenus(CenterMenus: ReactNode[]) {
+    Object.assign(menuManager, { CenterMenus })
+  }
+
+  function addContextMenus(ContextMenus: ReactNode[]) {
+    Object.assign(menuManager, { ContextMenus })
+  }
+
+  function Menus() {
+    return (
+      <Fragment>
+        {menuManager.CenterMenus}
+        {menuManager.ContextMenus}
+      </Fragment>
+    )
+  }
+
   return {
     mmAddMenu,
     mmOpenMenu,
     mmQueueMenu,
     mmCloseMenu,
-    useCenterMenu: makeUseCenterMenu(mmAddMenu, mmCloseMenu)
+    useCenterMenu: makeUseCenterMenu(mmAddMenu, mmCloseMenu),
+    addCenterMenus,
+    addContextMenus,
+    Menus
   }
 }
 
