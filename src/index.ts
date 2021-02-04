@@ -14,6 +14,7 @@ export { default as HorizontalScroller } from './HorizontalScroller/HorizontalSc
 export { default as LabelledItems } from './LabelledItems/LabelledItems'
 export { default as LabelledText } from './LabelledText/LabelledText'
 export { default as LabelledMultiText } from './LabelledText/LabelledMultiText'
+export { default as LoadingScreen } from './LoadingScreen/LoadingScreen'
 export { default as createMenuManager } from './menuManager/menuManager'
 export { default as NavBar } from './NavBar/NavBar'
 export { default as NavBarItem } from './NavBar/NavBarItem'

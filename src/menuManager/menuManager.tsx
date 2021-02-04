@@ -1,7 +1,6 @@
 import React from 'react'
 import { Fragment, ReactNode } from "react"
 import { makeUseCenterMenu } from "../hooks"
-import Map from "../Map"
 import { MenuManager, OpenMenu } from "./types"
 
 function createMenuManager() {

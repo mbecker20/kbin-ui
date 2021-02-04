@@ -11,6 +11,7 @@ export const colors = {
   text: '#bac4ce',
   selectedText: '#2461e8',
 
+  loadingScreenBG: '',
   dashboardBG: '',
 
   centerMenuBackground: 'rgba(0, 0, 0, .5)', // this covers 100vw 100vh
@@ -100,7 +101,8 @@ export function setCustomSizes(customSizes: CustomSizes) {
 export const zIndex = {
   contextMenu: 60,
   centerMenu: 50,
-  notification: 100
+  notification: 100,
+  loadingScreen: 100
 }
 
 export function setCustomZIndices(customZIndices: Partial<typeof zIndex>) {
