@@ -6,7 +6,7 @@ import { useLocalStorage } from '../hooks'
 import Conditional from '../Conditional'
 import SVGIcon from '../SVGIcon/SVGIcon'
 import Map from '../Map'
-import { colors } from '../theme'
+import FlexCol from '../Flex/FlexCol'
 
 /**
  * routes is an object with keys set as the routes and entries as urls to the image src for the route icon
@@ -14,13 +14,14 @@ import { colors } from '../theme'
  * @param params 
  */
 function NavBar({ 
-  localStorage, storageKey, initOpen, routes, onRouteClick,
+  localStorage, storageKey, initOpen, routes, onRouteClick, bottomRoutes,
   titleIconSrc, menuIconSrc, titleIconStyle, titleIconHeight, titleIconWidth
 }: {
   routes: { [route: string]: string } // route => iconSrc
   onRouteClick: (route: string) => void
   titleIconSrc: string
   menuIconSrc: string
+  bottomRoutes?: { [route: string]: string }
   titleIconStyle?: CSS.Properties
   titleIconHeight?: string
   titleIconWidth?: string
@@ -36,8 +37,8 @@ function NavBar({
   const classes = useJSS(open)
   const routeKeys = Object.keys(routes)
   return (
-    <div className={classes.NavBarBounder}>
-      <div className={classes.NavBar}>
+    <FlexCol className={classes.NavBar}>
+      <div className={classes.NavBarGrid}>
         <Conditional showIf={open}>
           <SVGIcon
             src={titleIconSrc}
@@ -54,25 +55,46 @@ function NavBar({
           src={menuIconSrc}
           alt='menu'
           style={{ gridColumn: 'icon / span 1' }}
-          onClick={ () => setOpen(!open) }
+          onClick={() => setOpen(!open)}
           margin='.1em'
           pointer
         />
-        <div className={classes.Divider}/>
-        <Map
-          array={routeKeys}
-          map={(route, index) => (
-            <NavBarItem
-              open={open}
-              iconSRC={routes[route]}
-              key={index}
-              text={route}
-              onClick={() => onRouteClick(route)}
-            />
-          )}
-        />
       </div>
-    </div>
+      <div className={classes.Divider} />
+      <div className={classes.Routes}>
+        <div className={classes.NavBarGrid}>
+          <Map
+            array={routeKeys}
+            map={(route, index) => (
+              <NavBarItem
+                open={open}
+                iconSRC={routes[route]}
+                key={index}
+                text={route}
+                onClick={() => onRouteClick(route)}
+              />
+            )}
+          />
+        </div>
+      </div>
+      <Conditional showIf={typeof bottomRoutes !== 'undefined'}>
+        <div className={classes.Divider} />
+        <div className={classes.NavBarGrid}>
+          <Map 
+            array={Object.keys(bottomRoutes as {})}
+            map={(route, index) => (
+              <NavBarItem
+                open={open}
+                iconSRC={routes[route]}
+                key={index}
+                text={route}
+                onClick={() => onRouteClick(route)}
+              />
+            )}
+          />
+        </div>
+      </Conditional>
+    </FlexCol>
   )
 }
 

@@ -2,27 +2,30 @@ import { createUseStyles } from 'react-jss'
 import { colors, scrollbarJSS } from '../theme'
 
 const useJSS = createUseStyles({
-  NavBarBounder: {
+  NavBar: {
     height: '100vh',
-    overflowY: 'auto',
     paddingRight: '.7em',
     backgroundColor: colors.navbarBackground,
+    gridColumn: 'navbar / span 1',
     ...scrollbarJSS.thin
   },
 
-  NavBar: {
+  NavBarGrid: {
+    width: '100%',
     display: 'grid',
     gridTemplateColumns: '[text] 1fr [icon] auto',
-    gridTemplateRows: 'auto',
-    gridColumn: 'navbar / span 1',
     gap: '.5em',
     alignItems: 'center',
-    gridAutoRows: 'auto',
     margin: '1em'
   },
 
+  Routes: {
+    overflowY: 'auto',
+    ...scrollbarJSS.none
+  },
+
   Divider: {
-    gridColumn: open => open ? 'text / span 2' : 'icon / span 1',
+    width: '95%',
     height: '.2em',
     margin: '.4em 0em',
     backgroundColor: colors.text
