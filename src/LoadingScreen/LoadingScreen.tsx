@@ -9,7 +9,7 @@ function LoadingScreen({ initialized, children }: {
   initialized?: boolean
   children?: ReactElement
 }) {
-  const [exists, setExists] = useState(false)
+  const [exists, setExists] = useState(true)
   const loadedStyle = useSpring({
     top: initialized ? '0vh' : '-100vh',
     opacity: initialized ? 0 : 1,
