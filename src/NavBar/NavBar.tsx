@@ -17,7 +17,6 @@ function NavBar({
   localStorage, storageKey, initOpen, routes, onRouteClick,
   titleIconSrc, menuIconSrc, titleIconStyle, titleIconHeight, titleIconWidth
 }: {
-  
   routes: { [route: string]: string } // route => iconSrc
   onRouteClick: (route: string) => void
   titleIconSrc: string
