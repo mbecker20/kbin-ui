@@ -5,7 +5,7 @@ const useJSS = createUseStyles({
   NavBarBounder: {
     height: '100vh',
     overflowY: 'auto',
-    paddingRight: '1em',
+    paddingRight: '.7em',
     backgroundColor: colors.navbarBackground,
     ...scrollbarJSS.thin
   },
@@ -20,6 +20,13 @@ const useJSS = createUseStyles({
     gridAutoRows: 'auto',
     margin: '1em'
   },
+
+  Divider: {
+    gridColumn: open => open ? 'text / span 2' : 'icon / span 1',
+    height: '.2em',
+    margin: '.4em 0em',
+    backgroundColor: colors.text
+  }
 })
 
 export default useJSS

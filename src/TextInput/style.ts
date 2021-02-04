@@ -22,6 +22,7 @@ const useJSS = createUseStyles({
     padding: '.2em .4em',
     borderStyle: 'none',
     color: colors.inputText,
+    fontWeight: ({ bold }) => bold ? 'bold' : 'normal'
   },
 })
 

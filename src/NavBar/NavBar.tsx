@@ -33,7 +33,7 @@ function NavBar({
   const _storageKey = storageKey ? storageKey : 'NavBar'
   const _initOpen = initOpen ? initOpen : true
   const [open, setOpen] = _localStorage ? useLocalStorage(_initOpen, _storageKey) : useState(_initOpen)
-  const classes = useJSS()
+  const classes = useJSS(open)
   const routeKeys = Object.keys(routes)
   return (
     <div className={classes.NavBarBounder}>
@@ -58,14 +58,7 @@ function NavBar({
           margin='.1em'
           pointer
         />
-        <div
-          style={{ 
-            gridColumn: open ? 'text / span 2' : 'icon / span 1',
-            height: '.2em',
-            margin: '.4em 0em',
-            backgroundColor: colors.text
-          }}
-        />
+        <div className={classes.Divider}/>
         <Map
           array={routeKeys}
           map={(route, index) => (

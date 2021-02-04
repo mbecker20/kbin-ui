@@ -23,7 +23,8 @@ const useJSS = createUseStyles({
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.small,
     fontFamily: 'inherit',
     color: colors.inputText,
-    resize: 'vertical'
+    resize: 'vertical',
+    fontWeight: ({ bold }) => bold ? 'bold' : 'normal'
   },
 })
 

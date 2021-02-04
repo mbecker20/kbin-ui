@@ -4,8 +4,9 @@ import CSS from 'csstype'
 import { animated } from 'react-spring'
 
 function _Text({ 
-  className, style, text, fontSize, color, onClick, pointer, padding, margin, textCursor,
-  wrap, textAlign, underline
+  className, style, text, fontSize, color, onClick, 
+  pointer, padding, margin, textCursor,
+  wrap, textAlign, underline, bold
 }: {
   text: string
   className?: string
@@ -21,11 +22,12 @@ function _Text({
   textAlign?: string
   ref?: RefObject<HTMLDivElement>
   underline?: boolean
+  bold?: boolean
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     fontSize, color, pointer, padding, 
     margin, textCursor, wrap, textAlign,
-    underline
+    underline, bold
   })
   return (
     <div className={className ? `${classes.Text} ${className}` : classes.Text}

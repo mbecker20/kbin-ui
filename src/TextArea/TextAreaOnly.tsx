@@ -6,7 +6,7 @@ function TextAreaOnly({
   className, style, placeholder, onChange, 
   onFocus, onBlur, onKeyDown, fontSize,
   textAreaRef, autoFocus, onEnter,
-  onEscape, defaultValue, value
+  onEscape, defaultValue, value, bold
 }: {
   className?: string
   style?: CSS.Properties
@@ -22,8 +22,9 @@ function TextAreaOnly({
   onEscape?: () => void
   defaultValue?: string
   value?: string
+  bold?: boolean
 }) {
-  const classes = useJSS({ fontSize })
+  const classes = useJSS({ fontSize, bold })
   return (
     <textarea
       className={

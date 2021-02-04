@@ -15,6 +15,7 @@ const useJSS = createUseStyles({
     overflowWrap: ({ wrap }) => wrap ? 'anywhere' : null,
     textAlign: ({ textAlign }) => textAlign,
     borderBottomStyle: ({ underline }) => underline ? 'solid' : 'none',
+    fontWeight: ({ bold }) => bold ? 'bold' : 'normal'
   },
 })
 

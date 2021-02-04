@@ -5,7 +5,8 @@ import CSS from 'csstype'
 function TextInputOnly({
   className, style, placeholder, onChange, onFocus, 
   onBlur, onKeyDown, fontSize, inputRef, autoFocus,
-  onEnter, onEscape, defaultValue, value, password
+  onEnter, onEscape, defaultValue, value, password,
+  bold
 }: {
   className?: string
   style?: CSS.Properties
@@ -22,8 +23,9 @@ function TextInputOnly({
   defaultValue?: string
   value?: string
   password?: boolean
+  bold?: boolean
 }) {
-  const classes = useJSS({ fontSize })
+  const classes = useJSS({ fontSize, bold })
   return (
     <input
       className={
