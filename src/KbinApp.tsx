@@ -27,21 +27,19 @@ function KbinApp({
 }) {
   return (
     <Fragment>
-      <Conditional showIf={initialized}>
-        <IfElse
-          showIf={loggedIn}
-          show={
-            <Fragment>
-              <Dashboard navbar={NavBar}>
-                {Router}
-                {children}
-              </Dashboard>
-              {Menus}
-            </Fragment>
-          }
-          showElse={Login}
-        />
-      </Conditional>
+      <IfElse
+        showIf={initialized && loggedIn}
+        show={
+          <Fragment>
+            <Dashboard navbar={NavBar}>
+              {Router}
+              {children}
+            </Dashboard>
+            {Menus}
+          </Fragment>
+        }
+        showElse={Login}
+      />
       <LoadingScreen initialized={initialized}>
         {LoadingIcon}
       </LoadingScreen>

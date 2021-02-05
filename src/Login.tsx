@@ -29,6 +29,7 @@ function Login({
       width='100vw'
       alignItems='center'
       justifyContent='center'
+      style={{ position: 'fixed' }}
     >
       <FlexCol
         alignItems='center'
