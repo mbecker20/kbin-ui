@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import FlexRow from '../Flex/FlexRow'
 import IfElse from '../IfElse'
 import SVGIcon from '../SVGIcon/SVGIcon'
 import Text from '../Text/Text'
@@ -19,12 +20,12 @@ function NavBarItem({
 }) {
   return (
     <IfElse
-      showIf={open as boolean}
+      showIf={open}
       show={
-        <Fragment>
+        <FlexRow justifyContent='space-between' alignItems='center' margin='.4em 1em'>
           <Text text={text} fontSize={textSize}
-            style={{ gridColumn: 'text / span 1' }}
             onClick={onClick}
+            bold={selected}
             pointer
           />
           <SVGIcon
@@ -33,11 +34,11 @@ function NavBarItem({
             size={iconSize}
             width={iconWidth}
             height={iconHeight}
-            style={{ gridColumn: 'icon / span 1' }}
             onClick={onClick}
+            margin='.1em'
             pointer
           />
-        </Fragment>
+        </FlexRow>
       }
       showElse={
         <SVGIcon 
@@ -47,7 +48,7 @@ function NavBarItem({
           width={iconWidth}
           height={iconHeight}
           onClick={onClick}
-          style={{ gridColumn: 'icon / span 1' }}
+          margin='.5em 1.1em'
           pointer
         />
       }

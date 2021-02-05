@@ -3,10 +3,12 @@ import useJSS from './style'
 import CSS from 'csstype'
 import NavBarItem from './NavBarItem'
 import { useLocalStorage } from '../hooks'
-import Conditional from '../Conditional'
+import FlexCol from '../Flex/FlexCol'
+import IfElse from '../IfElse'
+import FlexRow from '../Flex/FlexRow'
 import SVGIcon from '../SVGIcon/SVGIcon'
 import Map from '../Map'
-import FlexCol from '../Flex/FlexCol'
+import Conditional from '../Conditional'
 
 /**
  * routes is an object with keys set as the routes and entries as urls to the image src for the route icon
@@ -15,7 +17,8 @@ import FlexCol from '../Flex/FlexCol'
  */
 function NavBar({ 
   localStorage, storageKey, initOpen, routes, onRouteClick, bottomRoutes,
-  titleIconSrc, menuIconSrc, titleIconStyle, titleIconHeight, titleIconWidth
+  titleIconSrc, menuIconSrc, titleIconStyle, titleIconHeight, titleIconWidth,
+  iconWidth, iconHeight
 }: {
   routes: { [route: string]: string } // route => iconSrc
   onRouteClick: (route: string) => void
@@ -29,6 +32,8 @@ function NavBar({
   localStorage?: boolean
   storageKey?: string
   initOpen?: boolean
+  iconWidth?: string
+  iconHeight?: string
 }) {
   const _localStorage = localStorage ? localStorage : true
   const _storageKey = storageKey ? storageKey : 'NavBar'
@@ -37,31 +42,49 @@ function NavBar({
   const classes = useJSS(open)
   return (
     <FlexCol className={classes.NavBar}>
-      <div className={classes.NavBarGrid}>
-        <Conditional showIf={open}>
+      <IfElse
+        showIf={open}
+        show={
+          <FlexRow
+            justifyContent='space-between' 
+            alignItems='center'
+            margin='.4em 1em'
+          >
+            <SVGIcon
+              src={titleIconSrc}
+              alt='menu'
+              style={titleIconStyle}
+              onClick={() => setOpen(!open)}
+              width={titleIconWidth}
+              height={titleIconHeight}
+              pointer
+            />
+            <SVGIcon
+              src={menuIconSrc}
+              alt='menu'
+              onClick={() => setOpen(!open)}
+              margin='.1em'
+              width={iconWidth}
+              height={iconHeight}
+              pointer
+            />
+          </FlexRow>
+        }
+        showElse={
           <SVGIcon
-            src={titleIconSrc}
+            src={menuIconSrc}
             alt='menu'
-            style={Object.assign({ gridColumn: 'text / span 1' }, titleIconStyle)}
             onClick={() => setOpen(!open)}
-            width={titleIconWidth}
-            height={titleIconHeight}
-            padding='.4em 1em'
+            width={iconWidth}
+            height={iconHeight}
+            margin='.5em 1.1em'
             pointer
           />
-        </Conditional>
-        <SVGIcon
-          src={menuIconSrc}
-          alt='menu'
-          style={{ gridColumn: 'icon / span 1' }}
-          onClick={() => setOpen(!open)}
-          margin='.1em'
-          pointer
-        />
-      </div>
+        }
+      />
       <div className={classes.Divider} />
       <div className={classes.Routes}>
-        <div className={classes.NavBarGrid}>
+        <FlexCol>
           <Map
             array={Object.keys(routes)}
             map={(route, index) => (
@@ -70,28 +93,32 @@ function NavBar({
                 iconSRC={routes[route]}
                 key={index}
                 text={route}
+                iconWidth={iconWidth}
+                iconHeight={iconHeight}
                 onClick={() => onRouteClick(route)}
               />
             )}
           />
-        </div>
+        </FlexCol>
       </div>
       <Conditional showIf={bottomRoutes ? true : false}>
-        <div className={classes.Divider} style={{ justifySelf: 'flex-end' }} />
-        <div className={classes.NavBarGrid} style={{ justifySelf: 'flex-end' }}>
+        <div className={classes.Divider}/>
+        <FlexCol>
           <Map 
             array={bottomRoutes ? Object.keys(bottomRoutes as any) : []}
             map={(route, index) => (
               <NavBarItem
                 open={open}
-                iconSRC={routes[route]}
+                iconSRC={(bottomRoutes as any)[route]}
                 key={index}
                 text={route}
+                iconWidth={iconWidth}
+                iconHeight={iconHeight}
                 onClick={() => onRouteClick(route)}
               />
             )}
           />
-        </div>
+        </FlexCol>
       </Conditional>
     </FlexCol>
   )
