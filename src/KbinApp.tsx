@@ -27,6 +27,9 @@ function KbinApp({
 }) {
   return (
     <Fragment>
+      <LoadingScreen initialized={initialized}>
+        {LoadingIcon}
+      </LoadingScreen>
       <IfElse
         showIf={initialized && loggedIn}
         show={
@@ -40,9 +43,6 @@ function KbinApp({
         }
         showElse={Login}
       />
-      <LoadingScreen initialized={initialized}>
-        {LoadingIcon}
-      </LoadingScreen>
       {Notification}
     </Fragment>
   )
