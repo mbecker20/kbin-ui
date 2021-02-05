@@ -11,8 +11,8 @@ export const colors = {
   text: '#bac4ce',
   selectedText: '#2461e8',
 
-  loadingScreenBG: '',
-  dashboardBG: '',
+  loadingScreenBG: '#000000',
+  dashboardBG: '#000000',
 
   centerMenuBackground: 'rgba(0, 0, 0, .5)', // this covers 100vw 100vh
   centerMenu: '#030917',
