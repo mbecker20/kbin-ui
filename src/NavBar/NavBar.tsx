@@ -35,7 +35,6 @@ function NavBar({
   const _initOpen = initOpen ? initOpen : true
   const [open, setOpen] = _localStorage ? useLocalStorage(_initOpen, _storageKey) : useState(_initOpen)
   const classes = useJSS(open)
-  const routeKeys = Object.keys(routes)
   return (
     <FlexCol className={classes.NavBar}>
       <div className={classes.NavBarGrid}>
@@ -64,7 +63,7 @@ function NavBar({
       <div className={classes.Routes}>
         <div className={classes.NavBarGrid}>
           <Map
-            array={routeKeys}
+            array={Object.keys(routes)}
             map={(route, index) => (
               <NavBarItem
                 open={open}
@@ -77,11 +76,11 @@ function NavBar({
           />
         </div>
       </div>
-      <Conditional showIf={typeof bottomRoutes !== 'undefined'}>
-        <div className={classes.Divider} />
-        <div className={classes.NavBarGrid}>
+      <Conditional showIf={bottomRoutes ? true : false}>
+        <div className={classes.Divider} style={{ justifySelf: 'flex-end' }} />
+        <div className={classes.NavBarGrid} style={{ justifySelf: 'flex-end' }}>
           <Map 
-            array={Object.keys(bottomRoutes as {})}
+            array={bottomRoutes ? Object.keys(bottomRoutes as any) : []}
             map={(route, index) => (
               <NavBarItem
                 open={open}
