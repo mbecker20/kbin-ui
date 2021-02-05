@@ -15,7 +15,7 @@ function createMenuManager() {
     menuManager.menus[name] = openMenu
   }
 
-  function mmOpenMenu(name: string, save: boolean, ...args: any) {
+  function mmOpenMenu(name: string, save = true, ...args: any) {
     // returns the appropriate opening function
     menuManager.menus[name](...args)
     if (save) {
