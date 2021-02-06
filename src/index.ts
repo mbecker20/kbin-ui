@@ -6,6 +6,7 @@ export { default as UncontrolledCheckBox } from './CheckBox/UncontrolledCheckBox
 export { default as ContextMenu } from './ContextMenu/ContextMenu'
 export { default as ContextMenuExtension } from './ContextMenuExtension/ExtensionMenu'
 export { default as Dashboard } from './Dashboard/Dashboard'
+export { default as DataTable } from './DataTable/DataTable'
 export { default as DualButtons } from './DualButtons/DualButtons'
 export { default as UncontrolledDualButtons } from './DualButtons/UncontrolledDualButtons'
 export { default as FlexRow, AnimatedFlexRow } from './Flex/FlexRow'
