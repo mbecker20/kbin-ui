@@ -39,7 +39,10 @@ export const colors = {
   scrollbarBackground: '#2323246f',
   scrollbarThumb: '#0a2154',
 
-  navbarBackground: '#030917'
+  navbarBackground: '#030917',
+
+  dataTableEvenRow: '#252626',
+  dataTableOddRow: 'transparent'
 }
 
 export function setCustomColors(customColors: Partial<typeof colors>) {
@@ -76,6 +79,11 @@ export const sizes = {
     margin: '.3em',
     padding: '.2em',
     borderRadius: '.3em'
+  },
+  dataTable: {
+    colGap: '1em',
+    rowGap: '.2em',
+    itemMargin: '.2em'
   }
 }
 
@@ -86,6 +94,7 @@ type CustomSizes = {
   switch?: Partial<typeof sizes.switch>
   checkBox?: Partial<typeof sizes.checkBox>
   labelledItems?: Partial<typeof sizes.labelledItems>
+  dataTable?: Partial<typeof sizes.dataTable>
 }
 
 export function setCustomSizes(customSizes: CustomSizes) {
