@@ -6,7 +6,6 @@ const useJSS = createUseStyles({
     color: ({ color }) => color ? color : colors.text,
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.small,
     width: 'fit-content',
-    userSelect: 'none',
     '&:hover': {
       cursor: ({ pointer, textCursor }) => pointer ? 'pointer' : textCursor ? 'text' : 'default'
     },
@@ -15,7 +14,8 @@ const useJSS = createUseStyles({
     overflowWrap: ({ wrap }) => wrap ? 'anywhere' : null,
     textAlign: ({ textAlign }) => textAlign,
     borderBottomStyle: ({ underline }) => underline ? 'solid' : 'none',
-    fontWeight: ({ bold }) => bold ? 'bold' : 'normal'
+    fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
+    userSelect: ({ userSelect }) => userSelect ? userSelect : 'none'
   },
 })
 
