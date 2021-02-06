@@ -6,17 +6,24 @@ import CSS from 'csstype'
 import { sizes } from '../theme'
 import IfElse from '../IfElse'
 
-function LabelledItems({ children, label, labelSize, style, labelStyle, itemsStyle }: {
+function LabelledItems({ 
+  children, label, labelSize, style, labelStyle, 
+  itemsStyle, justifyContent, alignItems
+}: {
   children: ReactNode
   label: ReactNode
   labelSize?: string
   style?: CSS.Properties
   labelStyle?: CSS.Properties
   itemsStyle?: CSS.Properties
+  justifyContent?: string
+  alignItems?: string
 }) {
   const classes = useJSS()
   return (
-    <FlexCol className={classes.LabelledItems} style={style}>
+    <FlexCol className={classes.LabelledItems} style={style}
+      justifyContent={justifyContent} alignItems={alignItems}
+    >
       <IfElse 
         showIf={typeof (label) === 'string'}
         show={
