@@ -6,10 +6,11 @@ import Map from '../Map'
 import ListItem from './ListItem'
 import CSS from 'csstype'
 
-function List({ children, selectedIndex, label, itemStyle }: {
+function List({ children, selectedIndex, label, style, itemStyle }: {
   children: ReactNode[],
   selectedIndex?: number,
   label?: string
+  style?: CSS.Properties
   itemStyle?: CSS.Properties
 }) {
   return (
@@ -19,7 +20,7 @@ function List({ children, selectedIndex, label, itemStyle }: {
         <LabelledItems
           label={label}
         >
-          <FlexCol alignItems='stretch'>
+          <FlexCol alignItems='stretch' style={style}>
             <Map
               array={children}
               map={(child, i) => (
