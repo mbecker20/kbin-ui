@@ -1,6 +1,6 @@
 {
   "name": "kbin-ui",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "collection of react ui components",
   "main": "build/index.js",
   "scripts": {
