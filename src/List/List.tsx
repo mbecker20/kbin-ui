@@ -6,9 +6,10 @@ import Map from '../Map'
 import ListItem from './ListItem'
 import CSS from 'csstype'
 
-function List({ children, selectedIndex, label, style, itemStyle }: {
-  children: ReactNode[],
-  selectedIndex?: number,
+function List<T>({ array, map, selectedIndex, label, style, itemStyle }: {
+  array: T[]
+  map: (t: T, i: number) => ReactNode
+  selectedIndex?: number
   label?: ReactNode
   style?: CSS.Properties
   itemStyle?: CSS.Properties
@@ -22,13 +23,13 @@ function List({ children, selectedIndex, label, style, itemStyle }: {
         >
           <FlexCol alignItems='stretch' style={style}>
             <Map
-              array={children}
-              map={(child, i) => (
+              array={array}
+              map={(t, i) => (
                 <ListItem 
                   isSelected={selectedIndex ? i === selectedIndex : i % 2 === 0} 
                   style={itemStyle}
                 >
-                  {child}
+                  {map(t, i)}
                 </ListItem>
               )}
             />
@@ -38,13 +39,13 @@ function List({ children, selectedIndex, label, style, itemStyle }: {
       showElse={
         <FlexCol alignItems='stretch'>
           <Map
-            array={children}
-            map={(child, i) => (
+            array={array}
+            map={(t, i) => (
               <ListItem 
                 isSelected={selectedIndex ? i === selectedIndex : i % 2 === 0} 
                 style={itemStyle}
               >
-                {child}
+                {map(t, i)}
               </ListItem>
             )}
           />
