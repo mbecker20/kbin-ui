@@ -44,6 +44,9 @@ function List<T>({ array, map, noItemsText, selectedIndex, label, style, itemSty
       }
       showElse={
         <FlexCol alignItems='stretch'>
+          <Conditional showIf={array.length === 0}>
+            <Text text={noItemsText} textAlign='center' />
+          </Conditional>
           <Map
             array={array}
             map={(t, i) => (
