@@ -9,7 +9,7 @@ import CSS from 'csstype'
 function List({ children, selectedIndex, label, style, itemStyle }: {
   children: ReactNode[],
   selectedIndex?: number,
-  label?: string
+  label?: ReactNode
   style?: CSS.Properties
   itemStyle?: CSS.Properties
 }) {
