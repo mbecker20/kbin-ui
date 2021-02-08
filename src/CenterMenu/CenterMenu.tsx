@@ -9,11 +9,11 @@ import SVGIcon from '../SVGIcon/SVGIcon'
 export type CenterMenuControlData = boolean
 
 function CenterMenu({ 
-  cmControlData, className, style, headerClassName, 
+  exists, className, style, headerClassName, 
   headerStyle, children, header, onClose, 
   bounderStyle 
 }: {
-  cmControlData: CenterMenuControlData
+  exists: boolean
   onClose: () => void
   className?: string
   style?: CSS.Properties
@@ -23,16 +23,7 @@ function CenterMenu({
   header?: string
   bounderStyle?: CSS.Properties
 }) {
-  const exists = cmControlData
   const classes = useJSS()
-  /* const springStyle = useSpring({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 
-      'translate(-50%, -50%) scale(1)' : 
-      'translate(-50%, -50%) scale(0.9)',
-    onRest: () => { if (!visible) setExistFalse() },
-    config: springConfig.fast
-  }) */
   return (
     <Conditional showIf={exists}>
       <div className={classes.CenterMenuBounder}
