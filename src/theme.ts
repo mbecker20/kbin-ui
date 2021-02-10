@@ -84,6 +84,12 @@ export const sizes = {
     colGap: '1em',
     rowGap: '.2em',
     itemMargin: '.2em'
+  },
+  label: {
+    titleMargin: '.1em .2em',
+    searchMargin: '.2em',
+    searchMinWidth: '25%',
+    searchMaxWidth: '5em',
   }
 }
 
@@ -95,6 +101,7 @@ type CustomSizes = {
   checkBox?: Partial<typeof sizes.checkBox>
   labelledItems?: Partial<typeof sizes.labelledItems>
   dataTable?: Partial<typeof sizes.dataTable>
+  label?: Partial<typeof sizes.label>
 }
 
 export function setCustomSizes(customSizes: CustomSizes) {

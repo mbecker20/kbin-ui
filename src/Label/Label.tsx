@@ -1,14 +1,16 @@
 import React, { ReactNode } from 'react'
-import FlexCol from './Flex/FlexCol'
-import FlexRow from './Flex/FlexRow'
-import IfElse from './IfElse'
-import Text from './Text/Text'
-import TextInputOnly from './TextInput/TextInputOnly'
-import { sizes } from './theme'
+import FlexCol from '../Flex/FlexCol'
+import FlexRow from '../Flex/FlexRow'
+import IfElse from '../IfElse'
+import Text from '../Text/Text'
+import TextInputOnly from '../TextInput/TextInputOnly'
+import { sizes } from '../theme'
+import useJSS from './style'
 
 function Label({ 
   title, TitleComponent, ToTitleRight, search, setSearch,
-  titleSize
+  titleSize, titleMargin, searchMinWidth, searchMaxWidth, 
+  searchMargin
 }: {
   title?: string
   TitleComponent?: ReactNode
@@ -16,7 +18,12 @@ function Label({
   search?: string
   setSearch?: (search: string) => void
   titleSize?: string
+  titleMargin?: string
+  searchMinWidth?: string
+  searchMaxWidth?: string
+  searchMargin?: string
 }) {
+  const classes = useJSS({ searchMinWidth, searchMaxWidth, searchMargin })
   return (
     <FlexCol>
       <FlexRow>
@@ -25,20 +32,20 @@ function Label({
           show={TitleComponent}
           showElse={
             <Text
-              text={title ? title : 'repos'}
+              text={title ? title : 'label'}
               fontSize={titleSize ? titleSize : sizes.text.medium}
-              margin='.1em .2em'
+              margin={titleMargin ? titleMargin : sizes.label.titleMargin}
             />
           }
         />
         {ToTitleRight}
       </FlexRow>
       <TextInputOnly
+        className={classes.LabelSearch}
         value={search}
         onChange={_search => {
           if (setSearch) setSearch(_search)
         }}
-        style={{ alignSelf: 'flex-end', margin: '.2em', minWidth: '25%', maxWidth: '5em' }}
         placeholder='search'
       />
     </FlexCol>
