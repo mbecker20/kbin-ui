@@ -104,8 +104,8 @@ function createMenuManager() {
   }
 
   function Menus({ centerMenuProps, contextMenuProps }: {
-    centerMenuProps: CenterMenuProps
-    contextMenuProps: ContextMenuProps
+    centerMenuProps?: CenterMenuProps
+    contextMenuProps?: ContextMenuProps
   }) {
     return (
       <Fragment>
