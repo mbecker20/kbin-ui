@@ -43,21 +43,21 @@ function Login({
           label='username'
           inputRef={usernameRef}
           value={username}
-          onChange={e => setUsername(e.target.value)}
+          onChange={_username => setUsername(_username)}
           onEnter={() => login(username, password, email, setLoginLoading, usernameRef)}
         />
         <Conditional showIf={requireEmail ? true : false}>
           <TextInput
             label='email'
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={_email => setEmail(_email)}
             onEnter={() => login(username, password, email, setLoginLoading, usernameRef)}
           />
         </Conditional>
         <TextInput
           label='password'
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={_password => setPassword(_password)}
           onEnter={() => login(username, password, email, setLoginLoading, usernameRef)}
           password
         />

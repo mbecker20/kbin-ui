@@ -22,10 +22,10 @@ function TextInput({
   labelStyle?: CSS.Properties
   labelFontSize?: string
   placeholder?: string
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  onChange?: (value: string, e: ChangeEvent<HTMLInputElement>) => void
   onFocus?: (e: FocusEvent<HTMLInputElement>) => void
   onBlur?: (e: FocusEvent<HTMLInputElement>) => void
-  onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void
+  onKeyDown?: (key: string, e: KeyboardEvent<HTMLInputElement>) => void
   onEnter?: () => void
   onEscape?: () => void
   fontSize?: string

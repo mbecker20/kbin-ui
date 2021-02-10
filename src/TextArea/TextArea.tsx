@@ -22,10 +22,10 @@ function TextArea({
   labelStyle?: CSS.Properties
   labelFontSize?: string
   placeholder?: string
-  onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
+  onChange?: (value: string, e: ChangeEvent<HTMLTextAreaElement>) => void
   onFocus?: (e: FocusEvent<HTMLTextAreaElement>) => void
   onBlur?: (e: FocusEvent<HTMLTextAreaElement>) => void
-  onKeyDown?: (e: KeyboardEvent<HTMLTextAreaElement>) => void
+  onKeyDown?: (key: string, e: KeyboardEvent<HTMLTextAreaElement>) => void
   fontSize?: string
   textAreaRef?: RefObject<HTMLTextAreaElement>
   autoFocus?: boolean
@@ -73,7 +73,8 @@ function TextArea({
       <TextAreaOnly
         className={inputClassName}
         style={style} placeholder={placeholder}
-        onChange={onChange} onKeyDown={onKeyDown}
+        onChange={onChange} 
+        onKeyDown={onKeyDown}
         onFocus={e => {
           setFocussed(true)
           if (onFocus) onFocus(e)

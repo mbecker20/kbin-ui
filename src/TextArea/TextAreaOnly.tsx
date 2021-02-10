@@ -11,10 +11,10 @@ function TextAreaOnly({
   className?: string
   style?: CSS.Properties
   placeholder?: string
-  onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
+  onChange?: (value: string, e: ChangeEvent<HTMLTextAreaElement>) => void
   onFocus?: (e: FocusEvent<HTMLTextAreaElement>) => void
   onBlur?: (e: FocusEvent<HTMLTextAreaElement>) => void
-  onKeyDown?: (e: KeyboardEvent<HTMLTextAreaElement>) => void
+  onKeyDown?: (key: string, e: KeyboardEvent<HTMLTextAreaElement>) => void
   fontSize?: string
   textAreaRef?: RefObject<HTMLTextAreaElement>
   autoFocus?: boolean
@@ -33,7 +33,10 @@ function TextAreaOnly({
           classes.TextArea
       }
       style={style}
-      placeholder={placeholder} onChange={onChange}
+      placeholder={placeholder} 
+      onChange={e => {
+        if (onChange) onChange(e.target.value, e)
+      }}
       onFocus={onFocus}
       onBlur={onBlur}
       onKeyDown={e => {
@@ -41,7 +44,7 @@ function TextAreaOnly({
           case 'Enter': if (onEnter) onEnter(); break;
           case 'Escape': if (onEscape) onEscape(); break;
         }
-        if (onKeyDown) onKeyDown(e)
+        if (onKeyDown) onKeyDown(e.key, e)
       }}
       ref={textAreaRef}
       autoFocus={autoFocus}

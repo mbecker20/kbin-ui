@@ -11,10 +11,10 @@ function TextInputOnly({
   className?: string
   style?: CSS.Properties
   placeholder?: string
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  onChange?: (value: string, e: ChangeEvent<HTMLInputElement>) => void
   onFocus?: (e: FocusEvent<HTMLInputElement>) => void
   onBlur?: (e: FocusEvent<HTMLInputElement>) => void
-  onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void
+  onKeyDown?: (key: string, e: KeyboardEvent<HTMLInputElement>) => void
   fontSize?: string
   inputRef?: RefObject<HTMLInputElement>
   autoFocus?: boolean
@@ -35,7 +35,10 @@ function TextInputOnly({
       }
       type={password ? 'password' : 'text'}
       style={style}
-      placeholder={placeholder} onChange={onChange}
+      placeholder={placeholder}
+      onChange={e => {
+        if (onChange) onChange(e.target.value, e)
+      }}
       onFocus={onFocus}
       onBlur={onBlur}
       onKeyDown={e => {
@@ -43,7 +46,7 @@ function TextInputOnly({
           case 'Escape': if (onEscape) onEscape(); break;
           case 'Enter': if (onEnter) onEnter(); break;
         }
-        if (onKeyDown) onKeyDown(e)
+        if (onKeyDown) onKeyDown(e.key, e)
       }}
       ref={inputRef}
       autoFocus={autoFocus}

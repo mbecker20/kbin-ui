@@ -23,8 +23,8 @@
 		"body": [
 			"import React from 'react'",
 			"",
-			"function ${1:$TM_FILENAME_BASE}({ $2 }: {",
-			"\t$1",
+			"function ${1:$TM_FILENAME_BASE}({ $3 }: {",
+			"\t$2",
 			"}) {",
 			"\treturn (",
 			"\t\t<div>",
