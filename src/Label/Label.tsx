@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import Conditional from '../Conditional'
 import FlexCol from '../Flex/FlexCol'
 import FlexRow from '../Flex/FlexRow'
 import IfElse from '../IfElse'
@@ -40,14 +41,16 @@ function Label({
         />
         {ToTitleRight}
       </FlexRow>
-      <TextInputOnly
-        className={classes.LabelSearch}
-        value={search}
-        onChange={_search => {
-          if (setSearch) setSearch(_search)
-        }}
-        placeholder='search'
-      />
+      <Conditional showIf={search ? true : false}>
+        <TextInputOnly
+          className={classes.LabelSearch}
+          value={search}
+          onChange={_search => {
+            if (setSearch) setSearch(_search)
+          }}
+          placeholder='search'
+        />
+      </Conditional>
     </FlexCol>
   )
 }
