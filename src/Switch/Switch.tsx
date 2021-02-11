@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import useJSS from './style'
 import { useSpring, animated } from 'react-spring'
 import { sizes, colors, springConfig } from '../theme'
+import FlexRow from '../Flex/FlexRow'
+import Text from '../Text/Text'
+import CSS from 'csstype'
 
 const heightDif = 1
 
@@ -16,38 +19,62 @@ const rectY = heightDif
 const circleCY = (sizes.switch.diameter + heightDif) / 2
 
 
-function Switch({ text, onSwitch, initState, style, fontSize }: {
+function Switch({ 
+  text, onSwitch, initState, style, fontSize, padding, margin, borderRadius, textStyle,
+  backgroundColor, userSelect, svgMarginLeft
+}: {
   text: string,
   onSwitch: (newState: boolean) => void,
   initState: boolean,
-  style?: object,
+  style?: CSS.Properties
   fontSize?: string
+  textStyle?: CSS.Properties
+  padding?: string
+  margin?: string
+  borderRadius?: string
+  backgroundColor?: string
+  userSelect?: boolean
+  svgMarginLeft?: string
 }) {
   const [isSwitched, setSwitched] = useState(initState)
-  const classes = useJSS({ fontSize })
+  const classes = useJSS({ borderRadius, svgMarginLeft })
   const spring = useSpring({
     cx: isSwitched ? `${fullWidth - sizes.switch.diameter / 2}vmin` : `${sizes.switch.diameter / 2}vmin`,
     fill: isSwitched ? colors.notificationSuccess : colors.notificationFailure,
     config: springConfig.medium,
   })
+  function onClick() {
+    onSwitch(!isSwitched)
+    setSwitched(!isSwitched)
+  }
   return (
-    <div className={classes.Bounder} style={style}>
-      <div className={classes.Text}
-        onClick={() => { onSwitch(!isSwitched); setSwitched(!isSwitched) }}
-      >
-        {text}
-      </div>
-      <svg className={classes.SwitchSVG}
+    <FlexRow
+      className={classes.Switch}
+      alignItems='center'
+      justifyContent='space-between'
+      style={style}
+      padding={padding}
+      margin={margin}
+      onClick={onClick}
+      backgroundColor={backgroundColor}
+    >
+      <Text 
+        text={text} 
+        fontSize={fontSize} 
+        style={textStyle}
+        onClick={onClick}
+        userSelect={userSelect}
+      />
+      <svg
+        className={classes.SwitchSVG}
         width={`${fullWidth}vmin`}
         height={`${fullHeight}vmin`}
-        onClick={() => {
-          onSwitch(!isSwitched); setSwitched(!isSwitched)
-        }}
+        onClick={onClick}
       >
-        <rect width={`${rectWidth}vmin`} height={`${rectHeight}vmin`} x={`${rectX}vmin`} y={`${rectY}vmin`} rx='10' ry='10' fill={colors.centerMenu}/>
-        <animated.circle cx={spring.cx as any} cy={`${circleCY}vmin`} r={`${sizes.switch.diameter / 2}vmin`} fill={spring.fill}/>
+        <rect width={`${rectWidth}vmin`} height={`${rectHeight}vmin`} x={`${rectX}vmin`} y={`${rectY}vmin`} rx='10' ry='10' fill={colors.centerMenu} />
+        <animated.circle cx={spring.cx as any} cy={`${circleCY}vmin`} r={`${sizes.switch.diameter / 2}vmin`} fill={spring.fill} />
       </svg>
-    </div>
+    </FlexRow>      
   )
 }
 

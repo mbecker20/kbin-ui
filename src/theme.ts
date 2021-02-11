@@ -42,7 +42,9 @@ export const colors = {
   navbarBackground: '#030917',
 
   dataTableEvenRow: '#252626',
-  dataTableOddRow: 'transparent'
+  dataTableOddRow: 'transparent',
+
+  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
 }
 
 export function setCustomColors(customColors: Partial<typeof colors>) {
