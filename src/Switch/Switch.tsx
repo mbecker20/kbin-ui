@@ -58,7 +58,7 @@ function Switch({
       padding={padding}
       margin={margin}
       onClick={onClick}
-      backgroundColor={backgroundColor}
+      backgroundColor={backgroundColor ? backgroundColor : colors.unfocussedInput}
     >
       <Text 
         text={text} 
