@@ -21,7 +21,7 @@ const circleCY = (sizes.switch.diameter + heightDif) / 2
 
 function Switch({ 
   text, onSwitch, initState, style, fontSize, padding, margin, borderRadius, textStyle,
-  backgroundColor, userSelect, svgMarginLeft
+  backgroundColor, userSelect, svgMarginLeft, textMargin, textPadding
 }: {
   text: string,
   onSwitch: (newState: boolean) => void,
@@ -31,6 +31,8 @@ function Switch({
   textStyle?: CSS.Properties
   padding?: string
   margin?: string
+  textMargin?: string
+  textPadding?: string
   borderRadius?: string
   backgroundColor?: string
   userSelect?: boolean
@@ -64,6 +66,9 @@ function Switch({
         style={textStyle}
         onClick={onClick}
         userSelect={userSelect}
+        margin={textMargin}
+        padding={textPadding}
+        pointer
       />
       <svg
         className={classes.SwitchSVG}
@@ -71,7 +76,7 @@ function Switch({
         height={`${fullHeight}vmin`}
         onClick={onClick}
       >
-        <rect width={`${rectWidth}vmin`} height={`${rectHeight}vmin`} x={`${rectX}vmin`} y={`${rectY}vmin`} rx='10' ry='10' fill={colors.centerMenu} />
+        <rect width={`${rectWidth}vmin`} height={`${rectHeight}vmin`} x={`${rectX}vmin`} y={`${rectY}vmin`} rx='10' ry='10' fill={colors.switchLine} />
         <animated.circle cx={spring.cx as any} cy={`${circleCY}vmin`} r={`${sizes.switch.diameter / 2}vmin`} fill={spring.fill} />
       </svg>
     </FlexRow>      

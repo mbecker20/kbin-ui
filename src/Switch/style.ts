@@ -12,6 +12,9 @@ const useJSS = createUseStyles({
 
   SwitchSVG: {
     marginLeft: ({ svgMarginLeft }) => svgMarginLeft ? svgMarginLeft : '1em',
+    '&:hover': {
+      cursor: 'pointer'
+    },
   },
 })
 
