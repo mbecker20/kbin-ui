@@ -12,7 +12,7 @@ function TextInput({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, password, angry, happy
+  labelFontSize, value, password, angry, happy, width
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -36,6 +36,7 @@ function TextInput({
   password?: boolean
   angry?: boolean
   happy?: boolean
+  width?: string
 }) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
@@ -67,6 +68,7 @@ function TextInput({
         classes.InputBounder
       }
       style={springStyle}
+      width={width}
     > 
       {label ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}
