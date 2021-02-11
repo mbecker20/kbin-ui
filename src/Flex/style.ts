@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss'
+import { scrollbarJSS } from '../theme'
 
 const useJSS = createUseStyles({
   FlexRow: {
@@ -14,7 +15,11 @@ const useJSS = createUseStyles({
     height: ({ height }) => height,
     margin: ({ margin }) => margin,
     padding: ({ padding }) => padding,
-    backgroundColor: ({ backgroundColor }) => backgroundColor
+    backgroundColor: ({ backgroundColor }) => backgroundColor,
+    maxHeight: ({ maxHeight }) => maxHeight,
+    minHeight: ({ minHeight }) => minHeight,
+    maxWidth: ({ maxWidth }) => maxWidth,
+    minWidth: ({ minWidth }) => minWidth,
   },
 
   FlexCol: {
@@ -29,7 +34,13 @@ const useJSS = createUseStyles({
     height: ({ height }) => height,
     margin: ({ margin }) => margin,
     padding: ({ padding }) => padding,
-    backgroundColor: ({ backgroundColor }) => backgroundColor
+    backgroundColor: ({ backgroundColor }) => backgroundColor,
+    maxHeight: ({ maxHeight }) => maxHeight,
+    minHeight: ({ minHeight }) => minHeight,
+    maxWidth: ({ maxWidth }) => maxWidth,
+    minWidth: ({ minWidth }) => minWidth,
+    overflow: ({ scroller }) => scroller ? 'auto' : 'hidden',
+    ...scrollbarJSS.thin
   }
 })
 

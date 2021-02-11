@@ -26,10 +26,7 @@ const useJSS = createUseStyles({
     padding: '1vmin 2vmin 2vmin 2vmin',
     border: `.1em solid ${colors.centerMenuBorder}`,
     userSelect: 'none',
-    maxWidth: '90vw',
-    maxHeight: '90vh',
     transform: 'translate(-50%, -50%)',
-    ...scrollbarJSS.thin
   },
 
   Header: {

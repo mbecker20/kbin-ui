@@ -96,6 +96,12 @@ export const sizes = {
     searchMargin: '.2em',
     searchMinWidth: '25%',
     searchMaxWidth: '5em',
+  },
+  centerMenu: {
+    maxWidth: '80vw',
+    minWidth: '20vw',
+    maxHeight: '85vh',
+    minHeight: '20vh'
   }
 }
 
@@ -108,6 +114,7 @@ type CustomSizes = {
   labelledItems?: Partial<typeof sizes.labelledItems>
   dataTable?: Partial<typeof sizes.dataTable>
   label?: Partial<typeof sizes.label>
+  centerMenu?: Partial<typeof sizes.centerMenu>
 }
 
 export function setCustomSizes(customSizes: CustomSizes) {

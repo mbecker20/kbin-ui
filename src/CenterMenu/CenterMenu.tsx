@@ -5,13 +5,15 @@ import Conditional from '../Conditional'
 import Text from '../Text/Text'
 import { sizes } from '../theme'
 import SVGIcon from '../SVGIcon/SVGIcon'
+import FlexCol from '../Flex/FlexCol'
 
 export type CenterMenuControlData = boolean
 
 function CenterMenu({ 
   exists, className, style, headerClassName, 
   headerStyle, children, header, onClose, 
-  bounderStyle 
+  bounderStyle, maxHeight, maxWidth, minHeight,
+  minWidth
 }: {
   exists: boolean
   onClose: () => void
@@ -22,6 +24,10 @@ function CenterMenu({
   children: React.ReactNode
   header?: string
   bounderStyle?: CSS.Properties
+  maxWidth?: string
+  maxHeight?: string
+  minWidth?: string
+  minHeight?: string
 }) {
   const classes = useJSS()
   return (
@@ -45,7 +51,16 @@ function CenterMenu({
           <Text text={header} className={headerClassName ? `${classes.Header} ${headerClassName}` : classes.Header}
             style={headerStyle} fontSize={sizes.text.large}
           />}
-          {children}
+          <FlexCol 
+            alignItems='center'
+            maxWidth={maxWidth ? maxWidth : sizes.centerMenu.maxWidth}
+            maxHeight={maxHeight ? maxHeight : sizes.centerMenu.maxHeight}
+            minWidth={minWidth ? minWidth : sizes.centerMenu.minWidth}
+            minHeight={minHeight ? minHeight : sizes.centerMenu.minHeight}
+            scroller
+          >
+            {children}
+          </FlexCol>
         </div>
       </div>
     </Conditional>

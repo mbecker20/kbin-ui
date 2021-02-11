@@ -8,7 +8,8 @@ function _FlexCol({
   onDragOver, justifyContent, alignItems,
   onContextMenu, onClick, pointer, onWheel,
   width, height, onPointerEnter, onPointerLeave,
-  margin, padding, backgroundColor
+  margin, padding, backgroundColor, scroller,
+  maxHeight, minHeight, maxWidth, minWidth
 }: {
   className?: string
   style?: CSS.Properties
@@ -29,11 +30,18 @@ function _FlexCol({
   padding?: string
   backgroundColor?: string
   ref?: RefObject<HTMLDivElement>
+  scroller?: boolean,
+  maxHeight?: string
+  minHeight?: string
+  maxWidth?: string
+  minWidth?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     justifyContent, alignItems, pointer,
     width, height, margin, padding,
-    backgroundColor
+    backgroundColor, scroller,
+    maxHeight, minHeight, maxWidth,
+    minWidth
   })
   return (
     <div 

@@ -8,7 +8,8 @@ function _FlexRow({
   justifyContent, alignItems, flexWrap,
   onContextMenu, onClick, pointer, onWheel,
   width, height, onPointerEnter, onPointerLeave,
-  margin, padding, backgroundColor
+  margin, padding, backgroundColor,
+  maxHeight, minHeight, maxWidth, minWidth
 }: {
   className?: string
   style?: CSS.Properties
@@ -28,11 +29,16 @@ function _FlexRow({
   padding?: string
   backgroundColor?: string
   ref?: RefObject<HTMLDivElement>
+  maxHeight?: string
+  minHeight?: string
+  maxWidth?: string
+  minWidth?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     justifyContent, alignItems, flexWrap, 
     pointer, width, height, margin,
-    padding, backgroundColor
+    padding, backgroundColor,
+    maxHeight, minHeight, maxWidth, minWidth
   })
   return (
     <div 
