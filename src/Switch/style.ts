@@ -1,9 +1,9 @@
 import { createUseStyles } from 'react-jss'
-import { colors } from '../theme';
+import { colors, sizes } from '../theme';
 
 const useJSS = createUseStyles({
   Switch: {
-    borderRadius: ({ borderRadius }) => borderRadius ? borderRadius : '1em',
+    borderRadius: ({ borderRadius }) => borderRadius ? borderRadius : sizes.switch.borderRadius,
     boxShadow: colors.boxShadow,
     '&:hover': {
       cursor: 'pointer'
@@ -11,7 +11,7 @@ const useJSS = createUseStyles({
   },
 
   SwitchSVG: {
-    marginLeft: ({ svgMarginLeft }) => svgMarginLeft ? svgMarginLeft : '1em',
+    marginLeft: ({ svgMarginLeft }) => svgMarginLeft,
     '&:hover': {
       cursor: 'pointer'
     },

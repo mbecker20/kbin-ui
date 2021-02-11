@@ -67,7 +67,7 @@ function Switch({
         onClick={onClick}
         userSelect={userSelect}
         margin={textMargin}
-        padding={textPadding}
+        padding={textPadding ? textPadding : sizes.switch.textPadding}
         pointer
       />
       <svg
