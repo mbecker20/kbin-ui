@@ -34,7 +34,7 @@ function DataTable({
     <div className={classes.DataTable} style={style}>
       <DataRow
         row={1}
-        style={headersStyle ? Object.assign(headersStyle, rowStyle) : rowStyle}
+        style={headersStyle ? Object.assign({}, rowStyle, headersStyle) : rowStyle}
         dataset={objFrom2Arrays(keys, keys.map(key => (
           <Text text={key} bold={key === primaryKey} />
         )))}
