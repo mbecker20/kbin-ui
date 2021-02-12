@@ -133,6 +133,18 @@ export function setCustomSizes(customSizes: CustomSizes) {
   if (customSizes.checkBox) {
     Object.assign(sizes.checkBox, customSizes.checkBox)
   }
+  if (customSizes.labelledItems) {
+    Object.assign(sizes.labelledItems, customSizes.labelledItems)
+  }
+  if (customSizes.dataTable) {
+    Object.assign(sizes.dataTable, customSizes.dataTable)
+  }
+  if (customSizes.label) {
+    Object.assign(sizes.label, customSizes.label)
+  }
+  if (customSizes.centerMenu) {
+    Object.assign(sizes.centerMenu, customSizes.centerMenu)
+  }
 }
 
 export const zIndex = {

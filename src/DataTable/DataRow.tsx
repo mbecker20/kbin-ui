@@ -1,31 +1,28 @@
 import React, { Fragment, ReactNode } from 'react'
 import CSS from 'csstype'
 import Map from '../Map'
-import { colors, sizes } from '../theme'
+import { rowJSS } from './style'
 
-function DataRow({ dataset, row, style }: {
+function DataRow({ dataset, row, style, margin }: {
   dataset: { [index: string]: ReactNode }
   row: number
   style?: CSS.Properties
+  margin?: string
 }) {
+  const classes = rowJSS({ row, margin })
   return (
     <Fragment>
       <div
-        style={{
-          gridColumn: `1 / -1`,
-          gridRow: `${row} / span 1`,
-          backgroundColor: row % 2 === 0 ? colors.dataTableEvenRow : colors.dataTableOddRow,
-        }}
+        className={classes.DataTableRowBG}
       />
       <Map
         array={Object.keys(dataset)}
         map={key => (
           <div
+            className={classes.RowItem}
             key={key}
             style={Object.assign({
-              gridColumn: `${key} / span 1`,
-              gridRow: `${row} / span 1`,
-              margin: sizes.dataTable.itemMargin
+              gridColumn: `${key.replace(' ', '-')} / span 1`,
             }, style)}
           >
             {dataset[key]}

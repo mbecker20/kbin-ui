@@ -25,7 +25,8 @@ function DataTable({
 }) {
   const keys = data.length > 0 ? Object.keys(data[0]) : []
   const classes = useJSS({ 
-    primaryKey, columns: keys.filter(key => key !== primaryKey), 
+    primaryKey: primaryKey.replace(' ', '-'), 
+    columns: keys.filter(key => key !== primaryKey).map(key => key.replace(' ', '-')), 
     width, height, color, margin, padding, rowGap, colGap
   })
   return (
