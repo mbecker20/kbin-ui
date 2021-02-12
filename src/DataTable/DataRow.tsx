@@ -3,14 +3,13 @@ import CSS from 'csstype'
 import Map from '../Map'
 import { rowJSS } from './style'
 
-function DataRow({ dataset, row, style, margin, rowBGPadding }: {
+function DataRow({ dataset, row, style, margin }: {
   dataset: { [index: string]: ReactNode }
   row: number
   style?: CSS.Properties
   margin?: string
-  rowBGPadding?: string
 }) {
-  const classes = rowJSS({ row, margin, rowBGPadding })
+  const classes = rowJSS({ row, margin })
   return (
     <Fragment>
       <div

@@ -92,7 +92,7 @@ export const sizes = {
     colGap: '1em',
     rowGap: '.2em',
     itemMargin: '.2em 0em',
-    rowBGPadding: '.5em'
+    rowBGMargin: '.5em'
   },
   label: {
     titleMargin: '.1em .2em',
