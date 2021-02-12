@@ -102,9 +102,9 @@ export const sizes = {
   },
   centerMenu: {
     maxWidth: '80vw',
-    minWidth: '20vw',
+    minWidth: '0vw',
     maxHeight: '85vh',
-    minHeight: '20vh'
+    minHeight: '0vh'
   }
 }
 
