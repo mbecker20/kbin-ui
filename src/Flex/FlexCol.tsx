@@ -9,7 +9,8 @@ function _FlexCol({
   onContextMenu, onClick, pointer, onWheel,
   width, height, onPointerEnter, onPointerLeave,
   margin, padding, backgroundColor, scroller,
-  maxHeight, minHeight, maxWidth, minWidth, overflow
+  maxHeight, minHeight, maxWidth, minWidth, overflow,
+  xScroller
 }: {
   className?: string
   style?: CSS.Properties
@@ -30,7 +31,8 @@ function _FlexCol({
   padding?: string
   backgroundColor?: string
   ref?: RefObject<HTMLDivElement>
-  scroller?: boolean,
+  scroller?: boolean
+  xScroller?: boolean
   maxHeight?: string
   minHeight?: string
   maxWidth?: string
@@ -42,7 +44,7 @@ function _FlexCol({
     width, height, margin, padding,
     backgroundColor, scroller,
     maxHeight, minHeight, maxWidth,
-    minWidth, overflow
+    minWidth, overflow, xScroller
   })
   return (
     <div 
