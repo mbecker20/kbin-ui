@@ -89,7 +89,8 @@ export const sizes = {
   dataTable: {
     colGap: '1em',
     rowGap: '.2em',
-    itemMargin: '0em'
+    itemMargin: '0em',
+    rowBGPadding: '.5em'
   },
   label: {
     titleMargin: '.1em .2em',

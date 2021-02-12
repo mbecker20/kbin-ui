@@ -34,6 +34,7 @@ export const rowJSS = createUseStyles({
     gridColumn: `1 / -1`,
     gridRow: ({ row }) => `${row} / span 1`,
     backgroundColor: ({ row }) =>  row % 2 === 0 ? colors.dataTableEvenRow : colors.dataTableOddRow,
+    padding: ({ rowBGPadding }) =>  rowBGPadding ? rowBGPadding : sizes.dataTable.rowBGPadding
   },
 
   RowItem: {

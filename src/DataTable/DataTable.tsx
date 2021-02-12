@@ -8,7 +8,7 @@ import Map from '../Map'
 
 function DataTable({ 
   primaryKey, data, width, height, color, style, rowStyle, headersStyle,
-  margin, padding, rowGap, colGap
+  margin, padding, rowGap, colGap, rowBGPadding
 }: {
   primaryKey: string
   data: { [index: string]: ReactNode }[]
@@ -22,6 +22,7 @@ function DataTable({
   padding?: string
   rowGap?: string
   colGap?: string
+  rowBGPadding?: string
 }) {
   const keys = data.length > 0 ? Object.keys(data[0]) : []
   const classes = useJSS({ 
@@ -33,7 +34,7 @@ function DataTable({
     <div className={classes.DataTable} style={style}>
       <DataRow
         row={1}
-        style={headersStyle ? headersStyle : rowStyle}
+        style={headersStyle ? Object.assign(headersStyle, rowStyle) : rowStyle}
         dataset={objFrom2Arrays(keys, keys.map(key => (
           <Text text={key} bold={key === primaryKey} />
         )))}
@@ -45,7 +46,8 @@ function DataTable({
             dataset={dataset} 
             row={index + 2} 
             key={index} 
-            style={rowStyle} 
+            style={rowStyle}
+            rowBGPadding={rowBGPadding}
           />
         )}
       />
