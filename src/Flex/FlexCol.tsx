@@ -9,7 +9,7 @@ function _FlexCol({
   onContextMenu, onClick, pointer, onWheel,
   width, height, onPointerEnter, onPointerLeave,
   margin, padding, backgroundColor, scroller,
-  maxHeight, minHeight, maxWidth, minWidth
+  maxHeight, minHeight, maxWidth, minWidth, overflow
 }: {
   className?: string
   style?: CSS.Properties
@@ -35,13 +35,14 @@ function _FlexCol({
   minHeight?: string
   maxWidth?: string
   minWidth?: string
+  overflow?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     justifyContent, alignItems, pointer,
     width, height, margin, padding,
     backgroundColor, scroller,
     maxHeight, minHeight, maxWidth,
-    minWidth
+    minWidth, overflow
   })
   return (
     <div 

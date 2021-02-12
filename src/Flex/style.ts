@@ -39,7 +39,7 @@ const useJSS = createUseStyles({
     minHeight: ({ minHeight }) => minHeight,
     maxWidth: ({ maxWidth }) => maxWidth,
     minWidth: ({ minWidth }) => minWidth,
-    overflow: ({ scroller }) => scroller ? 'auto' : 'hidden',
+    overflow: ({ scroller, overflow }) => scroller ? 'auto' : overflow,
     ...scrollbarJSS.thin
   }
 })
