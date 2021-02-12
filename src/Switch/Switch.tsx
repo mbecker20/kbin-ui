@@ -42,7 +42,7 @@ function Switch({
   const classes = useJSS({ borderRadius, svgMarginLeft })
   const spring = useSpring({
     cx: isSwitched ? `${fullWidth - sizes.switch.diameter / 2}vmin` : `${sizes.switch.diameter / 2}vmin`,
-    fill: isSwitched ? colors.notificationSuccess : colors.notificationFailure,
+    fill: isSwitched ? colors.switchOn : colors.switchOff,
     config: springConfig.medium,
   })
   function onClick() {
