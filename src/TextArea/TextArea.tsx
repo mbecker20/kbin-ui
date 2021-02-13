@@ -12,7 +12,7 @@ function TextArea({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   textAreaRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, angry, happy, width
+  labelFontSize, value, angry, happy, width, rows, cols
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -36,6 +36,8 @@ function TextArea({
   angry?: boolean
   happy?: boolean
   width?: string
+  rows?: number
+  cols?: number
 }) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
@@ -91,6 +93,7 @@ function TextArea({
         onEscape={onEscape}
         defaultValue={defaultValue}
         value={value}
+        rows={rows} cols={cols}
       />
     </Flex>
   )
