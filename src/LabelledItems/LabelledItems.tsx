@@ -21,9 +21,7 @@ function LabelledItems({
 }) {
   const classes = useJSS()
   return (
-    <FlexCol className={classes.LabelledItems} style={style}
-      justifyContent={justifyContent} alignItems={alignItems}
-    >
+    <FlexCol className={classes.LabelledItems} style={style}>
       <IfElse 
         showIf={typeof (label) === 'string'}
         show={
@@ -34,7 +32,12 @@ function LabelledItems({
         }
         showElse={label}
       />
-      <FlexCol className={classes.Items} style={itemsStyle}>
+      <FlexCol 
+        className={classes.Items} 
+        style={itemsStyle} 
+        justifyContent={justifyContent} 
+        alignItems={alignItems}
+      >
         { children }
       </FlexCol>
     </FlexCol>
