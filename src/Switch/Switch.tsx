@@ -21,7 +21,7 @@ const circleCY = (sizes.switch.diameter + heightDif) / 2
 
 function Switch({ 
   text, onSwitch, initState, style, fontSize, padding, margin, borderRadius, textStyle,
-  backgroundColor, userSelect, svgMarginLeft, textMargin, textPadding
+  backgroundColor, userSelect, textMargin, textPadding, switchMargin
 }: {
   text: string,
   onSwitch: (newState: boolean) => void,
@@ -33,13 +33,13 @@ function Switch({
   margin?: string
   textMargin?: string
   textPadding?: string
+  switchMargin?: string
   borderRadius?: string
   backgroundColor?: string
   userSelect?: boolean
-  svgMarginLeft?: string
 }) {
   const [isSwitched, setSwitched] = useState(initState)
-  const classes = useJSS({ borderRadius, svgMarginLeft })
+  const classes = useJSS({ borderRadius, switchMargin })
   const spring = useSpring({
     cx: isSwitched ? `${fullWidth - sizes.switch.diameter / 2}vmin` : `${sizes.switch.diameter / 2}vmin`,
     fill: isSwitched ? colors.switchOn : colors.switchOff,

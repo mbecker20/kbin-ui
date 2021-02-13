@@ -74,7 +74,8 @@ export const sizes = {
   switch: {
     diameter: 3, // in vmin
     textPadding: '.5em',
-    borderRadius: '.5em'
+    borderRadius: '.5em',
+    switchMargin: '0em .7em 0em 0em'
   },
   checkBox: {
     size: 1.2, // in em
