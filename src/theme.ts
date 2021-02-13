@@ -76,7 +76,7 @@ export const sizes = {
   switch: {
     diameter: 3, // in vmin
     textPadding: '.5em',
-    borderRadius: '.5em',
+    borderRadius: '.3em',
     switchMargin: '0em .7em 0em 0em'
   },
   checkBox: {
@@ -89,7 +89,7 @@ export const sizes = {
     labelPadding: '.2em',
     margin: '.3em',
     padding: '.2em',
-    borderRadius: '.3em'
+    borderRadius: '.2em'
   },
   dataTable: {
     colGap: '1em',
