@@ -14,6 +14,8 @@ export const colors = {
   loadingScreenBG: '#000000',
   dashboardBG: '#000000',
 
+  pageHeaderBG: '',
+
   centerMenuBackground: 'rgba(0, 0, 0, .5)', // this covers 100vw 100vh
   centerMenu: '#030917',
   centerMenuBorder: 'transparent',
@@ -106,6 +108,9 @@ export const sizes = {
     minWidth: '0vw',
     maxHeight: '85vh',
     minHeight: '0vh'
+  },
+  grid: {
+    itemMinWidth: '1em'
   }
 }
 
@@ -119,6 +124,7 @@ type CustomSizes = {
   dataTable?: Partial<typeof sizes.dataTable>
   label?: Partial<typeof sizes.label>
   centerMenu?: Partial<typeof sizes.centerMenu>
+  grid?: Partial<typeof sizes.grid>
 }
 
 export function setCustomSizes(customSizes: CustomSizes) {
@@ -148,6 +154,9 @@ export function setCustomSizes(customSizes: CustomSizes) {
   }
   if (customSizes.centerMenu) {
     Object.assign(sizes.centerMenu, customSizes.centerMenu)
+  }
+  if (customSizes.grid) {
+    Object.assign(sizes.grid, customSizes.grid)
   }
 }
 

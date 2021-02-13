@@ -1,17 +1,17 @@
 import React, { ReactNode } from 'react'
 import useJSS from './style'
+import CSS from 'csstype'
 
-function Dashboard({ children, navbar }: {
+function Dashboard({ children, navbar, style }: {
   children: ReactNode
   navbar: ReactNode
+  style?: CSS.Properties
 }) {
   const classes = useJSS()
   return (
-    <div className={classes.DashboardBounder}>
+    <div className={classes.Dashboard} style={style}>
       {navbar}
-      <div className={classes.Dashboard}>
-        {children}
-      </div>
+      {children}
     </div>
   )
 }

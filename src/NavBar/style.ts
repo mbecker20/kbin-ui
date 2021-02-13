@@ -5,7 +5,7 @@ const useJSS = createUseStyles({
   NavBar: {
     height: '100vh',
     backgroundColor: colors.navbarBackground,
-    gridColumn: 'navbar / span 1',
+    gridArea: 'navbar',
     display: 'grid',
     gridTemplateRows: '[top] auto [topdiv] auto [routes] 1fr [bottomdiv] auto [bottom] auto'
   }, 

@@ -8,12 +8,17 @@ import IfElse from '../IfElse'
 
 function LabelledItems({ 
   children, label, labelSize, style, labelStyle, 
-  itemsStyle, justifyContent, alignItems
+  itemsStyle, justifyContent, alignItems, width, height,
+  itemsWidth, itemsHeight
 }: {
   children: ReactNode
   label: ReactNode
   labelSize?: string
   style?: CSS.Properties
+  width?: string
+  height?: string
+  itemsWidth?: string
+  itemsHeight?: string
   labelStyle?: CSS.Properties
   itemsStyle?: CSS.Properties
   justifyContent?: string
@@ -21,7 +26,12 @@ function LabelledItems({
 }) {
   const classes = useJSS()
   return (
-    <FlexCol className={classes.LabelledItems} style={style}>
+    <FlexCol 
+      className={classes.LabelledItems} 
+      style={style} 
+      width={width} 
+      height={height}
+    >
       <IfElse 
         showIf={typeof (label) === 'string'}
         show={
@@ -37,6 +47,8 @@ function LabelledItems({
         style={itemsStyle} 
         justifyContent={justifyContent} 
         alignItems={alignItems}
+        width={itemsWidth}
+        height={itemsHeight}
       >
         { children }
       </FlexCol>
