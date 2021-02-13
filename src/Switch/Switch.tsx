@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useJSS from './style'
 import { useSpring, animated } from 'react-spring'
 import { sizes, colors, springConfig } from '../theme'
@@ -19,13 +19,13 @@ const rectY = heightDif
 const circleCY = (sizes.switch.diameter + heightDif) / 2
 
 
-function Switch({ 
-  text, onSwitch, initState, style, fontSize, padding, margin, borderRadius, textStyle,
+function Switch({
+  text, onSwitch, isSwitched, style, fontSize, padding, margin, borderRadius, textStyle,
   backgroundColor, userSelect, textMargin, textPadding, switchMargin
 }: {
   text: string,
-  onSwitch: (newState: boolean) => void,
-  initState: boolean,
+  onSwitch: () => void,
+  isSwitched: boolean,
   style?: CSS.Properties
   fontSize?: string
   textStyle?: CSS.Properties
@@ -38,17 +38,12 @@ function Switch({
   backgroundColor?: string
   userSelect?: boolean
 }) {
-  const [isSwitched, setSwitched] = useState(initState)
   const classes = useJSS({ borderRadius, switchMargin })
   const spring = useSpring({
     cx: isSwitched ? `${fullWidth - sizes.switch.diameter / 2}vmin` : `${sizes.switch.diameter / 2}vmin`,
     fill: isSwitched ? colors.switchOn : colors.switchOff,
     config: springConfig.medium,
   })
-  function onClick() {
-    onSwitch(!isSwitched)
-    setSwitched(!isSwitched)
-  }
   return (
     <FlexRow
       className={classes.Switch}
@@ -57,14 +52,14 @@ function Switch({
       style={style}
       padding={padding}
       margin={margin}
-      onClick={onClick}
+      onClick={onSwitch}
       backgroundColor={backgroundColor ? backgroundColor : colors.unfocussedInput}
     >
-      <Text 
-        text={text} 
-        fontSize={fontSize} 
+      <Text
+        text={text}
+        fontSize={fontSize}
         style={textStyle}
-        onClick={onClick}
+        onClick={onSwitch}
         userSelect={userSelect}
         margin={textMargin}
         padding={textPadding ? textPadding : sizes.switch.textPadding}
@@ -74,12 +69,12 @@ function Switch({
         className={classes.SwitchSVG}
         width={`${fullWidth}vmin`}
         height={`${fullHeight}vmin`}
-        onClick={onClick}
+        onClick={onSwitch}
       >
         <rect width={`${rectWidth}vmin`} height={`${rectHeight}vmin`} x={`${rectX}vmin`} y={`${rectY}vmin`} rx='10' ry='10' fill={colors.switchLine} />
         <animated.circle cx={spring.cx as any} cy={`${circleCY}vmin`} r={`${sizes.switch.diameter / 2}vmin`} fill={spring.fill} />
       </svg>
-    </FlexRow>      
+    </FlexRow>
   )
 }
 
