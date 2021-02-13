@@ -9,6 +9,10 @@ export function useListener<Event>(listenerID: string, listener: (e: Event) => v
   }, dependencies)
 }
 
+export function conditionalUseState<T>(conditional: boolean, initState: T) {
+  return conditional ? useState(initState) : [initState, () => {}]
+}
+
 export function useEscapeToClose(closeMenu: () => void, dependencies: any[] = []) {
   useListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Escape') {
