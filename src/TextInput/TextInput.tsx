@@ -12,7 +12,7 @@ function TextInput({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, password, angry, happy, width
+  labelFontSize, value, password, angry, happy, width, gridArea
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -37,6 +37,7 @@ function TextInput({
   angry?: boolean
   happy?: boolean
   width?: string
+  gridArea?: string
 }) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
@@ -61,7 +62,8 @@ function TextInput({
   })
   const Flex = layout === 'row' ? AnimatedFlexRow : AnimatedFlexCol
   return (
-    <Flex alignItems='stretch' 
+    <Flex 
+      alignItems='stretch' 
       className={
         bounderClassName ? 
         `${classes.InputBounder} ${bounderClassName}` :
@@ -69,6 +71,7 @@ function TextInput({
       }
       style={springStyle}
       width={width}
+      gridArea={gridArea}
     > 
       {label ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}

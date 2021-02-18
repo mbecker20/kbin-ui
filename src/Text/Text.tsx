@@ -3,11 +3,7 @@ import useJSS from './style'
 import CSS from 'csstype'
 import { animated } from 'react-spring'
 
-function _Text({ 
-  className, style, text, fontSize, color, onClick, 
-  pointer, padding, margin, textCursor,
-  wrap, textAlign, underline, bold, userSelect
-}: {
+function _Text(props: {
   text: string
   className?: string
   style?: CSS.Properties
@@ -24,12 +20,13 @@ function _Text({
   underline?: boolean
   bold?: boolean
   userSelect?: boolean
+  gridArea?: string
+  alignSelf?: string
+  justifySelf?: string
+  placeSelf?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
-  const classes = useJSS({ 
-    fontSize, color, pointer, padding, 
-    margin, textCursor, wrap, textAlign,
-    underline, bold, userSelect
-  })
+  const classes = useJSS(props)
+  const { className, style, text, onClick } = props
   return (
     <div className={className ? `${classes.Text} ${className}` : classes.Text}
       style={style} ref={ref}

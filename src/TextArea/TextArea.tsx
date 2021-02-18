@@ -12,7 +12,7 @@ function TextArea({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   textAreaRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, angry, happy, width, rows, cols
+  labelFontSize, value, angry, happy, width, rows, cols, gridArea
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -38,6 +38,7 @@ function TextArea({
   width?: string
   rows?: number
   cols?: number
+  gridArea?: string
 }) {
   const classes = useJSS({ fontSize, labelFontSize })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
@@ -62,7 +63,8 @@ function TextArea({
   })
   const Flex = layout === 'row' ? AnimatedFlexRow : AnimatedFlexCol
   return (
-    <Flex alignItems='stretch'
+    <Flex 
+      alignItems='stretch'
       className={
         bounderClassName ?
           `${classes.TextAreaBounder} ${bounderClassName}` :
@@ -70,6 +72,7 @@ function TextArea({
       }
       style={springStyle}
       width={width}
+      gridArea={gridArea}
     >
       {label ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}

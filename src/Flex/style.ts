@@ -20,6 +20,7 @@ const useJSS = createUseStyles({
     minHeight: ({ minHeight }) => minHeight,
     maxWidth: ({ maxWidth }) => maxWidth,
     minWidth: ({ minWidth }) => minWidth,
+    gridArea: ({ gridArea }) => gridArea
   },
 
   FlexCol: {
@@ -38,7 +39,8 @@ const useJSS = createUseStyles({
     maxHeight: ({ maxHeight }) => maxHeight,
     minHeight: ({ minHeight }) => minHeight,
     maxWidth: ({ maxWidth }) => maxWidth,
-    minWidth: ({ minWidth }) => minWidth, 
+    minWidth: ({ minWidth }) => minWidth,
+    gridArea: ({ gridArea }) => gridArea,
     overflow: ({ scroller, xScroller, overflow }) => 
       (scroller && xScroller) ? 'auto' : 
       scroller ? 'hidden auto' : 

@@ -7,26 +7,38 @@ function Button({
   className, onClick, children, style, onPointerDown, 
   buttonRef, onKeyDown, onContextMenu, fontSize, notClickable,
   onPointerEnter, onPointerLeave, onDoubleClick,
-  isRed, margin, padding
+  isRed, margin, padding, width, height, maxHeight, maxWidth,
+  minHeight, minWidth, gridArea
 }: {
   className?: string
   children?: React.ReactNode
-  onClick?: (e: MouseEvent<HTMLDivElement>) => void
   style?: CSS.Properties
-  onPointerDown?: (e: React.PointerEvent<HTMLDivElement>) => void
   buttonRef?: RefObject<HTMLDivElement>
-  onKeyDown?: (e: KeyboardEvent<HTMLDivElement>) => void
-  onContextMenu?: (e: MouseEvent<HTMLDivElement>) => void
   fontSize?: string
   notClickable?: boolean
-  onPointerEnter?: (e: MouseEvent<HTMLDivElement>) => void
-  onPointerLeave?: (e: MouseEvent<HTMLDivElement>) => void
-  onDoubleClick?: (e: MouseEvent<HTMLDivElement>) => void
   isRed?: boolean
   margin?: string
   padding?: string
+  width?: string
+  height?: string
+  maxWidth?: string
+  maxHeight?: string
+  minWidth?: string
+  minHeight?: string
+  gridArea?: string
+  onClick?: (e: MouseEvent<HTMLDivElement>) => void
+  onKeyDown?: (e: KeyboardEvent<HTMLDivElement>) => void
+  onContextMenu?: (e: MouseEvent<HTMLDivElement>) => void
+  onPointerEnter?: (e: MouseEvent<HTMLDivElement>) => void
+  onPointerLeave?: (e: MouseEvent<HTMLDivElement>) => void
+  onDoubleClick?: (e: MouseEvent<HTMLDivElement>) => void
+  onPointerDown?: (e: React.PointerEvent<HTMLDivElement>) => void
 }) {
-  const classes = useJSS({ fontSize, notClickable, isRed, margin, padding })
+  const classes = useJSS({ 
+    fontSize, notClickable, isRed, margin, padding,
+    width, height, maxHeight, maxWidth, minHeight, minWidth,
+    gridArea
+  })
   return (
     <div 
       className={className ? `${classes.Button} ${className}` : classes.Button}

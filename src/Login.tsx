@@ -14,7 +14,7 @@ function Login({
   LoginTitle: ReactElement
   login: (username: string, password: string, email?: string, setLoginLoading?: (loading: boolean) => void, usernameRef?: RefObject<HTMLDivElement>) => void
   AdditionalLogins?: ReactElement[]
-    createAccount?: (username: string, password: string, email?: string, setCreateLoading?: (loading: boolean) => void, usernameRef?: RefObject<HTMLDivElement>) => void
+  createAccount?: (username: string, password: string, email?: string, setCreateLoading?: (loading: boolean) => void, usernameRef?: RefObject<HTMLDivElement>) => void
   requireEmail?: boolean
 }) {
   const [username, setUsername] = useState('')

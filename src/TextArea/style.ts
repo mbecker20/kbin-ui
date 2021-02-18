@@ -6,7 +6,7 @@ const useJSS = createUseStyles({
     margin: '.3em',
     borderStyle: 'solid',
     borderRadius: '.3em',
-    borderWidth: '.3em'
+    borderWidth: '.3em',
   },
 
   Label: {
@@ -24,7 +24,8 @@ const useJSS = createUseStyles({
     fontFamily: 'inherit',
     color: colors.inputText,
     resize: 'vertical',
-    fontWeight: ({ bold }) => bold ? 'bold' : 'normal'
+    fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
+    gridArea: ({ gridArea }) => gridArea
   },
 })
 

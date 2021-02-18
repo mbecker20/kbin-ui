@@ -10,7 +10,7 @@ function _FlexCol({
   width, height, onPointerEnter, onPointerLeave,
   margin, padding, backgroundColor, scroller,
   maxHeight, minHeight, maxWidth, minWidth, overflow,
-  xScroller
+  xScroller, gridArea
 }: {
   className?: string
   style?: CSS.Properties
@@ -38,13 +38,14 @@ function _FlexCol({
   maxWidth?: string
   minWidth?: string
   overflow?: string
+  gridArea?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS({ 
     justifyContent, alignItems, pointer,
     width, height, margin, padding,
     backgroundColor, scroller,
     maxHeight, minHeight, maxWidth,
-    minWidth, overflow, xScroller
+    minWidth, overflow, xScroller, gridArea
   })
   return (
     <div 

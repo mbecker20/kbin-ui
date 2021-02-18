@@ -25,6 +25,13 @@ const useJSS = createUseStyles({
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.xsmall,
     boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
     userSelect: 'none',
+    width: ({ width }) => width,
+    maxWidth: ({ maxWidth }) => maxWidth,
+    minWidth: ({ minWidth }) => minWidth,
+    height: ({ height }) => height,
+    maxHeight: ({ maxHeight }) => maxHeight,
+    minHeight: ({ minHeight }) => minHeight,
+    gridArea: ({ gridArea }) => gridArea
   },
 })
 

@@ -15,7 +15,11 @@ const useJSS = createUseStyles({
     textAlign: ({ textAlign }) => textAlign,
     borderBottomStyle: ({ underline }) => underline ? 'solid' : 'none',
     fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
-    userSelect: ({ userSelect }) => userSelect ? 'text' : 'none'
+    userSelect: ({ userSelect }) => userSelect ? 'text' : 'none',
+    gridArea: ({ gridArea }) => gridArea,
+    alignSelf: ({ alignSelf }) => alignSelf,
+    justifySelf: ({ justifySelf }) => justifySelf,
+    placeSelf: ({ placeSelf }) => placeSelf
   },
 })
 

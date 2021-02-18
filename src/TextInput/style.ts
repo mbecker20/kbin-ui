@@ -6,7 +6,7 @@ const useJSS = createUseStyles({
     margin: '.3em',
     borderStyle: 'solid',
     borderRadius: '.3em',
-    borderWidth: '.3em'
+    borderWidth: '.3em',
   },
 
   Label: {

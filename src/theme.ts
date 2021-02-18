@@ -50,7 +50,9 @@ export const colors = {
 
   switchLine: 'black',
   switchOn: '#046727',
-  switchOff: '#9e0505'
+  switchOff: '#9e0505',
+
+  topbarBG: '#030917'
 }
 
 export function setCustomColors(customColors: Partial<typeof colors>) {
@@ -273,16 +275,16 @@ export function setCustomScrollbarJSS(customJSS: CustomScrollbarJSS) {
 export const useScrollbarJSS = createUseStyles({
   Scroller: {
     '&::-webkit-scrollbar': {
-      width: type => scrollbarJSS[type]['&::-webkit-scrollbar'].width,
+      width: type => (scrollbarJSS as any)[type]['&::-webkit-scrollbar'].width,
     },
     '&::-webkit-scrollbar-track': {
-      background: type => scrollbarJSS[type]['&::-webkit-scrollbar-track'].background,
+      background: type => (scrollbarJSS as any)[type]['&::-webkit-scrollbar-track'].background,
     },
     '&::-webkit-scrollbar-thumb': {
-      background: type => scrollbarJSS[type]['&::-webkit-scrollbar-thumb'].background,
-      borderRadius: type => scrollbarJSS[type]['&::-webkit-scrollbar-thumb'].borderRadius,
+      background: type => (scrollbarJSS as any)[type]['&::-webkit-scrollbar-thumb'].background,
+      borderRadius: type => (scrollbarJSS as any)[type]['&::-webkit-scrollbar-thumb'].borderRadius,
     },
-    scrollbarWidth: type => scrollbarJSS[type].scrollbarWidth,
-    scrollbarColor: type => scrollbarJSS[type].scrollbarColor,
+    scrollbarWidth: type => (scrollbarJSS as any)[type].scrollbarWidth,
+    scrollbarColor: type => (scrollbarJSS as any)[type].scrollbarColor,
   }
 })
