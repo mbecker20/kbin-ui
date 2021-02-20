@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import CSS from 'csstype'
 import Grid from './Grid/Grid'
+import { colors } from './theme'
 
 function Dashboard({ children, TopBar, NavBar, fullNavBar, backgroundColor, style }: {
   children: ReactNode
@@ -16,7 +17,7 @@ function Dashboard({ children, TopBar, NavBar, fullNavBar, backgroundColor, styl
     <Grid
       width='100vw'
       height='100vh'
-      backgroundColor={backgroundColor}
+      backgroundColor={backgroundColor ? backgroundColor : colors.dashboardBG}
       gridTemplateColumns={useNavBar ? 'auto 1fr' : '1fr'}
       gridTemplateRows={useTopBar ? 'auto 1fr' : '1fr'}
       gridTemplateAreas={areas(useTopBar, useNavBar, fullNavBar)}

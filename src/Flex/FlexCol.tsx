@@ -3,15 +3,7 @@ import CSS from 'csstype'
 import useJSS from './style'
 import { animated } from 'react-spring'
 
-function _FlexCol({ 
-  className, children, style, onDrop, 
-  onDragOver, justifyContent, alignItems,
-  onContextMenu, onClick, pointer, onWheel,
-  width, height, onPointerEnter, onPointerLeave,
-  margin, padding, backgroundColor, scroller,
-  maxHeight, minHeight, maxWidth, minWidth, overflow,
-  xScroller, gridArea
-}: {
+function _FlexCol(props: {
   className?: string
   style?: CSS.Properties
   children?: React.ReactNode
@@ -39,14 +31,14 @@ function _FlexCol({
   minWidth?: string
   overflow?: string
   gridArea?: string
+  boxShadow?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
-  const classes = useJSS({ 
-    justifyContent, alignItems, pointer,
-    width, height, margin, padding,
-    backgroundColor, scroller,
-    maxHeight, minHeight, maxWidth,
-    minWidth, overflow, xScroller, gridArea
-  })
+  const classes = useJSS(props)
+  const {
+    className, children, style, onDrop,
+    onDragOver, onContextMenu, onClick, onWheel,
+    onPointerEnter, onPointerLeave,
+  } = props
   return (
     <div 
       className={className ? `${classes.FlexCol} ${className}` : classes.FlexCol}

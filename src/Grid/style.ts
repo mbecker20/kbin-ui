@@ -24,7 +24,14 @@ const useJSS = createUseStyles({
     minHeight: ({ minHeight }) => minHeight,
     maxWidth: ({ maxWidth }) => maxWidth,
     maxHeight: ({ maxHeight }) => maxHeight,
-    backgroundColor: ({ backgroundColor }) => backgroundColor
+    backgroundColor: ({ backgroundColor }) => backgroundColor,
+    gridArea: ({ gridArea }) => gridArea,
+    margin: ({ margin }) => margin,
+    padding: ({ padding }) => padding,
+    '&:hover': {
+      cursor: ({ pointer }) => pointer ? 'pointer' : 'default'
+    },
+    boxShadow: ({ boxShadow }) => boxShadow,
   },
 })
 

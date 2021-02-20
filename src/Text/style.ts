@@ -5,7 +5,6 @@ const useJSS = createUseStyles({
   Text: {
     color: ({ color }) => color ? color : colors.text,
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.small,
-    width: 'fit-content',
     '&:hover': {
       cursor: ({ pointer, textCursor }) => pointer ? 'pointer' : textCursor ? 'text' : 'default'
     },
@@ -19,7 +18,10 @@ const useJSS = createUseStyles({
     gridArea: ({ gridArea }) => gridArea,
     alignSelf: ({ alignSelf }) => alignSelf,
     justifySelf: ({ justifySelf }) => justifySelf,
-    placeSelf: ({ placeSelf }) => placeSelf
+    placeSelf: ({ placeSelf }) => placeSelf,
+    boxShadow: ({ boxShadow }) => boxShadow,
+    backgroundColor: ({ backgroundColor }) => backgroundColor,
+    width: ({ width }) => width ? width : 'fit-content'
   },
 })
 

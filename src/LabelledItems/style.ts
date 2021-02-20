@@ -11,15 +11,9 @@ const useJSS = createUseStyles({
 
   Label: {
     backgroundColor: colors.unfocussedInput,
-    padding: sizes.labelledItems.labelPadding,
+    //padding: sizes.labelledItems.labelPadding,
     color: colors.unfocussedInputLabel,
   },
-
-  Items: {
-    backgroundColor: colors.inputBG,
-    padding: sizes.labelledItems.itemsPadding,
-    width: 'inherit'
-  }
 })
 
 export default useJSS

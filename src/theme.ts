@@ -12,9 +12,7 @@ export const colors = {
   selectedText: '#2461e8',
 
   loadingScreenBG: '#000000',
-  dashboardBG: '#000000',
-
-  pageHeaderBG: '',
+  dashboardBG: '#16171b',
 
   centerMenuBackground: 'rgba(0, 0, 0, .5)', // this covers 100vw 100vh
   centerMenu: '#030917',
@@ -30,6 +28,8 @@ export const colors = {
   angryInputBorder: '#970000',
   happyInput: '#003e12',
   happyInputBorder: '#007d25',
+
+  labelledItemsItems: '#252626',
 
   notificationSuccess: '#046727c7',
   notificationFailure: '#9e0505c7',
@@ -52,7 +52,10 @@ export const colors = {
   switchOn: '#046727',
   switchOff: '#9e0505',
 
-  topbarBG: '#030917'
+  topbarBG: '#061535',
+
+  circleFill: '#0a2154',
+  circleStroke: '#1343b1',
 }
 
 export function setCustomColors(customColors: Partial<typeof colors>) {

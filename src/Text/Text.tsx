@@ -24,6 +24,9 @@ function _Text(props: {
   alignSelf?: string
   justifySelf?: string
   placeSelf?: string
+  boxShadow?: string
+  backgroundColor?: string
+  width?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
   const { className, style, text, onClick } = props

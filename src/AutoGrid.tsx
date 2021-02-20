@@ -8,9 +8,11 @@ function AutoGrid({
   className, style, numRows, numCols, autoCols,
   gap, rowGap, colGap, placeItems, justifyItems, 
   autoRows, justifyContent, alignItems, alignContent,
+  width, height, margin, maxWidth, padding
 }: {
   direction?: 'row' | 'column' | 'row dense' | 'column dense'
   minWidth?: string
+  maxWidth?: string
   minHeight?: string
   children?: ReactNode
   className?: string
@@ -27,6 +29,10 @@ function AutoGrid({
   justifyItems?: 'start' | 'end' | 'center' | 'stretch'
   justifyContent?: 'start' | 'end' | 'center' | 'stretch' | 'space-around' | 'space-between' | 'space-evenly'
   alignContent?: 'start' | 'end' | 'center' | 'stretch' | 'space-around' | 'space-between' | 'space-evenly'
+  width?: string
+  height?: string
+  margin?: string
+  padding?: string
 }) {
   return (
     <Grid
@@ -40,7 +46,7 @@ function AutoGrid({
       gridTemplateColumns={
         numCols ?
           `repeat(${numCols}, ${minWidth ? minWidth : sizes.grid.itemMinWidth})` :
-          `repeat(auto-fill, minmax(${minWidth ? minWidth : sizes.grid.itemMinWidth}, 1fr))`
+          `repeat(auto-fill, minmax(${minWidth ? minWidth : sizes.grid.itemMinWidth}, ${maxWidth ? maxWidth : '1fr'}))`
       }
       gridAutoRows={
         numRows ? undefined : autoRows ? autoRows : 'auto'
@@ -51,8 +57,8 @@ function AutoGrid({
       gap={gap} rowGap={rowGap} columnGap={colGap}
       placeItems={placeItems} alignItems={alignItems}
       justifyItems={justifyItems} justifyContent={justifyContent}
-      alignContent={alignContent}
-      style={style}
+      alignContent={alignContent} style={style} width={width} 
+      height={height} margin={margin} padding={padding}
     >
       {children}
     </Grid>

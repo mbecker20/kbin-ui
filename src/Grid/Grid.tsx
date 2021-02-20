@@ -28,6 +28,11 @@ function Grid(props: {
   maxHeight?: string
   style?: CSS.Properties
   backgroundColor?: string
+  gridArea?: string
+  margin?: string
+  padding?: string
+  pointer?: boolean
+  boxShadow?: string
 }) {
   const classes = useJSS(props)
   return (

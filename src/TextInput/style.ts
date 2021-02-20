@@ -16,13 +16,14 @@ const useJSS = createUseStyles({
 
   TextInput: {
     backgroundColor: colors.inputBG,
-    width: 'inherit',
+    width: ({ width }) => width,
     outline: 'none',
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.small,
     padding: '.2em .4em',
     borderStyle: 'none',
     color: colors.inputText,
-    fontWeight: ({ bold }) => bold ? 'bold' : 'normal'
+    fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
+    margin: ({ margin }) => margin,
   },
 })
 

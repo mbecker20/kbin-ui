@@ -3,14 +3,7 @@ import CSS from 'csstype'
 import useJSS from './style'
 import { animated } from 'react-spring'
 
-function _FlexRow({ 
-  className, children, style, 
-  justifyContent, alignItems, flexWrap,
-  onContextMenu, onClick, pointer, onWheel,
-  width, height, onPointerEnter, onPointerLeave,
-  margin, padding, backgroundColor, gridArea,
-  maxHeight, minHeight, maxWidth, minWidth
-}: {
+function _FlexRow(props: {
   className?: string
   style?: CSS.Properties
   children?: React.ReactNode
@@ -34,13 +27,17 @@ function _FlexRow({
   maxWidth?: string
   minWidth?: string
   gridArea?: string
+  borderRadius?: string
+  justifySelf?: string
+  alignSelf?: string
+  boxShadow?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
-  const classes = useJSS({ 
-    justifyContent, alignItems, flexWrap, 
-    pointer, width, height, margin,
-    padding, backgroundColor, gridArea,
-    maxHeight, minHeight, maxWidth, minWidth
-  })
+  const classes = useJSS(props)
+  const {
+    className, children, style,
+    onContextMenu, onClick, onWheel,
+    onPointerEnter, onPointerLeave,
+  } = props
   return (
     <div 
       className={className ? `${classes.FlexRow} ${className}` : classes.FlexRow}

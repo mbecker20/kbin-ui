@@ -3,13 +3,14 @@ import FlexCol from '../Flex/FlexCol'
 import Text from '../Text/Text'
 import useJSS from './style'
 import CSS from 'csstype'
-import { sizes } from '../theme'
+import { colors, sizes } from '../theme'
 import IfElse from '../IfElse'
 
 function LabelledItems({ 
   children, label, labelSize, style, labelStyle, 
-  itemsStyle, justifyContent, alignItems, width, height,
-  itemsWidth, itemsHeight
+  width, height, itemsMargin,
+  itemsMaxHeight, minWidth, minHeight, maxWidth,
+  margin, maxHeight, scroller
 }: {
   children: ReactNode
   label: ReactNode
@@ -17,12 +18,19 @@ function LabelledItems({
   style?: CSS.Properties
   width?: string
   height?: string
+  minWidth?: string
+  maxWidth?: string
+  minHeight?: string
+  maxHeight?: string
   itemsWidth?: string
   itemsHeight?: string
   labelStyle?: CSS.Properties
-  itemsStyle?: CSS.Properties
+  itemsMargin?: string
   justifyContent?: string
   alignItems?: string
+  itemsMaxHeight?: string
+  margin?: string
+  scroller?: boolean
 }) {
   const classes = useJSS()
   return (
@@ -31,6 +39,12 @@ function LabelledItems({
       style={style} 
       width={width} 
       height={height}
+      minWidth={minWidth}
+      minHeight={minHeight}
+      maxWidth={maxWidth}
+      maxHeight={maxHeight}
+      margin={margin}
+      boxShadow={colors.boxShadow}
     >
       <IfElse 
         showIf={typeof (label) === 'string'}
@@ -43,14 +57,13 @@ function LabelledItems({
         showElse={label}
       />
       <FlexCol 
-        className={classes.Items} 
-        style={itemsStyle} 
-        justifyContent={justifyContent} 
-        alignItems={alignItems}
-        width={itemsWidth}
-        height={itemsHeight}
+        maxHeight={itemsMaxHeight}
+        backgroundColor={colors.labelledItemsItems}
+        height='100%'
+        margin={itemsMargin}
+        scroller={typeof scroller === 'boolean' ? scroller : true}
       >
-        { children }
+        {children}
       </FlexCol>
     </FlexCol>
   )

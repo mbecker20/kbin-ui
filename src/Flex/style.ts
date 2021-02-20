@@ -20,7 +20,11 @@ const useJSS = createUseStyles({
     minHeight: ({ minHeight }) => minHeight,
     maxWidth: ({ maxWidth }) => maxWidth,
     minWidth: ({ minWidth }) => minWidth,
-    gridArea: ({ gridArea }) => gridArea
+    gridArea: ({ gridArea }) => gridArea,
+    borderRadius: ({ borderRadius }) => borderRadius,
+    justifySelf: ({ justifySelf }) => justifySelf,
+    alignSelf: ({ alignSelf }) => alignSelf,
+    boxShadow: ({ boxShadow }) => boxShadow,
   },
 
   FlexCol: {
@@ -41,6 +45,8 @@ const useJSS = createUseStyles({
     maxWidth: ({ maxWidth }) => maxWidth,
     minWidth: ({ minWidth }) => minWidth,
     gridArea: ({ gridArea }) => gridArea,
+    borderRadius: ({ borderRadius }) => borderRadius,
+    boxShadow: ({ boxShadow }) => boxShadow,
     overflow: ({ scroller, xScroller, overflow }) => 
       (scroller && xScroller) ? 'auto' : 
       scroller ? 'hidden auto' : 

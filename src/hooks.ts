@@ -1,3 +1,4 @@
+import { roughStringsEqual } from "kbin-state"
 import { useEffect, useState } from "react"
 
 export function useListener<Event>(listenerID: string, listener: (e: Event) => void, dependencies: any[] = []) {
@@ -61,6 +62,12 @@ export function useReRenderOnResize() {
   useListener('resize', () => {
     window.requestAnimationFrame(reRender)
   })
+}
+
+export function useSearch(ar: string[], toCompare?: (el: string) => string): [string[], string, (search: string) => void] {
+  const [search, setSearch] = useState('')
+  const filtered = ar.filter(el => roughStringsEqual(search, toCompare ? toCompare(el) : el))
+  return [filtered, search, setSearch]
 }
 
 export function useErrorReport() {
