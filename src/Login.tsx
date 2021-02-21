@@ -30,8 +30,8 @@ function Login({
       width='100vw'
       alignItems='center'
       justifyContent='center'
-      backgroundColor={colors.dashboardBG}
       style={{ position: 'fixed' }}
+      backgroundColor={colors.dashboardBG}
     >
       <FlexCol
         alignItems='center'

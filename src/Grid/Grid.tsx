@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { MouseEvent, ReactNode } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 
@@ -33,12 +33,14 @@ function Grid(props: {
   padding?: string
   pointer?: boolean
   boxShadow?: string
+  onClick?: (e: MouseEvent<HTMLDivElement>) => void
 }) {
   const classes = useJSS(props)
   return (
     <div 
       className={props.className ? `${classes.Grid} ${props.className}` : classes.Grid}
       style={props.style}
+      onClick={props.onClick}
     >
       {props.children}
     </div>

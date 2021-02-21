@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { MouseEvent, ReactNode } from 'react'
 import CSS from 'csstype'
 import Grid from './Grid/Grid'
 import { sizes } from './theme'
@@ -8,7 +8,7 @@ function AutoGrid({
   className, style, numRows, numCols, autoCols,
   gap, rowGap, colGap, placeItems, justifyItems, 
   autoRows, justifyContent, alignItems, alignContent,
-  width, height, margin, maxWidth, padding
+  width, height, margin, maxWidth, padding, onClick
 }: {
   direction?: 'row' | 'column' | 'row dense' | 'column dense'
   minWidth?: string
@@ -33,6 +33,7 @@ function AutoGrid({
   height?: string
   margin?: string
   padding?: string
+  onClick?: (e: MouseEvent<HTMLDivElement>) => void
 }) {
   return (
     <Grid
@@ -59,6 +60,7 @@ function AutoGrid({
       justifyItems={justifyItems} justifyContent={justifyContent}
       alignContent={alignContent} style={style} width={width} 
       height={height} margin={margin} padding={padding}
+      onClick={onClick}
     >
       {children}
     </Grid>

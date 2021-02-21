@@ -1,9 +1,13 @@
-import React, { Children, cloneElement, ReactElement } from 'react'
+import React, { Children, cloneElement, MouseEvent, ReactElement } from 'react'
 import Grid from './Grid/Grid'
 import { colors } from './theme'
 import { createUseStyles } from 'react-jss'
 
-function Circle({ size, fill, stroke, strokeWidth, circleR, children, gridArea, margin, padding, pointer }: {
+function Circle({ 
+  size, fill, stroke, strokeWidth, circleR, 
+  children, gridArea, margin, padding, pointer,
+  onClick
+}: {
   size: string
   fill?: string
   stroke?: string
@@ -14,6 +18,7 @@ function Circle({ size, fill, stroke, strokeWidth, circleR, children, gridArea, 
   margin?: string
   padding?: string
   pointer?: boolean
+  onClick?: (e: MouseEvent<HTMLDivElement>) => void
 }) {
   const classes = useJSS({ size })
   return (
@@ -30,6 +35,7 @@ function Circle({ size, fill, stroke, strokeWidth, circleR, children, gridArea, 
       margin={margin}
       padding={padding}
       pointer={pointer}
+      onClick={onClick}
     >
       <svg 
         className={classes.Circle}
