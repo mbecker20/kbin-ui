@@ -3,6 +3,7 @@ import CSS from 'csstype'
 import AutoGrid from './AutoGrid'
 import { createUseStyles } from 'react-jss'
 import FlexCol from './Flex/FlexCol'
+import { sizes } from './theme'
 
 function Page({ 
   children, contentStyle, itemMinWidth, placeItems, alignContent, 
@@ -31,8 +32,8 @@ function Page({
       scroller
     >
       <AutoGrid
-        minWidth={itemMinWidth}
-        maxWidth={itemMaxWidth}
+        itemMinWidth={itemMinWidth ? itemMinWidth : sizes.page.itemMinWidth}
+        itemMaxWidth={itemMaxWidth}
         style={contentStyle}
         placeItems={placeItems}
         alignContent={alignContent}
