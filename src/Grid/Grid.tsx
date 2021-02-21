@@ -4,9 +4,11 @@ import CSS from 'csstype'
 
 function Grid(props: {
   className?: string
-  gridTemplateRows?: string,
-  gridTemplateColumns?: string,
-  gridTemplateAreas?: string,
+  gridTemplateRows?: string
+  gridTemplateColumns?: string
+  gridTemplateAreas?: string
+  numRows?: number
+  numCols?: number
   gap?: string
   rowGap?: string
   columnGap?: string

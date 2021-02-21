@@ -3,8 +3,8 @@ import { createUseStyles } from 'react-jss'
 const useJSS = createUseStyles({
   Grid: {
     display: 'grid',
-    gridTemplateRows: ({ gridTemplateRows }) => gridTemplateRows,
-    gridTemplateColumns: ({ gridTemplateColumns }) => gridTemplateColumns,
+    gridTemplateRows: ({ gridTemplateRows, numRows }) => numRows ? `repeat(${numRows}, 1fr)` : gridTemplateRows,
+    gridTemplateColumns: ({ gridTemplateColumns, numCols }) => numCols ? `repeat(${numCols}, 1fr)` : gridTemplateColumns,
     gridTemplateAreas: ({ gridTemplateAreas }) => gridTemplateAreas,
     gap: ({ gap }) => gap,
     rowGap: ({ rowGap }) => rowGap,
