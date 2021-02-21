@@ -3,6 +3,7 @@ import Button from './Button/Button'
 import Conditional from './Conditional'
 import FlexCol from './Flex/FlexCol'
 import TextInput from './TextInput/TextInput'
+import { colors } from './theme'
 
 function Login({
   LoginTitle,
@@ -29,6 +30,7 @@ function Login({
       width='100vw'
       alignItems='center'
       justifyContent='center'
+      backgroundColor={colors.dashboardBG}
       style={{ position: 'fixed' }}
     >
       <FlexCol
