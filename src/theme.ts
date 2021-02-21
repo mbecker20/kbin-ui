@@ -118,7 +118,8 @@ export const sizes = {
     itemMinWidth: '1em'
   },
   page: {
-    itemMinWidth: '12rem'
+    itemMinWidth: '12rem',
+    flexPageMargin: '2rem 0em'
   }
 }
 

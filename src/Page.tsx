@@ -24,10 +24,9 @@ function Page({
   children: ReactNode
   margin?: string
 }) {
-  const classes = useJSS()
   return (
     <FlexCol
-      className={classes.Content}
+      gridArea='content'
       margin={margin}
       scroller
     >
@@ -48,11 +47,5 @@ function Page({
     </FlexCol>
   )
 }
-
-const useJSS = createUseStyles({
-  Content: {
-    gridArea: 'content',
-  }
-})
 
 export default Page
