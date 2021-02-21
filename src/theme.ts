@@ -33,7 +33,7 @@ export const colors = {
 
   notificationSuccess: '#046727c7',
   notificationFailure: '#9e0505c7',
-  
+
   checkBoxBorder: '#b7c0c8',
   checkBoxHighlightCenter: '#0a2154ef',
   checkBoxHighlightEdge: '#0a21549b',
@@ -116,6 +116,9 @@ export const sizes = {
   },
   grid: {
     itemMinWidth: '1em'
+  },
+  page: {
+    itemMinWidth: '12rem'
   }
 }
 
@@ -130,39 +133,13 @@ type CustomSizes = {
   label?: Partial<typeof sizes.label>
   centerMenu?: Partial<typeof sizes.centerMenu>
   grid?: Partial<typeof sizes.grid>
+  page?: Partial<typeof sizes.page>
 }
 
 export function setCustomSizes(customSizes: CustomSizes) {
-  if (customSizes.text) {
-    Object.assign(sizes.text, customSizes.text)
-  }
-  if (customSizes.contextMenu) {
-    Object.assign(sizes.contextMenu, customSizes.contextMenu)
-  }
-  if (customSizes.button) {
-    Object.assign(sizes.button, customSizes.button)
-  }
-  if (customSizes.switch) {
-    Object.assign(sizes.switch, customSizes.switch)
-  }
-  if (customSizes.checkBox) {
-    Object.assign(sizes.checkBox, customSizes.checkBox)
-  }
-  if (customSizes.labelledItems) {
-    Object.assign(sizes.labelledItems, customSizes.labelledItems)
-  }
-  if (customSizes.dataTable) {
-    Object.assign(sizes.dataTable, customSizes.dataTable)
-  }
-  if (customSizes.label) {
-    Object.assign(sizes.label, customSizes.label)
-  }
-  if (customSizes.centerMenu) {
-    Object.assign(sizes.centerMenu, customSizes.centerMenu)
-  }
-  if (customSizes.grid) {
-    Object.assign(sizes.grid, customSizes.grid)
-  }
+  Object.keys(customSizes).forEach(key => {
+    Object.assign((sizes as any)[key], (customSizes as any)[key])
+  })
 }
 
 export const zIndex = {
@@ -201,15 +178,9 @@ type CustomSpringConfig = {
 }
 
 export function setCustomSpringConfig(customSpringConfig: CustomSpringConfig) {
-  if (customSpringConfig.fast) {
-    Object.assign(springConfig.fast, customSpringConfig.fast)
-  }
-  if (customSpringConfig.medium) {
-    Object.assign(springConfig.medium, customSpringConfig.medium)
-  }
-  if (customSpringConfig.xslow) {
-    Object.assign(springConfig.xslow, customSpringConfig.xslow)
-  }
+  Object.keys(customSpringConfig).forEach(key => {
+    Object.assign((springConfig as any)[key], (customSpringConfig as any)[key])
+  })
 }
 
 export const scrollbarJSS = {
