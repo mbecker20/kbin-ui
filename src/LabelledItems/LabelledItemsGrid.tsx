@@ -34,7 +34,7 @@ function LabelledItemsGrid(props: {
         style={props.itemsStyle}
         gap={props.gap}
         padding={props.gap}
-        minWidth={props.itemMinWidth}
+        itemMinWidth={props.itemMinWidth}
         placeItems='stretch'
       >
         {props.children}
