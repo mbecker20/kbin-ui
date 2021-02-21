@@ -21,7 +21,12 @@ const useJSS = createUseStyles({
     placeSelf: ({ placeSelf }) => placeSelf,
     boxShadow: ({ boxShadow }) => boxShadow,
     backgroundColor: ({ backgroundColor }) => backgroundColor,
-    width: ({ width }) => width ? width : 'fit-content'
+    width: ({ width }) => width ? width : 'fit-content',
+    height: ({ height }) => height,
+    maxHeight: ({ maxHeight }) => maxHeight,
+    maxWidth: ({ maxWidth }) => maxWidth,
+    minWidth: ({ minWidth }) => minWidth,
+    minHeight: ({ minHeight }) => minHeight
   },
 })
 

@@ -27,6 +27,11 @@ function _Text(props: {
   boxShadow?: string
   backgroundColor?: string
   width?: string
+  height?: string
+  maxWidth?: string
+  maxHeight?: string
+  minWidth?: string
+  minHeight?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
   const { className, style, text, onClick } = props
