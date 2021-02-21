@@ -1,16 +1,15 @@
 import React, { ReactNode } from 'react'
 import FlexCol from '../Flex/FlexCol'
 import Text from '../Text/Text'
-import useJSS from './style'
 import CSS from 'csstype'
 import { colors, sizes } from '../theme'
 import IfElse from '../IfElse'
 
 function LabelledItems({ 
   children, label, labelSize, style, labelStyle, 
-  width, height, itemsMargin,
+  width, height, itemsMargin, borderRadius,
   itemsMaxHeight, minWidth, minHeight, maxWidth,
-  margin, maxHeight, scroller
+  margin, maxHeight, scroller, padding
 }: {
   children: ReactNode
   label: ReactNode
@@ -30,12 +29,14 @@ function LabelledItems({
   alignItems?: string
   itemsMaxHeight?: string
   margin?: string
+  padding?: string
   scroller?: boolean
+  borderRadius?: string
 }) {
-  const classes = useJSS()
   return (
     <FlexCol 
-      className={classes.LabelledItems} 
+      backgroundColor={colors.unfocussedInput}
+      padding={padding ? padding : sizes.labelledItems.padding}
       style={style} 
       width={width} 
       height={height}
@@ -43,13 +44,16 @@ function LabelledItems({
       minHeight={minHeight}
       maxWidth={maxWidth}
       maxHeight={maxHeight}
-      margin={margin}
+      margin={margin ? margin : sizes.labelledItems.margin}
+      borderRadius={borderRadius ? borderRadius : sizes.labelledItems.borderRadius}
       boxShadow={colors.boxShadow}
     >
       <IfElse 
         showIf={typeof (label) === 'string'}
         show={
-          <Text text={label as string} className={classes.Label}
+          <Text text={label as string}
+            backgroundColor={colors.unfocussedInput}
+            color={colors.unfocussedInputLabel}
             fontSize={labelSize ? labelSize : sizes.text.xsmall}
             style={labelStyle}
           />

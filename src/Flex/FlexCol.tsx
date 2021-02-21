@@ -32,6 +32,7 @@ function _FlexCol(props: {
   overflow?: string
   gridArea?: string
   boxShadow?: string
+  borderRadius?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
   const {
