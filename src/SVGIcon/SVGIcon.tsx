@@ -18,6 +18,7 @@ function SVGIcon(props: {
   padding?: string
   imageRef?: RefObject<HTMLImageElement>
   title?: string
+  gridArea?: string
 }) {
   const classes = useJSS(props)
   const {
