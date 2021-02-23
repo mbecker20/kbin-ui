@@ -24,6 +24,7 @@ const useJSS = createUseStyles({
     fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
     margin: ({ margin }) => margin,
     padding: ({ padding }) => padding ? padding : '.2em .4em',
+    
   },
 })
 
