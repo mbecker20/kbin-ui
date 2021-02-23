@@ -7,10 +7,16 @@ import useJSS from './style'
 
 const TIMEOUT = 3000
 
-function createNotificationManager({ xLocation, yLocation }: {
-  xLocation: 'left' | 'center' | 'right',
-  yLocation: 'top' | 'center' | 'bottom'
+const DEFAULT = {
+  xLocation: 'right',
+  yLocation: 'top'
+}
+
+function createNotificationManager(options?: {
+  xLocation?: 'left' | 'center' | 'right',
+  yLocation?: 'top' | 'center' | 'bottom'
 }) {
+  const { xLocation, yLocation } = Object.assign({}, DEFAULT, options)
   const manager: {
     success: boolean
     message: string
