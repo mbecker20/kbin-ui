@@ -12,7 +12,8 @@ function TextArea({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   textAreaRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, angry, happy, width, rows, cols, gridArea
+  labelFontSize, value, angry, happy, width, rows, cols, gridArea,
+  bounderBorderRadius, borderRadius
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -39,8 +40,10 @@ function TextArea({
   rows?: number
   cols?: number
   gridArea?: string
+  borderRadius?: string
+  bounderBorderRadius?: string
 }) {
-  const classes = useJSS({ fontSize, labelFontSize })
+  const classes = useJSS({ fontSize, labelFontSize, bounderBorderRadius })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const borderColor =
     happy ? colors.happyInputBorder :
@@ -97,6 +100,7 @@ function TextArea({
         defaultValue={defaultValue}
         value={value}
         rows={rows} cols={cols}
+        borderRadius={borderRadius}
       />
     </Flex>
   )

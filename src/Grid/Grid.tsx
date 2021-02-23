@@ -35,6 +35,7 @@ function Grid(props: {
   padding?: string
   pointer?: boolean
   boxShadow?: string
+  borderRadius?: string
   onClick?: (e: MouseEvent<HTMLDivElement>) => void
 }) {
   const classes = useJSS(props)

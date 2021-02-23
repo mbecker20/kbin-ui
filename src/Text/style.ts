@@ -26,7 +26,8 @@ const useJSS = createUseStyles({
     maxHeight: ({ maxHeight }) => maxHeight,
     maxWidth: ({ maxWidth }) => maxWidth,
     minWidth: ({ minWidth }) => minWidth,
-    minHeight: ({ minHeight }) => minHeight
+    minHeight: ({ minHeight }) => minHeight,
+    borderRadius: ({ borderRadius }) => borderRadius
   },
 })
 

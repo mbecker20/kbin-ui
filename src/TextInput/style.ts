@@ -5,8 +5,8 @@ const useJSS = createUseStyles({
   InputBounder: {
     margin: '.3em',
     borderStyle: 'solid',
-    borderRadius: '.3em',
     borderWidth: '.3em',
+    borderRadius: ({ bounderBorderRadius }) => bounderBorderRadius ? bounderBorderRadius : '.3em'
   },
 
   Label: {

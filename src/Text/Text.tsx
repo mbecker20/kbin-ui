@@ -32,6 +32,7 @@ function _Text(props: {
   maxHeight?: string
   minWidth?: string
   minHeight?: string
+  borderRadius?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
   const { className, style, text, onClick } = props

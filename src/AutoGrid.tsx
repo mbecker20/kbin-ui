@@ -9,7 +9,8 @@ function AutoGrid({
   gap, rowGap, colGap, placeItems, justifyItems, 
   autoRows, justifyContent, alignItems, alignContent,
   width, height, margin, maxWidth, padding, onClick,
-  maxHeight, itemMinWidth, itemMinHeight, itemMaxWidth
+  maxHeight, itemMinWidth, itemMinHeight, itemMaxWidth,
+  borderRadius
 }: {
   direction?: 'row' | 'column' | 'row dense' | 'column dense'
   minWidth?: string
@@ -38,6 +39,7 @@ function AutoGrid({
   height?: string
   margin?: string
   padding?: string
+  borderRadius?: string
   onClick?: (e: MouseEvent<HTMLDivElement>) => void
 }) {
   return (
@@ -66,7 +68,7 @@ function AutoGrid({
       alignContent={alignContent} style={style} width={width} 
       height={height} margin={margin} padding={padding}
       onClick={onClick} minWidth={minWidth} maxWidth={maxWidth}
-      minHeight={minHeight} maxHeight={maxHeight}
+      minHeight={minHeight} maxHeight={maxHeight} borderRadius={borderRadius}
     >
       {children}
     </Grid>

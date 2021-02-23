@@ -7,7 +7,7 @@ function TextAreaOnly({
   onFocus, onBlur, onKeyDown, fontSize,
   textAreaRef, autoFocus, onEnter,
   onEscape, defaultValue, value, bold,
-  rows, cols, gridArea
+  rows, cols, gridArea, borderRadius
 }: {
   className?: string
   style?: CSS.Properties
@@ -27,8 +27,9 @@ function TextAreaOnly({
   rows?: number
   cols?: number
   gridArea?: string
+  borderRadius?: string
 }) {
-  const classes = useJSS({ fontSize, bold, gridArea })
+  const classes = useJSS({ fontSize, bold, gridArea, borderRadius })
   return (
     <textarea
       className={

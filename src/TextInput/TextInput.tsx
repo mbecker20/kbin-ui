@@ -12,7 +12,8 @@ function TextInput({
   inputClassName, style, label, labelStyle, bounderClassName,
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, password, angry, happy, width, gridArea
+  labelFontSize, value, password, angry, happy, width, gridArea,
+  borderRadius, bounderBorderRadius
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -38,8 +39,10 @@ function TextInput({
   happy?: boolean
   width?: string
   gridArea?: string
+  bounderBorderRadius?: string
+  borderRadius?: string
 }) {
-  const classes = useJSS({ fontSize, labelFontSize })
+  const classes = useJSS({ fontSize, labelFontSize, bounderBorderRadius })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const borderColor = 
     happy ? colors.happyInputBorder : 
@@ -95,6 +98,7 @@ function TextInput({
         defaultValue={defaultValue}
         value={value}
         password={password}
+        borderRadius={borderRadius}
       />
     </Flex>
   )

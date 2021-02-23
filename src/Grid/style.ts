@@ -32,6 +32,7 @@ const useJSS = createUseStyles({
       cursor: ({ pointer }) => pointer ? 'pointer' : 'default'
     },
     boxShadow: ({ boxShadow }) => boxShadow,
+    borderRadius: ({ borderRadius }) => borderRadius
   },
 })
 

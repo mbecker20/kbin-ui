@@ -5,8 +5,8 @@ const useJSS = createUseStyles({
   TextAreaBounder: {
     margin: '.3em',
     borderStyle: 'solid',
-    borderRadius: '.3em',
     borderWidth: '.3em',
+    borderRadius: ({ bounderBorderRadius }) => bounderBorderRadius ? bounderBorderRadius : '.3em'
   },
 
   Label: {
@@ -25,7 +25,8 @@ const useJSS = createUseStyles({
     color: colors.inputText,
     resize: 'vertical',
     fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
-    gridArea: ({ gridArea }) => gridArea
+    gridArea: ({ gridArea }) => gridArea,
+    borderRadius: ({ borderRadius }) => borderRadius
   },
 })
 
