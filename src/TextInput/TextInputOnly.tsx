@@ -6,7 +6,7 @@ function TextInputOnly({
   className, style, placeholder, onChange, onFocus, 
   onBlur, onKeyDown, fontSize, inputRef, autoFocus,
   onEnter, onEscape, defaultValue, value, password,
-  bold, gridArea, margin, width, borderRadius
+  bold, gridArea, margin, width, borderRadius, padding
 }: {
   className?: string
   style?: CSS.Properties
@@ -28,8 +28,9 @@ function TextInputOnly({
   margin?: string
   width?: string
   borderRadius?: string
+  padding?: string
 }) {
-  const classes = useJSS({ fontSize, bold, gridArea, margin, width, borderRadius })
+  const classes = useJSS({ fontSize, bold, gridArea, margin, width, borderRadius, padding })
   return (
     <input
       className={

@@ -19,11 +19,11 @@ const useJSS = createUseStyles({
     width: ({ width }) => width,
     outline: 'none',
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.small,
-    padding: '.2em .4em',
     borderStyle: 'none',
     color: colors.inputText,
     fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
     margin: ({ margin }) => margin,
+    padding: ({ padding }) => padding ? padding : '.2em .4em',
   },
 })
 
