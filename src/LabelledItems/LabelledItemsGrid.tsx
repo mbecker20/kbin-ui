@@ -25,6 +25,7 @@ function LabelledItemsGrid(props: {
   itemsMaxHeight?: string
   itemMinWidth?: string
   margin?: string
+  borderRadius?: string
 }) {
   return (
     <LabelledItems 
