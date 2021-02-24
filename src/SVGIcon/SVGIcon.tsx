@@ -19,6 +19,8 @@ function SVGIcon(props: {
   imageRef?: RefObject<HTMLImageElement>
   title?: string
   gridArea?: string
+  boxShadow?: string
+  borderRadius?: string
 }) {
   const classes = useJSS(props)
   const {

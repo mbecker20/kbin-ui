@@ -10,7 +10,9 @@ const useJSS = createUseStyles({
     transform: ({ scale }) => `scale(${scale})`,
     margin: ({ margin }) => margin,
     padding: ({ padding }) => padding,
-    gridArea: ({ gridArea }) => gridArea
+    gridArea: ({ gridArea }) => gridArea,
+    borderRadius: ({ borderRadius }) => borderRadius,
+    boxShadow: ({ boxShadow }) => boxShadow,
   },
 })
 
