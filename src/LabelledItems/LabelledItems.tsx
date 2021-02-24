@@ -9,7 +9,8 @@ function LabelledItems({
   children, label, labelSize, style, labelStyle, 
   width, height, itemsMargin, borderRadius,
   itemsMaxHeight, minWidth, minHeight, maxWidth,
-  margin, maxHeight, scroller, padding
+  margin, maxHeight, scroller, padding, itemsBorderRadius,
+  itemsPadding, itemsStyle
 }: {
   children: ReactNode
   label: ReactNode
@@ -25,6 +26,8 @@ function LabelledItems({
   itemsHeight?: string
   labelStyle?: CSS.Properties
   itemsMargin?: string
+  itemsPadding?: string
+  itemsStyle?: CSS.Properties
   justifyContent?: string
   alignItems?: string
   itemsMaxHeight?: string
@@ -32,6 +35,7 @@ function LabelledItems({
   padding?: string
   scroller?: boolean
   borderRadius?: string
+  itemsBorderRadius?: string
 }) {
   return (
     <FlexCol 
@@ -66,6 +70,9 @@ function LabelledItems({
         height='100%'
         margin={itemsMargin}
         scroller={typeof scroller === 'boolean' ? scroller : true}
+        borderRadius={itemsBorderRadius}
+        style={itemsStyle}
+        padding={itemsPadding}
       >
         {children}
       </FlexCol>

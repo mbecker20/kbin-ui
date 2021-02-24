@@ -18,6 +18,7 @@ function LabelledItemsGrid(props: {
   itemsHeight?: string
   labelStyle?: CSS.Properties
   itemsStyle?: CSS.Properties
+  itemsPadding?: string
   itemsMargin?: string
   justifyContent?: string
   alignItems?: string
