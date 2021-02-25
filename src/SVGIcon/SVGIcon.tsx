@@ -21,6 +21,7 @@ function SVGIcon(props: {
   gridArea?: string
   boxShadow?: string
   borderRadius?: string
+  backgroundColor?: string
 }) {
   const classes = useJSS(props)
   const {

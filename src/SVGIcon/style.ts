@@ -13,6 +13,7 @@ const useJSS = createUseStyles({
     gridArea: ({ gridArea }) => gridArea,
     borderRadius: ({ borderRadius }) => borderRadius,
     boxShadow: ({ boxShadow }) => boxShadow,
+    backgroundColor: ({ backgroundColor }) => backgroundColor,
   },
 })
 
