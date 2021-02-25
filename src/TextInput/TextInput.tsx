@@ -13,7 +13,7 @@ function TextInput({
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
   labelFontSize, value, password, angry, happy, width, gridArea,
-  borderRadius, bounderBorderRadius
+  borderRadius, bounderBorderRadius, inputWidth, padding, inputPadding
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -41,6 +41,9 @@ function TextInput({
   gridArea?: string
   bounderBorderRadius?: string
   borderRadius?: string
+  inputWidth?: string
+  padding?: string
+  inputPadding?: string
 }) {
   const classes = useJSS({ fontSize, labelFontSize, bounderBorderRadius })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
@@ -75,6 +78,7 @@ function TextInput({
       style={springStyle}
       width={width}
       gridArea={gridArea}
+      padding={padding}
     > 
       {label ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}
@@ -99,6 +103,8 @@ function TextInput({
         value={value}
         password={password}
         borderRadius={borderRadius}
+        width={inputWidth}
+        padding={inputPadding}
       />
     </Flex>
   )
