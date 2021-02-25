@@ -38,10 +38,11 @@ function TextInput(props: {
   inputWidth?: string
   padding?: string
   inputPadding?: string
-  bounderStyle?: string
+  bounderStyle?: CSS.Properties
   size?: number
   maxSize?: number
   minSize?: number
+  margin?: string
 }) {
   const classes = useJSS(props)
   const {
@@ -50,7 +51,7 @@ function TextInput(props: {
     inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
     value, password, angry, happy, width, gridArea,
     borderRadius, inputWidth, padding, inputPadding,
-    bounderStyle, size
+    bounderStyle, size, margin
   } = props
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const borderColor = 
@@ -85,6 +86,7 @@ function TextInput(props: {
       width={width}
       gridArea={gridArea}
       padding={padding}
+      margin={margin}
     > 
       {typeof label === 'string' ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}
