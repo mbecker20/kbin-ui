@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FocusEvent, KeyboardEvent, RefObject, useState } from 'react'
+import React, { ChangeEvent, FocusEvent, KeyboardEvent, ReactNode, RefObject, useState } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 import { AnimatedFlexRow } from '../Flex/FlexRow'
@@ -13,13 +13,14 @@ function TextInput({
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
   labelFontSize, value, password, angry, happy, width, gridArea,
-  borderRadius, bounderBorderRadius, inputWidth, padding, inputPadding
+  borderRadius, bounderBorderRadius, inputWidth, padding, inputPadding,
+  bounderStyle
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
   bounderClassName?: string
   style?: CSS.Properties
-  label?: string // this is to the top or left of the input
+  label?: ReactNode // this is to the top or left of the input
   labelStyle?: CSS.Properties
   labelFontSize?: string
   placeholder?: string
@@ -44,6 +45,7 @@ function TextInput({
   inputWidth?: string
   padding?: string
   inputPadding?: string
+  bounderStyle?: string
 }) {
   const classes = useJSS({ fontSize, labelFontSize, bounderBorderRadius })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
@@ -75,14 +77,14 @@ function TextInput({
         `${classes.InputBounder} ${bounderClassName}` :
         classes.InputBounder
       }
-      style={springStyle}
+      style={Object.assign(springStyle, bounderStyle)}
       width={width}
       gridArea={gridArea}
       padding={padding}
     > 
-      {label ? <AnimatedText className={classes.Label} text={label}
+      {typeof label === 'string' ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}
-      /> : null}
+      /> : label}
       <TextInputOnly
         className={inputClassName}
         style={style} placeholder={placeholder} 
