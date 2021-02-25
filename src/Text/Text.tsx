@@ -4,7 +4,7 @@ import CSS from 'csstype'
 import { animated } from 'react-spring'
 
 function _Text(props: {
-  text: string
+  text?: string
   className?: string
   style?: CSS.Properties
   fontSize?: string
