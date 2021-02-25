@@ -8,14 +8,7 @@ import { useSpring } from 'react-spring'
 import { colors, springConfig } from '../theme'
 import { AnimatedFlexCol } from '../Flex/FlexCol'
 
-function TextInput({ 
-  inputClassName, style, label, labelStyle, bounderClassName,
-  placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
-  inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-  labelFontSize, value, password, angry, happy, width, gridArea,
-  borderRadius, bounderBorderRadius, inputWidth, padding, inputPadding,
-  bounderStyle
-}: {
+function TextInput(props: {
   layout?: 'row' | 'column'
   inputClassName?: string
   bounderClassName?: string
@@ -46,8 +39,17 @@ function TextInput({
   padding?: string
   inputPadding?: string
   bounderStyle?: string
+  size?: number
 }) {
-  const classes = useJSS({ fontSize, labelFontSize, bounderBorderRadius })
+  const classes = useJSS(props)
+  const {
+    inputClassName, style, label, labelStyle, bounderClassName,
+      placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
+      inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
+      value, password, angry, happy, width, gridArea,
+      borderRadius, inputWidth, padding, inputPadding,
+      bounderStyle, size
+  } = props
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const borderColor = 
     happy ? colors.happyInputBorder : 
@@ -107,6 +109,7 @@ function TextInput({
         borderRadius={borderRadius}
         width={inputWidth}
         padding={inputPadding}
+        size={size}
       />
     </Flex>
   )

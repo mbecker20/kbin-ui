@@ -15,7 +15,7 @@ const useJSS = createUseStyles({
   },
 
   TextInput: {
-    backgroundColor: colors.inputBG,
+    backgroundColor: ({ inputBackgroundColor }) => inputBackgroundColor ? inputBackgroundColor : colors.inputBG,
     width: ({ width }) => width,
     outline: 'none',
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.small,

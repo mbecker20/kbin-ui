@@ -2,12 +2,7 @@ import React, { ChangeEvent, FocusEvent, KeyboardEvent, RefObject } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 
-function TextInputOnly({
-  className, style, placeholder, onChange, onFocus, 
-  onBlur, onKeyDown, fontSize, inputRef, autoFocus,
-  onEnter, onEscape, defaultValue, value, password,
-  bold, gridArea, margin, width, borderRadius, padding
-}: {
+function TextInputOnly(props: {
   className?: string
   style?: CSS.Properties
   placeholder?: string
@@ -29,8 +24,15 @@ function TextInputOnly({
   width?: string
   borderRadius?: string
   padding?: string
+  inputBackgroundColor?: string
+  size?: number
 }) {
-  const classes = useJSS({ fontSize, bold, gridArea, margin, width, borderRadius, padding })
+  const classes = useJSS(props)
+  const {
+    className, style, placeholder, onChange, onFocus,
+    onBlur, onKeyDown, inputRef, autoFocus, size,
+    onEnter, onEscape, defaultValue, value, password
+  } = props
   return (
     <input
       className={
@@ -56,6 +58,7 @@ function TextInputOnly({
       ref={inputRef}
       autoFocus={autoFocus}
       defaultValue={defaultValue}
+      size={size}
       value={value}
     />
   )
