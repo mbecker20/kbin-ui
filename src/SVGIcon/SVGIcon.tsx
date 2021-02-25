@@ -22,6 +22,8 @@ function SVGIcon(props: {
   boxShadow?: string
   borderRadius?: string
   backgroundColor?: string
+  alignSelf?: string
+  justifySelf?: string
 }) {
   const classes = useJSS(props)
   const {

@@ -14,6 +14,8 @@ const useJSS = createUseStyles({
     borderRadius: ({ borderRadius }) => borderRadius,
     boxShadow: ({ boxShadow }) => boxShadow,
     backgroundColor: ({ backgroundColor }) => backgroundColor,
+    alignSelf: ({ alignSelf }) => alignSelf,
+    justifySelf: ({ justifySelf }) => justifySelf
   },
 })
 

@@ -33,15 +33,17 @@ function _Text(props: {
   minWidth?: string
   minHeight?: string
   borderRadius?: string
+  children?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
-  const { className, style, text, onClick } = props
+  const { className, style, text, onClick, children } = props
   return (
     <div className={className ? `${classes.Text} ${className}` : classes.Text}
       style={style} ref={ref}
       onClick={onClick}
     >
       {text}
+      {children}
     </div>
   )
 }
