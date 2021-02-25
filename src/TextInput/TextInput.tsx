@@ -40,15 +40,17 @@ function TextInput(props: {
   inputPadding?: string
   bounderStyle?: string
   size?: number
+  maxSize?: number
+  minSize?: number
 }) {
   const classes = useJSS(props)
   const {
     inputClassName, style, label, labelStyle, bounderClassName,
-      placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
-      inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
-      value, password, angry, happy, width, gridArea,
-      borderRadius, inputWidth, padding, inputPadding,
-      bounderStyle, size
+    placeholder, onChange, onFocus, onBlur, onKeyDown,
+    inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
+    value, password, angry, happy, width, gridArea,
+    borderRadius, inputWidth, padding, inputPadding,
+    bounderStyle, size
   } = props
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const borderColor = 

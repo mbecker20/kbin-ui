@@ -26,12 +26,15 @@ function TextInputOnly(props: {
   padding?: string
   inputBackgroundColor?: string
   size?: number
+  maxLength?: number
+  minLength?: number
 }) {
   const classes = useJSS(props)
   const {
     className, style, placeholder, onChange, onFocus,
     onBlur, onKeyDown, inputRef, autoFocus, size,
-    onEnter, onEscape, defaultValue, value, password
+    onEnter, onEscape, defaultValue, value, password,
+    maxLength, minLength
   } = props
   return (
     <input
@@ -59,6 +62,8 @@ function TextInputOnly(props: {
       autoFocus={autoFocus}
       defaultValue={defaultValue}
       size={size}
+      maxLength={maxLength}
+      minLength={minLength}
       value={value}
     />
   )
