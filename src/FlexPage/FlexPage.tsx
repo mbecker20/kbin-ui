@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react'
 import CSS from 'csstype'
-import FlexCol from './Flex/FlexCol'
-import FlexRow from './Flex/FlexRow'
-import { sizes } from './theme'
+import FlexCol from '../Flex/FlexCol'
+import FlexRow from '../Flex/FlexRow'
+import { sizes } from '../theme'
 
 function FlexPage({ 
   children, margin, style, bounderStyle 

@@ -119,7 +119,8 @@ export const sizes = {
   },
   page: {
     itemMinWidth: '12rem',
-    flexPageMargin: '2rem 0em'
+    flexPageMargin: '2rem 0em',
+    animationHeight: 100 //px
   }
 }
 
