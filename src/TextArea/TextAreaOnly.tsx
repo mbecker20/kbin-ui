@@ -2,13 +2,7 @@ import React, { ChangeEvent, FocusEvent, KeyboardEvent, RefObject } from 'react'
 import useJSS from './style'
 import CSS from 'csstype'
 
-function TextAreaOnly({
-  className, style, placeholder, onChange, 
-  onFocus, onBlur, onKeyDown, fontSize,
-  textAreaRef, autoFocus, onEnter,
-  onEscape, defaultValue, value, bold,
-  rows, cols, gridArea, borderRadius
-}: {
+function TextAreaOnly(props: {
   className?: string
   style?: CSS.Properties
   placeholder?: string
@@ -28,8 +22,24 @@ function TextAreaOnly({
   cols?: number
   gridArea?: string
   borderRadius?: string
+  margin?: string
+  padding?: string
+  width?: string
+  height?: string
+  maxWidth?: string
+  minWidth?: string
+  maxHeight?: string
+  minHeight?: string
+  alignSelf?: string
 }) {
-  const classes = useJSS({ fontSize, bold, gridArea, borderRadius })
+  const classes = useJSS(props)
+  const {
+    className, style, placeholder, onChange,
+    onFocus, onBlur, onKeyDown,
+    textAreaRef, autoFocus, onEnter,
+    onEscape, defaultValue, value,
+    rows, cols
+  } = props
   return (
     <textarea
       className={

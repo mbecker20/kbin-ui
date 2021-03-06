@@ -13,7 +13,10 @@ function TextArea({
   placeholder, onChange, onFocus, onBlur, onKeyDown, fontSize,
   textAreaRef, autoFocus, onEnter, onEscape, layout, defaultValue,
   labelFontSize, value, angry, happy, width, rows, cols, gridArea,
-  bounderBorderRadius, borderRadius
+  bounderBorderRadius, borderRadius, height, inputWidth, inputHeight,
+  maxHeight, maxWidth, minHeight, minWidth, alignSelf, inputMargin,
+  inputPadding, margin, padding, inputMaxHeight, inputMaxWidth, inputMinHeight,
+  inputMinWidth
 }: {
   layout?: 'row' | 'column'
   inputClassName?: string
@@ -37,11 +40,27 @@ function TextArea({
   angry?: boolean
   happy?: boolean
   width?: string
+  height?: string
   rows?: number
   cols?: number
   gridArea?: string
   borderRadius?: string
   bounderBorderRadius?: string
+  inputWidth?: string
+  inputHeight?: string
+  inputMaxWidth?: string
+  inputMinWidth?: string
+  inputMaxHeight?: string
+  inputMinHeight?: string
+  maxWidth?: string
+  minWidth?: string
+  maxHeight?: string
+  minHeight?: string
+  alignSelf?: string
+  margin?: string
+  padding?: string
+  inputMargin?: string
+  inputPadding?: string
 }) {
   const classes = useJSS({ fontSize, labelFontSize, bounderBorderRadius })
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
@@ -76,6 +95,12 @@ function TextArea({
       style={springStyle}
       width={width}
       gridArea={gridArea}
+      margin={margin}
+      padding={padding}
+      maxWidth={maxWidth}
+      minWidth={minWidth}
+      maxHeight={maxHeight}
+      minHeight={minHeight}
     >
       {label ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}
@@ -101,6 +126,12 @@ function TextArea({
         value={value}
         rows={rows} cols={cols}
         borderRadius={borderRadius}
+        width={inputWidth}
+        height={inputHeight}
+        maxHeight={inputMaxHeight}
+        minHeight={inputMinHeight}
+        maxWidth={inputMaxWidth}
+        minWidth={inputMinWidth}
       />
     </Flex>
   )

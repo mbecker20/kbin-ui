@@ -16,9 +16,8 @@ const useJSS = createUseStyles({
 
   TextArea: {
     backgroundColor: colors.inputBG,
-    width: 'inherit',
+    width: ({ width }) => width ? width : 'inherit',
     outline: 'none',
-    padding: '.2em .4em',
     borderStyle: 'none',
     fontSize: ({ fontSize }) => fontSize ? fontSize : sizes.text.small,
     fontFamily: 'inherit',
@@ -26,7 +25,15 @@ const useJSS = createUseStyles({
     resize: 'vertical',
     fontWeight: ({ bold }) => bold ? 'bold' : 'normal',
     gridArea: ({ gridArea }) => gridArea,
-    borderRadius: ({ borderRadius }) => borderRadius
+    borderRadius: ({ borderRadius }) => borderRadius,
+    height: ({ height }) => height,
+    maxWidth: ({ maxWidth }) => maxWidth,
+    minWidth: ({ minWidth }) => minWidth,
+    maxHeight: ({ maxHeight }) => maxHeight,
+    minHeight: ({ minHeight }) => minHeight,
+    margin: ({ margin }) => margin,
+    padding: ({ padding }) => padding ? padding : '.2em .4em',
+    alignSelf: ({ alignSelf }) => alignSelf
   },
 })
 
