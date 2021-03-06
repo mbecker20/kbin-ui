@@ -28,13 +28,14 @@ function TextInputOnly(props: {
   size?: number
   maxLength?: number
   minLength?: number
+  number?: boolean
 }) {
   const classes = useJSS(props)
   const {
     className, style, placeholder, onChange, onFocus,
     onBlur, onKeyDown, inputRef, autoFocus, size,
     onEnter, onEscape, defaultValue, value, password,
-    maxLength, minLength
+    maxLength, minLength, number
   } = props
   return (
     <input
@@ -43,7 +44,7 @@ function TextInputOnly(props: {
           `${classes.TextInput} ${className}` :
           classes.TextInput
       }
-      type={password ? 'password' : 'text'}
+      type={password ? 'password' : number ? 'number' : 'text'}
       style={style}
       placeholder={placeholder}
       onChange={e => {
