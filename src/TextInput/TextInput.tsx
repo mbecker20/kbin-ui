@@ -43,6 +43,7 @@ function TextInput(props: {
   maxSize?: number
   minSize?: number
   margin?: string
+  number?: boolean
 }) {
   const classes = useJSS(props)
   const {
@@ -51,7 +52,7 @@ function TextInput(props: {
     inputRef, autoFocus, onEnter, onEscape, layout, defaultValue,
     value, password, angry, happy, width, gridArea,
     borderRadius, inputWidth, padding, inputPadding,
-    bounderStyle, size, margin
+    bounderStyle, size, margin, number
   } = props
   const [focussed, setFocussed] = useState(autoFocus ? true : false)
   const borderColor = 
@@ -113,7 +114,8 @@ function TextInput(props: {
         borderRadius={borderRadius}
         width={inputWidth}
         padding={inputPadding}
-        size={size}
+        size={size} 
+        number={number}
       />
     </Flex>
   )
