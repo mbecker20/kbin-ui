@@ -94,6 +94,7 @@ function TextArea({
       }
       style={springStyle}
       width={width}
+      height={height}
       gridArea={gridArea}
       margin={margin}
       padding={padding}
@@ -101,6 +102,7 @@ function TextArea({
       minWidth={minWidth}
       maxHeight={maxHeight}
       minHeight={minHeight}
+      alignSelf={alignSelf}
     >
       {label ? <AnimatedText className={classes.Label} text={label}
         style={Object.assign(labelSpring, labelStyle)}
@@ -132,6 +134,8 @@ function TextArea({
         minHeight={inputMinHeight}
         maxWidth={inputMaxWidth}
         minWidth={inputMinWidth}
+        margin={inputMargin}
+        padding={inputPadding}
       />
     </Flex>
   )
