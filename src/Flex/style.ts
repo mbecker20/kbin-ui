@@ -47,6 +47,7 @@ const useJSS = createUseStyles({
     gridArea: ({ gridArea }) => gridArea,
     borderRadius: ({ borderRadius }) => borderRadius,
     boxShadow: ({ boxShadow }) => boxShadow,
+    alignSelf: ({ alignSelf }) => alignSelf,
     overflow: ({ scroller, xScroller, overflow }) => 
       (scroller && xScroller) ? 'auto' : 
       scroller ? 'hidden auto' : 

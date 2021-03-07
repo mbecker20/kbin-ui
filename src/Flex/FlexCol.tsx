@@ -33,6 +33,7 @@ function _FlexCol(props: {
   gridArea?: string
   boxShadow?: string
   borderRadius?: string
+  alignSelf?: string
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
   const {
