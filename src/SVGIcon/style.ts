@@ -15,7 +15,8 @@ const useJSS = createUseStyles({
     boxShadow: ({ boxShadow }) => boxShadow,
     backgroundColor: ({ backgroundColor }) => backgroundColor,
     alignSelf: ({ alignSelf }) => alignSelf,
-    justifySelf: ({ justifySelf }) => justifySelf
+    justifySelf: ({ justifySelf }) => justifySelf,
+    placeSelf: ({ placeSelf }) => placeSelf,
   },
 })
 

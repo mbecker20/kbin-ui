@@ -24,6 +24,7 @@ function SVGIcon(props: {
   backgroundColor?: string
   alignSelf?: string
   justifySelf?: string
+  placeSelf?: string
 }) {
   const classes = useJSS(props)
   const {
