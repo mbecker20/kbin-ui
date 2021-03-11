@@ -10,7 +10,7 @@ function LabelledItems({
   width, height, itemsMargin, borderRadius,
   itemsMaxHeight, minWidth, minHeight, maxWidth,
   margin, maxHeight, scroller, padding, itemsBorderRadius,
-  itemsPadding, itemsStyle
+  itemsPadding, itemsStyle, backgroundColor
 }: {
   children: ReactNode
   label: ReactNode
@@ -36,10 +36,11 @@ function LabelledItems({
   scroller?: boolean
   borderRadius?: string
   itemsBorderRadius?: string
+  backgroundColor?: string
 }) {
   return (
     <FlexCol 
-      backgroundColor={colors.unfocussedInput}
+      backgroundColor={backgroundColor ? backgroundColor : colors.unfocussedInput}
       padding={padding ? padding : sizes.labelledItems.padding}
       style={style} 
       width={width} 

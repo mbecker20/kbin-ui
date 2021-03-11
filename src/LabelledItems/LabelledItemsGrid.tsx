@@ -29,6 +29,7 @@ function LabelledItemsGrid(props: {
   borderRadius?: string
   padding?: string
   itemsBorderRadius?: string
+  backgroundColor?: string
 }) {
   return (
     <LabelledItems 
