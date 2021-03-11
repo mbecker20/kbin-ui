@@ -67,7 +67,7 @@ function LabelledItems({
       />
       <FlexCol 
         maxHeight={itemsMaxHeight}
-        backgroundColor={colors.labelledItemsItems}
+        backgroundColor={backgroundColor ? backgroundColor : colors.labelledItemsItems}
         height='100%'
         margin={itemsMargin}
         scroller={typeof scroller === 'boolean' ? scroller : true}
