@@ -5,10 +5,11 @@ import SVGIcon from '../SVGIcon/SVGIcon'
 import { colors } from '../theme'
 import useJSS from './style'
 import CSS from 'csstype'
+import { useReRenderOnResize } from '../hooks'
 
 function DropdownMenu({ 
   children, alt, title, margin ,padding, width, height,
-  backgroundColor, menuPadding, menuStyle, svgStyle
+  backgroundColor, menuPadding, menuStyle, svgStyle, menuBorderRadius
 }: {
   children: ReactNode
   alt: string
@@ -21,14 +22,16 @@ function DropdownMenu({
   menuPadding?: string
   menuStyle?: CSS.Properties
   svgStyle?: CSS.Properties
+  menuBorderRadius?: string
 }) {
   const [open, setOpen] = useState(false)
   const svgRef = useRef<HTMLImageElement>(null)
   const boundingRect = svgRef.current ? svgRef.current.getBoundingClientRect() : undefined
   const classes = useJSS({
-    top: boundingRect?.bottom,
+    top: svgRef.current && boundingRect ? svgRef.current.offsetTop + boundingRect.bottom - boundingRect.top : 0,
     left: boundingRect ? (boundingRect.right + boundingRect.left) / 2 : 0
   })
+  useReRenderOnResize()
   return (
     <Fragment>
       <SVGIcon
@@ -51,6 +54,7 @@ function DropdownMenu({
           padding={menuPadding}
           boxShadow={colors.boxShadow}
           style={menuStyle}
+          borderRadius={menuBorderRadius}
         >
           {children}
         </FlexCol>

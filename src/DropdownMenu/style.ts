@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss'
 
 const useJSS = createUseStyles({
   DropdownMenu: {
-    position: 'fixed',
+    position: 'sticky',
     top: ({ top }) => top,
     left: ({ left }) => left,
     transform: 'translate(-50%, 0%)'
