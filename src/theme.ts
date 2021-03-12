@@ -56,6 +56,8 @@ export const colors = {
 
   circleFill: '#0a2154',
   circleStroke: '#1343b1',
+
+  dropdownBG: '#16171b'
 }
 
 export function setCustomColors(customColors: Partial<typeof colors>) {

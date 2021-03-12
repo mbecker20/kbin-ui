@@ -2,10 +2,12 @@ import React, { Fragment, ReactNode, useEffect, useRef, useState } from 'react'
 import Conditional from '../Conditional'
 import FlexCol from '../Flex/FlexCol'
 import SVGIcon from '../SVGIcon/SVGIcon'
+import { colors } from '../theme'
 import useJSS from './style'
 
 function DropdownMenu({ 
-  children, alt, title, margin ,padding, width, height
+  children, alt, title, margin ,padding, width, height,
+  backgroundColor, menuPadding
 }: {
   children: ReactNode
   alt: string
@@ -14,6 +16,8 @@ function DropdownMenu({
   width?: string
   height?: string
   title?: string
+  backgroundColor?: string
+  menuPadding?: string
 }) {
   const [open, setOpen] = useState(false)
   const svgRef = useRef<HTMLImageElement>(null)
@@ -39,6 +43,9 @@ function DropdownMenu({
       <Conditional showIf={open}>
         <FlexCol 
           className={classes.DropdownMenu}
+          backgroundColor={backgroundColor ? backgroundColor : colors.dropdownBG}
+          padding={menuPadding}
+          boxShadow={colors.boxShadow}
         >
           {children}
         </FlexCol>
