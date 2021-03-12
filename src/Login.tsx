@@ -12,7 +12,7 @@ function Login({
   createAccount,
   requireEmail,
 }: {
-  LoginTitle: ReactElement
+  LoginTitle: ReactNode
   login: (username: string, password: string, email?: string, setLoginLoading?: (loading: boolean) => void, usernameRef?: RefObject<HTMLDivElement>) => void
   AdditionalLogins?: ReactNode
   createAccount?: (username: string, password: string, email?: string, setCreateLoading?: (loading: boolean) => void, usernameRef?: RefObject<HTMLDivElement>) => void
