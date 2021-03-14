@@ -1,6 +1,7 @@
 export { default as Button } from './Button/Button'
 export { default as CheckBox } from './CheckBox/CheckBox'
 export { default as UncontrolledCheckBox } from './CheckBox/UncontrolledCheckBox'
+export { default as LabelledCheckBox } from './CheckBox/LabelledCheckBox'
 export { default as ContextMenuExtension } from './ContextMenuExtension/ExtensionMenu'
 export { default as DataTable } from './DataTable/DataTable'
 export { default as DropdownMenu } from './DropdownMenu/DropdownMenu'

@@ -123,7 +123,16 @@ export const sizes = {
     itemMinWidth: '12rem',
     flexPageMargin: '2rem 0em',
     animationHeight: 100 //px
-  }
+  },
+  borderRadius: {
+    large: '2rem',
+    medium: '1rem',
+    small: '.5rem',
+    largeUpperRight: '0rem 2rem 0rem 0rem',
+    largeLowerRight: '0rem 0rem 2rem 0rem',
+    mediumUpperRight: '0rem 1rem 0rem 0rem',
+    mediumLoweright: '0rem 0rem 1rem 0rem',
+  },
 }
 
 type CustomSizes = {
@@ -138,6 +147,7 @@ type CustomSizes = {
   centerMenu?: Partial<typeof sizes.centerMenu>
   grid?: Partial<typeof sizes.grid>
   page?: Partial<typeof sizes.page>
+  borderRadius?: Partial<typeof sizes.borderRadius>
 }
 
 export function setCustomSizes(customSizes: CustomSizes) {

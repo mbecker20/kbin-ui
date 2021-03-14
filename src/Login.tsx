@@ -1,4 +1,4 @@
-import React, { ReactElement, RefObject, useRef, useState } from 'react'
+import React, { ReactElement, ReactNode, RefObject, useRef, useState } from 'react'
 import Button from './Button/Button'
 import Conditional from './Conditional'
 import FlexCol from './Flex/FlexCol'
@@ -12,9 +12,9 @@ function Login({
   createAccount,
   requireEmail,
 }: {
-  LoginTitle: ReactElement
+  LoginTitle: ReactNode
   login: (username: string, password: string, email?: string, setLoginLoading?: (loading: boolean) => void, usernameRef?: RefObject<HTMLDivElement>) => void
-  AdditionalLogins?: ReactElement[]
+  AdditionalLogins?: ReactNode
   createAccount?: (username: string, password: string, email?: string, setCreateLoading?: (loading: boolean) => void, usernameRef?: RefObject<HTMLDivElement>) => void
   requireEmail?: boolean
 }) {
