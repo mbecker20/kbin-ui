@@ -34,6 +34,7 @@ function _Text(props: {
   minHeight?: string
   borderRadius?: string
   children?: string
+  whitespaceWrap?: boolean
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
   const { className, style, text, onClick, children } = props

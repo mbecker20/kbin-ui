@@ -27,7 +27,8 @@ const useJSS = createUseStyles({
     maxWidth: ({ maxWidth }) => maxWidth,
     minWidth: ({ minWidth }) => minWidth,
     minHeight: ({ minHeight }) => minHeight,
-    borderRadius: ({ borderRadius }) => borderRadius
+    borderRadius: ({ borderRadius }) => borderRadius,
+    whiteSpace: ({ whitespaceWrap }) => whitespaceWrap ? 'pre-wrap' : undefined
   },
 })
 
