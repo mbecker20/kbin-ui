@@ -83,6 +83,7 @@ function DropdownSelector({
                 key={i}
                 onClick={() => {
                   if (onSelect) onSelect(selection)
+                  setOpen(false)
                 }}
                 margin={selectionMargin}
                 padding={selectionPadding}
