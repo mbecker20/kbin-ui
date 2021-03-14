@@ -81,7 +81,7 @@ function DropdownSelector({
           <Map
             array={selections}
             map={(selection, i) => (
-              <Text 
+              <Text
                 key={i}
                 className={classes.Selection}
                 onClick={() => {

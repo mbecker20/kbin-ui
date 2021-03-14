@@ -19,7 +19,7 @@ const useJSS = createUseStyles({
   },
 
   Selection: {
-    '&::hover': {
+    '&:hover': {
       cursor: 'pointer',
       color: ({ highlightColor }) => highlightColor ? highlightColor : colors.circleStroke
     }
