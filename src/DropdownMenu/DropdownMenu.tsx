@@ -14,7 +14,6 @@ function getLeft(rect: DOMRect, alignment?: 'center' | 'right' | 'left') {
     case 'left': return rect.left
     default: return (rect.right + rect.left) / 2
   }
-  return 
 }
 
 function DropdownMenu({ 
