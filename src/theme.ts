@@ -167,6 +167,11 @@ export const springConfig = {
     velocity: 5,
     friction: 40,
   },
+  slow: {
+    tension: 250,
+    friction: 50,
+    mass: 1
+  },
   xslow: {
     tension: 100,
     friction: 20,
@@ -178,6 +183,7 @@ export const springConfig = {
 type CustomSpringConfig = {
   fast?: Partial<typeof springConfig.fast>
   medium?: Partial<typeof springConfig.medium>
+  slow?: Partial<typeof springConfig.slow>
   xslow?: Partial<typeof springConfig.xslow>
 }
 
