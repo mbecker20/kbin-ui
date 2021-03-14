@@ -20,7 +20,8 @@ function getLeft(rect: DOMRect, alignment?: 'center' | 'right' | 'left') {
 function DropdownSelector({
   selection, onSelect, selections, selectionToText, margin, padding, width, height,
   backgroundColor, menuPadding, menuStyle, textStyle, menuBorderRadius,
-  alignment, alignItems, selectionMargin, selectionPadding, selectionStyle
+  alignment, alignItems, selectionMargin, selectionPadding, selectionStyle,
+  highlightColor,
 }: {
   selection: string
   selections: string[]
@@ -42,6 +43,7 @@ function DropdownSelector({
   selectionMargin?: string
   selectionPadding?: string
   selectionStyle?: CSS.Properties
+  highlightColor?: string
 }) {
   const [open, setOpen] = useState(false)
   const textRef = useRef<HTMLDivElement>(null)
@@ -49,7 +51,7 @@ function DropdownSelector({
   const classes = useJSS({
     top: textRef.current && boundingRect ? textRef.current.offsetTop + boundingRect.bottom - boundingRect.top : 0,
     left: boundingRect ? getLeft(boundingRect, alignment) : 0,
-    alignment
+    alignment, highlightColor
   })
   useReRenderOnResize()
   return (
@@ -81,6 +83,7 @@ function DropdownSelector({
             map={(selection, i) => (
               <Text 
                 key={i}
+                className={classes.Selection}
                 onClick={() => {
                   if (onSelect) onSelect(selection)
                   setOpen(false)
