@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { colors, scrollbarJSS, zIndex } from '../theme'
+import { colors, scrollbarJSS, sizes, zIndex } from '../theme'
 
 const useJSS = createUseStyles({
   CenterMenuBounder: {
@@ -21,7 +21,7 @@ const useJSS = createUseStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    borderRadius: '1.2vmin',
+    borderRadius: sizes.borderRadius.large,
     boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
     padding: '1vmin 2vmin 2vmin 2vmin',
     border: `.1em solid ${colors.centerMenuBorder}`,
