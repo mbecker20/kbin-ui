@@ -20,7 +20,7 @@ function getLeft(rect: DOMRect, alignment?: 'center' | 'right' | 'left') {
 function DropdownMenu({ 
   children, alt, title, margin ,padding, width, height,
   backgroundColor, menuPadding, menuStyle, svgStyle, menuBorderRadius,
-  alignment
+  alignment, alignItems
 }: {
   children: ReactNode
   alt: string
@@ -35,6 +35,7 @@ function DropdownMenu({
   svgStyle?: CSS.Properties
   menuBorderRadius?: string
   alignment?: 'center' | 'right' | 'left'
+  alignItems?: string
 }) {
   const [open, setOpen] = useState(false)
   const svgRef = useRef<HTMLImageElement>(null)
@@ -68,6 +69,7 @@ function DropdownMenu({
           boxShadow={colors.boxShadow}
           style={menuStyle}
           borderRadius={menuBorderRadius}
+          alignItems={alignItems}
         >
           {children}
         </FlexCol>
