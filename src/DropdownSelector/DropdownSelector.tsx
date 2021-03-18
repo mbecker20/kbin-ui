@@ -5,7 +5,7 @@ import Conditional from '../Conditional'
 import Text from '../Text/Text'
 import Map from '../Map'
 import FlexCol from '../Flex/FlexCol'
-import { useReRenderOnResize } from '../hooks'
+import { useListener, useReRenderOnResize } from '../hooks'
 import { colors } from '../theme'
 
 function getLeft(rect: DOMRect, alignment?: 'center' | 'right' | 'left') {
@@ -53,7 +53,21 @@ function DropdownSelector({
     left: boundingRect ? getLeft(boundingRect, alignment) : 0,
     alignment, highlightColor
   })
+  const menuRef = useRef<HTMLDivElement>(null)
   useReRenderOnResize()
+  useListener('click', (e: MouseEvent) => {
+    if (open && menuRef.current) {
+      const boundingRect = menuRef.current.getBoundingClientRect()
+      if (
+        e.clientX < boundingRect.left ||
+        e.clientX > boundingRect.right ||
+        e.clientY < boundingRect.top ||
+        e.clientY > boundingRect.bottom
+      ) {
+        setOpen(false)
+      }
+    }
+  })
   return (
     <Fragment>
       <Text
@@ -77,6 +91,7 @@ function DropdownSelector({
           style={menuStyle}
           borderRadius={menuBorderRadius}
           alignItems={alignItems}
+          ref={menuRef}
         >
           <Map
             array={selections}
