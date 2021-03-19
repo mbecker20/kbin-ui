@@ -34,12 +34,13 @@ function _FlexCol(props: {
   boxShadow?: string
   borderRadius?: string
   alignSelf?: string
+  onScroll?: (e: MouseEvent<HTMLDivElement>) => void
 }, ref: ForwardedRef<HTMLDivElement>) {
   const classes = useJSS(props)
   const {
     className, children, style, onDrop,
     onDragOver, onContextMenu, onClick, onWheel,
-    onPointerEnter, onPointerLeave,
+    onPointerEnter, onPointerLeave, onScroll
   } = props
   return (
     <div 
@@ -53,6 +54,7 @@ function _FlexCol(props: {
       onWheel={onWheel}
       onPointerEnter={onPointerEnter}
       onPointerLeave={onPointerLeave}
+      onScroll={onScroll}
     >
       { children }
     </div>
