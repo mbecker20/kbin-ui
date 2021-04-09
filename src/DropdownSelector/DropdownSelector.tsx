@@ -21,12 +21,13 @@ function DropdownSelector({
   selection, onSelect, selections, selectionToText, margin, padding, width, height,
   backgroundColor, menuPadding, menuStyle, textStyle, menuBorderRadius,
   alignment, alignItems, selectionMargin, selectionPadding, selectionStyle,
-  highlightColor,
+  highlightColor, selectedToText
 }: {
   selection: string
   selections: string[]
   onSelect?: (selection: string) => void
   selectionToText?: (selection: string) => string
+  selectedToText?: (selection: string) => string
   margin?: string
   padding?: string
   width?: string
@@ -80,7 +81,7 @@ function DropdownSelector({
         ref={textRef}
         pointer
       >
-        {selectionToText ? selectionToText(selection) : selection}
+        {selectedToText ? selectedToText(selection) : selectionToText ? selectionToText(selection) : selection}
       </Text>
       <Conditional showIf={open}>
         <FlexCol
