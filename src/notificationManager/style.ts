@@ -3,7 +3,7 @@ import { sizes } from '../theme'
 
 function getYLocation(yLoc: string) {
   switch(yLoc) {
-    case 'top': return '2vh'
+    case 'top': return '1vh'
     case 'center': return '50vh'
     case 'bottom': return '90vh'
     default: return '5vh'
